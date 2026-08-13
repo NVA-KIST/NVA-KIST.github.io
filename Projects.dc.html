@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#12162a;font-family:'Pretendard',-apple-system,system-ui,sans-serif;color:#e7e8f2}
+  a{color:#7fa2e8;text-decoration:none}
+  a:hover{color:#ff6b6f}
+</style>
+</helmet>
+
+<div>
+
+  <div style="background:#12162a;color:#fff">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:76px;max-width:1320px;margin:0 auto">
+      <a href="Home.dc.html" style="display:flex;align-items:center">
+        <img src="assets/logo-dark.webp" alt="NVA Lab" style="height:34px;width:auto;display:block">
+      </a>
+      <nav style="display:flex;gap:30px;font:500 13.5px Pretendard,sans-serif">
+        <a href="Home.dc.html#about" style="color:#dcdee8">About</a>
+        <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
+          <a href="Director.dc.html" style="color:#dcdee8">Members</a>
+          <div style="{{ membersMenuStyle }}">
+            <a href="Director.dc.html" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Director</a>
+            <a href="Students.dc.html" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Students</a>
+          </div>
+        </div>
+        <a href="Publications.dc.html" style="color:#dcdee8">Publications</a>
+        <a href="Projects.dc.html" style="color:#fff;font-weight:600">Projects</a>
+        <div style="position:relative" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
+          <a href="Board.dc.html" style="color:#dcdee8">Board</a>
+          <div style="{{ boardMenuStyle }}">
+            <a href="Board.dc.html#album" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Album</a>
+            <a href="Board.dc.html#news" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">News</a>
+            <a href="Board.dc.html#blogs" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Research Blogs</a>
+          </div>
+        </div>
+        <a href="Contact.dc.html" style="color:#dcdee8">Contact</a>
+      </nav>
+    </div>
+    <div style="height:2px;background:linear-gradient(90deg,#1f2f6b,#b3272a,#f2a71b)"></div>
+    <div style="padding:64px 56px 56px;text-align:center">
+      <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8f95bd;margin-bottom:14px">NVA Lab</div>
+      <h1 style="font:500 42px Newsreader,serif;margin:0;color:#fff">Projects</h1>
+    </div>
+  </div>
+
+  <div style="padding:96px 56px 120px;max-width:1120px;margin:0 auto">
+
+    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:24px">2025</div>
+    <div style="display:flex;flex-direction:column;gap:56px">
+      <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center;border:1px solid #262c4d;padding:36px">
+        <div style="aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#1c2142,#1c2142 10px,#242a4d 10px,#242a4d 20px);display:flex;align-items:center;justify-content:center;font:12px ui-monospace,monospace;color:#6f75a0">project photo</div>
+        <div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+            <span style="font:600 11px Pretendard,sans-serif;padding:3px 10px;border-radius:20px;background:rgba(91,127,224,.16);color:#89aef0">Computer Vision</span>
+            <span style="font:600 11px Pretendard,sans-serif;padding:3px 10px;border-radius:20px;background:rgba(242,167,27,.16);color:#f2c05e">Deep Learning</span>
+            <span style="font:600 11px Pretendard,sans-serif;padding:3px 10px;border-radius:20px;background:rgba(179,39,42,.16);color:#ff9a9d">Robotics</span>
+          </div>
+          <h3 style="font:600 22px Pretendard,sans-serif;margin:0 0 8px;color:#f2f2f8">Robotic End-Effector &amp; Remote Pilot</h3>
+          <div style="font:600 12px Pretendard,sans-serif;color:#b3272a;margin-bottom:16px">2025 Korea Science and Technology Festival</div>
+          <ul style="font:400 14px/1.8 Pretendard,sans-serif;color:#b7bcd4;margin:0 0 16px;padding-left:20px">
+            <li>Developed real-time tomato detection and tracking system</li>
+            <li>Implemented robotic control system for precise manipulation</li>
+            <li>Created user interface for remote operation</li>
+          </ul>
+          <a href="https://github.com/NVA-Lab/tomato-robot" style="font:600 13px Pretendard,sans-serif;color:#89aef0">View on GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background:#12162a;color:#fff;padding:52px 56px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+      <div>
+        <img src="assets/logo-dark.webp" alt="NVA Lab" style="height:28px;width:auto;display:block;margin-bottom:14px">
+        <div style="font:400 13px Pretendard,sans-serif;color:#9ba0c2">KIST · 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</div>
+      </div>
+      <div style="font:400 12px Pretendard,sans-serif;color:#6f759a">© 2026 Neural Vision Algorithm Lab. All rights reserved.</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { membersOpen: false, boardOpen: false };
+  openMembers = () => this.setState({ membersOpen: true });
+  closeMembers = () => this.setState({ membersOpen: false });
+  openBoard = () => this.setState({ boardOpen: true });
+  closeBoard = () => this.setState({ boardOpen: false });
+  renderVals() {
+    return {
+      openMembers: this.openMembers,
+      closeMembers: this.closeMembers,
+      openBoard: this.openBoard,
+      closeBoard: this.closeBoard,
+      boardMenuStyle: {
+        position: 'absolute', top: '100%', left: 0, background: '#171c38',
+        border: '1px solid #262c4d', borderRadius: 8, minWidth: 170,
+        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
+        opacity: this.state.boardOpen ? 1 : 0,
+        visibility: this.state.boardOpen ? 'visible' : 'hidden',
+        transform: this.state.boardOpen ? 'translateY(0)' : 'translateY(-6px)',
+        transition: 'opacity .15s ease, transform .15s ease'
+      },
+      membersMenuStyle: {
+        position: 'absolute', top: '100%', left: 0, background: '#171c38',
+        border: '1px solid #262c4d', borderRadius: 8, minWidth: 150,
+        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
+        opacity: this.state.membersOpen ? 1 : 0,
+        visibility: this.state.membersOpen ? 'visible' : 'hidden',
+        transform: this.state.membersOpen ? 'translateY(0)' : 'translateY(-6px)',
+        transition: 'opacity .15s ease, transform .15s ease'
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

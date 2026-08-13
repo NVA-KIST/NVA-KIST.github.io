@@ -1,0 +1,60 @@
+{
+  "album": [
+    {
+      "src": "assets/logo-dark.webp",
+      "caption": "NVA Lab mark",
+      "date": "2026.08"
+    },
+    {
+      "src": "",
+      "caption": "Lab photo — add a file under assets/album/ and put the path here",
+      "date": "2026.07"
+    },
+    {
+      "src": "",
+      "caption": "Seminar / visit — placeholder",
+      "date": "2026.06"
+    },
+    {
+      "src": "",
+      "caption": "Demo day — placeholder",
+      "date": "2025.11"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026.07",
+      "kind": "Announcement",
+      "headline": "Paper accepted — \"Robust 3D Human Pose Estimation for Real-World Applications\" [placeholder]",
+      "href": "Publications.dc.html"
+    },
+    {
+      "date": "2025.11",
+      "kind": "News",
+      "headline": "Awarded at the 2025 Korea Science and Technology Festival for the tomato-robot project [placeholder]",
+      "href": "Projects.dc.html"
+    },
+    {
+      "date": "2025.09",
+      "kind": "Announcement",
+      "headline": "New students joined Neural Vision Algorithm Lab [placeholder]",
+      "href": "Students.dc.html"
+    }
+  ],
+  "blogs": [
+    {
+      "date": "2026.06",
+      "author": "NVA Lab",
+      "title": "Reading notes: vision-language models for medical images",
+      "excerpt": "A short lab note on aligning vision and language for medical image interpretation. Replace this placeholder with a real post.",
+      "href": "#"
+    },
+    {
+      "date": "2025.12",
+      "author": "NVA Lab",
+      "title": "Behind the tomato-robot demo",
+      "excerpt": "How we built real-time detection, tracking, and remote control for the festival demo. Replace this placeholder with a real post.",
+      "href": "#"
+    }
+  ]
+}

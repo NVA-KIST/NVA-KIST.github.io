@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#12162a;font-family:'Pretendard',-apple-system,system-ui,sans-serif;color:#e7e8f2}
+  a{color:#7fa2e8;text-decoration:none}
+  a:hover{color:#ff6b6f}
+</style>
+</helmet>
+
+<div>
+
+  <div style="background:#12162a;color:#fff">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:76px;max-width:1320px;margin:0 auto">
+      <a href="Home.dc.html" style="display:flex;align-items:center">
+        <img src="assets/logo-dark.webp" alt="NVA Lab" style="height:34px;width:auto;display:block">
+      </a>
+      <nav style="display:flex;gap:30px;font:500 13.5px Pretendard,sans-serif">
+        <a href="Home.dc.html#about" style="color:#dcdee8">About</a>
+        <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
+          <a href="Director.dc.html" style="color:#dcdee8">Members</a>
+          <div style="{{ membersMenuStyle }}">
+            <a href="Director.dc.html" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Director</a>
+            <a href="Students.dc.html" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Students</a>
+          </div>
+        </div>
+        <a href="Publications.dc.html" style="color:#fff;font-weight:600">Publications</a>
+        <a href="Projects.dc.html" style="color:#dcdee8">Projects</a>
+        <div style="position:relative" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
+          <a href="Board.dc.html" style="color:#dcdee8">Board</a>
+          <div style="{{ boardMenuStyle }}">
+            <a href="Board.dc.html#album" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Album</a>
+            <a href="Board.dc.html#news" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">News</a>
+            <a href="Board.dc.html#blogs" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Research Blogs</a>
+          </div>
+        </div>
+        <a href="Contact.dc.html" style="color:#dcdee8">Contact</a>
+      </nav>
+    </div>
+    <div style="height:2px;background:linear-gradient(90deg,#1f2f6b,#b3272a,#f2a71b)"></div>
+    <div style="padding:64px 56px 56px;text-align:center">
+      <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8f95bd;margin-bottom:14px">NVA Lab</div>
+      <h1 style="font:500 42px Newsreader,serif;margin:0;color:#fff">Publications</h1>
+    </div>
+  </div>
+
+  <div style="padding:96px 56px 120px;max-width:960px;margin:0 auto">
+
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:52px">
+      <sc-for list="{{ filterDefs }}" as="f" hint-placeholder-count="5">
+        <div style="{{ f.style }}" onClick="{{ f.onToggle }}">{{ f.label }}</div>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{ hasResults }}" hint-placeholder-val="{{ true }}">
+      <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
+        <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin:0 0 24px">{{ g.year }}</div>
+        <div style="border-top:1px solid #262c4d;margin-bottom:44px">
+          <sc-for list="{{ g.items }}" as="pub" hint-placeholder-count="2">
+            <div style="padding:28px 0;border-bottom:1px solid #262c4d;display:flex;gap:24px">
+              <div style="width:96px;height:96px;flex:none;background:repeating-linear-gradient(45deg,#1c2142,#1c2142 8px,#242a4d 8px,#242a4d 16px);display:flex;align-items:center;justify-content:center;font:10px ui-monospace,monospace;color:#6f75a0;text-align:center">figure</div>
+              <div>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+                  <span style="{{ pub.typeBadgeStyle }}">{{ pub.badgeType }}</span>
+                  <span style="{{ pub.scopeBadgeStyle }}">{{ pub.badgeScope }}</span>
+                  <sc-if value="{{ pub.status }}">
+                    <span style="{{ pub.statusBadgeStyle }}">{{ pub.status }}</span>
+                  </sc-if>
+                </div>
+                <h3 style="font:600 17px/1.5 Pretendard,sans-serif;margin:0 0 8px;color:#f2f2f8">{{ pub.title }}</h3>
+                <div style="font:400 13.5px Pretendard,sans-serif;color:#a7acc9">{{ pub.authors }} · {{ pub.venue }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </sc-if>
+    <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+      <div style="border-top:1px solid #262c4d;padding:40px 0;font:400 14.5px/1.8 Pretendard,sans-serif;color:#8f95bd;text-align:center">No publications match the selected filters.</div>
+    </sc-if>
+
+  </div>
+
+  <div style="background:#12162a;color:#fff;padding:52px 56px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+      <div>
+        <img src="assets/logo-dark.webp" alt="NVA Lab" style="height:28px;width:auto;display:block;margin-bottom:14px">
+        <div style="font:400 13px Pretendard,sans-serif;color:#9ba0c2">KIST · 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</div>
+      </div>
+      <div style="font:400 12px Pretendard,sans-serif;color:#6f759a">© 2026 Neural Vision Algorithm Lab. All rights reserved.</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    membersOpen: false,
+    boardOpen: false,
+    filters: { journal: false, conference: false, patent: false, international: false, domestic: false }
+  };
+
+  publications = [
+    {
+      year: 2026, tags: ['journal', 'international'],
+      badgeType: 'Journal', badgeScope: 'International', status: 'Under Review',
+      title: 'Robust 3D Human Pose Estimation for Real-World Applications',
+      authors: 'Kim, Y.-J., Ryu, K.-H.', venue: 'IEEE Transactions on Pattern Analysis (submitted)'
+    },
+    {
+      year: 2025, tags: ['conference', 'domestic'],
+      badgeType: 'Conference', badgeScope: 'Domestic', status: null,
+      title: 'Vision-Language Alignment for Medical Image Interpretation',
+      authors: 'Jeong, Y.-J., Kim, S.-A., Ryu, K.-H.', venue: 'Korean Society of Medical Imaging, Fall Conference'
+    },
+    {
+      year: 2025, tags: ['conference', 'domestic'],
+      badgeType: 'Conference', badgeScope: 'Domestic', status: null,
+      title: 'Real-Time Detection and Tracking for Agricultural Robotics',
+      authors: 'Kang, D.-Y., Goh, H.-J., Ryu, K.-H.', venue: '2025 Korea Science and Technology Festival'
+    },
+    {
+      year: 2025, tags: ['patent', 'domestic'],
+      badgeType: 'Patent', badgeScope: 'Domestic', status: 'Filed',
+      title: 'Method and System for Real-Time 3D Pose Tracking Using Multi-Modal Sensors',
+      authors: 'Ryu, K.-H.', venue: 'Korean Intellectual Property Office'
+    }
+  ];
+
+  badgeStyles = {
+    journal: { bg: 'rgba(91,127,224,.16)', fg: '#89aef0' },
+    conference: { bg: 'rgba(91,127,224,.16)', fg: '#89aef0' },
+    patent: { bg: 'rgba(242,167,27,.16)', fg: '#f2c05e' },
+    international: { bg: 'rgba(179,39,42,.16)', fg: '#ff9a9d' },
+    domestic: { bg: 'rgba(179,39,42,.16)', fg: '#ff9a9d' },
+    status: { bg: 'rgba(255,255,255,.1)', fg: '#f2f2f8' }
+  };
+
+  makeBadgeStyle(kind) {
+    const c = this.badgeStyles[kind] || this.badgeStyles.status;
+    return {
+      font: '600 11px Pretendard,sans-serif', padding: '3px 10px', borderRadius: 20,
+      background: c.bg, color: c.fg
+    };
+  }
+
+  openMembers = () => this.setState({ membersOpen: true });
+  closeMembers = () => this.setState({ membersOpen: false });
+  openBoard = () => this.setState({ boardOpen: true });
+  closeBoard = () => this.setState({ boardOpen: false });
+
+  toggleFilter = (key) => {
+    this.setState((s) => ({ filters: { ...s.filters, [key]: !s.filters[key] } }));
+  };
+
+  renderVals() {
+    const styledPubs = this.publications.map((p) => ({
+      ...p,
+      typeBadgeStyle: this.makeBadgeStyle(p.badgeType.toLowerCase()),
+      scopeBadgeStyle: this.makeBadgeStyle(p.badgeScope.toLowerCase()),
+      statusBadgeStyle: this.makeBadgeStyle('status')
+    }));
+
+    const active = Object.keys(this.state.filters).filter((k) => this.state.filters[k]);
+    const matches = (pub) => active.length === 0 || pub.tags.some((t) => active.includes(t));
+
+    const years = [...new Set(styledPubs.map((p) => p.year))].sort((a, b) => b - a);
+    const groups = years
+      .map((year) => ({ year, items: styledPubs.filter((p) => p.year === year && matches(p)) }))
+      .filter((g) => g.items.length > 0);
+
+    const allOn = active.length === 0;
+    const allFilter = {
+      key: 'all', label: 'All', onToggle: () => this.setState({ filters: { journal: false, conference: false, patent: false, international: false, domestic: false } }),
+      style: {
+        font: '600 12px Pretendard,sans-serif', padding: '9px 18px', borderRadius: 20, cursor: 'pointer',
+        border: allOn ? '1px solid #5b7fe0' : '1px solid #262c4d',
+        background: allOn ? 'rgba(91,127,224,.14)' : 'transparent',
+        color: allOn ? '#89aef0' : '#a7acc9', userSelect: 'none'
+      }
+    };
+
+    const filterDefs = [allFilter].concat([
+      { key: 'journal', label: 'Journal' },
+      { key: 'conference', label: 'Conference' },
+      { key: 'patent', label: 'Patent' },
+      { key: 'international', label: 'International' },
+      { key: 'domestic', label: 'Domestic' }
+    ].map((f) => {
+      const on = this.state.filters[f.key];
+      return {
+        key: f.key, label: f.label, onToggle: () => this.toggleFilter(f.key),
+        style: {
+          font: '600 12px Pretendard,sans-serif', padding: '9px 18px', borderRadius: 20, cursor: 'pointer',
+          border: on ? '1px solid #5b7fe0' : '1px solid #262c4d',
+          background: on ? 'rgba(91,127,224,.14)' : 'transparent',
+          color: on ? '#89aef0' : '#a7acc9', userSelect: 'none'
+        }
+      };
+    }));
+
+    return {
+      openMembers: this.openMembers,
+      closeMembers: this.closeMembers,
+      openBoard: this.openBoard,
+      closeBoard: this.closeBoard,
+      boardMenuStyle: {
+        position: 'absolute', top: '100%', left: 0, background: '#171c38',
+        border: '1px solid #262c4d', borderRadius: 8, minWidth: 170,
+        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
+        opacity: this.state.boardOpen ? 1 : 0,
+        visibility: this.state.boardOpen ? 'visible' : 'hidden',
+        transform: this.state.boardOpen ? 'translateY(0)' : 'translateY(-6px)',
+        transition: 'opacity .15s ease, transform .15s ease'
+      },
+      membersMenuStyle: {
+        position: 'absolute', top: '100%', left: 0, background: '#171c38',
+        border: '1px solid #262c4d', borderRadius: 8, minWidth: 150,
+        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
+        opacity: this.state.membersOpen ? 1 : 0,
+        visibility: this.state.membersOpen ? 'visible' : 'hidden',
+        transform: this.state.membersOpen ? 'translateY(0)' : 'translateY(-6px)',
+        transition: 'opacity .15s ease, transform .15s ease'
+      },
+      filterDefs,
+      groups,
+      hasResults: groups.length > 0,
+      noResults: groups.length === 0
+    };
+  }
+}
+</script>
+</body>
+</html>

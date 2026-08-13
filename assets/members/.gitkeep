@@ -1,0 +1,13 @@
+Put teammate photos in this folder, then reference them from Students.dc.html and Director.dc.html
+(for example: src="assets/members/sumin-cho.jpg").
+
+Recommended filenames (lowercase, hyphenated):
+  kang-hyun-ryu.jpg   Kang-Hyun Ryu (Director)
+  sumin-cho.jpg       Sumin Cho
+  yongjun-kim.jpg     Yongjun Kim
+  seoa-kim.jpg        Seoa Kim
+  yeonjae-jeong.jpg   Yeonjae Jeong
+  dongyeop-kang.jpg   Dongyeop Kang
+  hyeonjin-goh.jpg    Hyeonjin Goh
+  chanyoung-kim.jpg   Chanyoung Kim
+  ishita.jpg          Ishita

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#12162a;font-family:'Pretendard',-apple-system,system-ui,sans-serif;color:#e7e8f2}
+  a{color:#7fa2e8;text-decoration:none}
+  a:hover{color:#ff6b6f}
+</style>
+</helmet>
+
+<div>
+
+  <div style="background:#12162a;color:#fff">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:76px;max-width:1320px;margin:0 auto">
+      <a href="Home.dc.html" style="display:flex;align-items:center">
+        <img src="assets/logo-dark.webp" alt="NVA Lab" style="height:34px;width:auto;display:block">
+      </a>
+      <nav style="display:flex;gap:30px;font:500 13.5px Pretendard,sans-serif">
+        <a href="Home.dc.html#about" style="color:#dcdee8">About</a>
+        <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
+          <a href="Director.dc.html" style="color:#fff;font-weight:600">Members</a>
+          <div style="{{ membersMenuStyle }}">
+            <a href="Director.dc.html" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Director</a>
+            <a href="Students.dc.html" style="display:block;padding:10px 18px;color:#fff;font:600 13px Pretendard,sans-serif;white-space:nowrap">Students</a>
+          </div>
+        </div>
+        <a href="Publications.dc.html" style="color:#dcdee8">Publications</a>
+        <a href="Projects.dc.html" style="color:#dcdee8">Projects</a>
+        <div style="position:relative" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
+          <a href="Board.dc.html" style="color:#dcdee8">Board</a>
+          <div style="{{ boardMenuStyle }}">
+            <a href="Board.dc.html#album" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Album</a>
+            <a href="Board.dc.html#news" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">News</a>
+            <a href="Board.dc.html#blogs" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Research Blogs</a>
+          </div>
+        </div>
+        <a href="Contact.dc.html" style="color:#dcdee8">Contact</a>
+      </nav>
+    </div>
+    <div style="height:2px;background:linear-gradient(90deg,#1f2f6b,#b3272a,#f2a71b)"></div>
+    <div style="padding:64px 56px 56px;text-align:center">
+      <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8f95bd;margin-bottom:14px">NVA Lab</div>
+      <h1 style="font:500 42px Newsreader,serif;margin:0;color:#fff">Students</h1>
+    </div>
+  </div>
+
+  <div style="padding:96px 56px 40px;max-width:1320px;margin:0 auto">
+    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:32px">MS-Ph.D. Combined</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+
+      <div>
+        <div style="aspect-ratio:1;background:#1c2142;margin-bottom:16px;overflow:hidden">
+          <img src="assets/members/sumin-cho.jpg" alt="Sumin Cho" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        </div>
+        <h3 style="font:600 16px Pretendard,sans-serif;margin:0 0 4px;color:#f2f2f8">Sumin Cho <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">조수민</span></h3>
+        <div style="font:400 12.5px Pretendard,sans-serif;color:#8f95bd;margin-bottom:6px">MS-Ph.D., Seoul National University · B.S., Hanyang University</div>
+        <a href="mailto:sumin.cho@kist.re.kr" style="display:block;font:400 12.5px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:10px">sumin.cho@kist.re.kr</a>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Medical Image Registration</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="aspect-ratio:1;background:#1c2142;margin-bottom:16px;overflow:hidden">
+          <img src="assets/members/SerdarIncenkara.jpg" alt="Serdar Incenkara" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        </div>
+        <h3 style="font:600 16px Pretendard,sans-serif;margin:0 0 4px;color:#f2f2f8">Serdar Incenkara</h3>
+        <div style="font:400 12.5px Pretendard,sans-serif;color:#8f95bd;margin-bottom:6px">MS-Ph.D., KIST School-UST</div>
+        <a href="mailto:serdar.incenkara@kist.re.kr" style="display:block;font:400 12.5px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:10px">serdar.incenkara@kist.re.kr</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="padding:24px 56px 40px;max-width:1320px;margin:0 auto">
+    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:32px">M.S.</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+
+      <div>
+        <div style="aspect-ratio:1;background:#1c2142;margin-bottom:16px;overflow:hidden">
+          <img src="assets/members/yongjun-kim.jpg" alt="Yongjun Kim" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        </div>
+        <h3 style="font:600 16px Pretendard,sans-serif;margin:0 0 4px;color:#f2f2f8">Yongjun Kim <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">김용준</span></h3>
+        <div style="font:400 12.5px Pretendard,sans-serif;color:#8f95bd;margin-bottom:6px">M.S., Korea University · B.S., Ajou University</div>
+        <a href="mailto:yongjun.kim@kist.re.kr" style="display:block;font:400 12.5px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:10px">yongjun.kim@kist.re.kr</a>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">3D-Vision</span>
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Multi-Modal</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="aspect-ratio:1;background:#1c2142;margin-bottom:16px;overflow:hidden">
+          <img src="assets/members/seoa-kim.jpg" alt="Seoa Kim" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        </div>
+        <h3 style="font:600 16px Pretendard,sans-serif;margin:0 0 4px;color:#f2f2f8">Seoa Kim <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">김서아</span></h3>
+        <div style="font:400 12.5px Pretendard,sans-serif;color:#8f95bd;margin-bottom:6px">M.S., Seoul National University · B.S., Sogang University</div>
+        <a href="mailto:seoa.kim@kist.re.kr" style="display:block;font:400 12.5px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:10px">seoa.kim@kist.re.kr</a>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">3D-Vision</span>
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Medical Image Processing</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="aspect-ratio:1;background:#1c2142;margin-bottom:16px;overflow:hidden">
+          <img src="assets/members/DongyubKang.jpg" alt="Dongyeop Kang" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        </div>
+        <h3 style="font:600 16px Pretendard,sans-serif;margin:0 0 4px;color:#f2f2f8">Dongyeop Kang <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">강동엽</span></h3>
+        <div style="font:400 12.5px Pretendard,sans-serif;color:#8f95bd;margin-bottom:6px">M.S., Korea University · B.S., SangMyung University</div>
+        <a href="mailto:dongyeop.kang@kist.re.kr" style="display:block;font:400 12.5px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:10px">dongyeop.kang@kist.re.kr</a>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">3D-Vision</span>
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Pattern Recognition</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="aspect-ratio:1;background:#1c2142;margin-bottom:16px;overflow:hidden">
+          <img src="assets/members/IshitaSinghFaujdar.jpg" alt="Ishita Singh Faujdar" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        </div>
+        <h3 style="font:600 16px Pretendard,sans-serif;margin:0 0 4px;color:#f2f2f8">Ishita Singh Faujdar</h3>
+        <div style="font:400 12.5px Pretendard,sans-serif;color:#8f95bd;margin-bottom:6px">M.S., KIST School-UST · B.Tech, Christ University</div>
+        <a href="mailto:ishitasinghfaujdar@kist.re.kr" style="display:block;font:400 12.5px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:10px">ishitasinghfaujdar@kist.re.kr</a>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Robot-Vision</span>
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Medical Image Processing</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="aspect-ratio:1;background:#1c2142;margin-bottom:16px;overflow:hidden">
+          <img src="assets/members/hyeonjin-goh.jpg" alt="Hyeonjin Goh" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        </div>
+        <h3 style="font:600 16px Pretendard,sans-serif;margin:0 0 4px;color:#f2f2f8">Hyeonjin Goh <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">고현진</span></h3>
+        <div style="font:400 12.5px Pretendard,sans-serif;color:#8f95bd;margin-bottom:6px">M.S., Seoul National University · B.S., KyungHee University</div>
+        <a href="mailto:hyeonjin.goh@kist.re.kr" style="display:block;font:400 12.5px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:10px">hyeonjin.goh@kist.re.kr</a>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">3D-Vision</span>
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Visual Reasoning</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="padding:24px 56px 96px;max-width:1320px;margin:0 auto">
+    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:32px">Undergraduate</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+
+      <div>
+        <div style="aspect-ratio:1;background:#1c2142;margin-bottom:16px;overflow:hidden">
+          <img src="assets/members/ChanyongKim.jpg" alt="Chanyoung Kim" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        </div>
+        <h3 style="font:600 16px Pretendard,sans-serif;margin:0 0 4px;color:#f2f2f8">Chanyoung Kim <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">김찬영</span></h3>
+        <div style="font:400 12.5px Pretendard,sans-serif;color:#8f95bd;margin-bottom:6px">B.S., Soongsil University</div>
+        <a href="mailto:chanyoung.kim@kist.re.kr" style="display:block;font:400 12.5px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:10px">chanyoung.kim@kist.re.kr</a>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Robot-Vision</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="background:#12162a;color:#fff;padding:52px 56px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+      <div>
+        <img src="assets/logo-dark.webp" alt="NVA Lab" style="height:28px;width:auto;display:block;margin-bottom:14px">
+        <div style="font:400 13px Pretendard,sans-serif;color:#9ba0c2">KIST · 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</div>
+      </div>
+      <div style="font:400 12px Pretendard,sans-serif;color:#6f759a">© 2026 Neural Vision Algorithm Lab. All rights reserved.</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { membersOpen: false, boardOpen: false };
+  openMembers = () => this.setState({ membersOpen: true });
+  closeMembers = () => this.setState({ membersOpen: false });
+  openBoard = () => this.setState({ boardOpen: true });
+  closeBoard = () => this.setState({ boardOpen: false });
+  renderVals() {
+    return {
+      openMembers: this.openMembers,
+      closeMembers: this.closeMembers,
+      openBoard: this.openBoard,
+      closeBoard: this.closeBoard,
+      boardMenuStyle: {
+        position: 'absolute', top: '100%', left: 0, background: '#171c38',
+        border: '1px solid #262c4d', borderRadius: 8, minWidth: 170,
+        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
+        opacity: this.state.boardOpen ? 1 : 0,
+        visibility: this.state.boardOpen ? 'visible' : 'hidden',
+        transform: this.state.boardOpen ? 'translateY(0)' : 'translateY(-6px)',
+        transition: 'opacity .15s ease, transform .15s ease'
+      },
+      membersMenuStyle: {
+        position: 'absolute', top: '100%', left: 0, background: '#171c38',
+        border: '1px solid #262c4d', borderRadius: 8, minWidth: 150,
+        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
+        opacity: this.state.membersOpen ? 1 : 0,
+        visibility: this.state.membersOpen ? 'visible' : 'hidden',
+        transform: this.state.membersOpen ? 'translateY(0)' : 'translateY(-6px)',
+        transition: 'opacity .15s ease, transform .15s ease'
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
