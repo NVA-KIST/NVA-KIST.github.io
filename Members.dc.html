@@ -155,62 +155,10 @@
             </sc-if>
           </div>
           <div>
-            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Current role</div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Lab Role</div>
             <div style="display:flex;flex-direction:column;gap:4px">
               <sc-for list="{{ m.roles }}" as="r" hint-placeholder-count="2">
-                <div style="font:500 14px/1.45 Pretendard,sans-serif;color:#ff6b6f">{{ r }}</div>
-              </sc-for>
-            </div>
-          </div>
-          <div>
-            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Area of research</div>
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <sc-for list="{{ m.tags }}" as="tag" hint-placeholder-count="2">
-                <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">{{ tag }}</span>
-              </sc-for>
-            </div>
-          </div>
-          <div>
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
-              <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a">Publications</div>
-              <a href="{{ m.pubsHref }}" style="font:600 12px Pretendard,sans-serif;color:#89aef0">View all →</a>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:8px">
-              <sc-for list="{{ m.pubs }}" as="pub" hint-placeholder-count="2">
-                <a href="{{ pub.href }}" style="font:400 13.5px/1.5 Pretendard,sans-serif;color:#dfe1ee">{{ pub.title }}</a>
-              </sc-for>
-            </div>
-          </div>
-        </div>
-      </sc-for>
-    </div>
-  </div>
-
-  <div style="padding:32px 56px 24px;max-width:1320px;margin:0 auto">
-    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:20px">M.S.</div>
-    <div style="border-top:1px solid #262c4d">
-      <sc-for list="{{ ms }}" as="m" hint-placeholder-count="5">
-        <div style="display:grid;grid-template-columns:140px 1.15fr 0.85fr 1fr 1.25fr;gap:24px;padding:28px 0;border-bottom:1px solid #262c4d;align-items:start">
-          <div style="width:140px;aspect-ratio:1;background:#1c2142;overflow:hidden;flex:none">
-            <img src="{{ m.photo }}" alt="{{ m.name }}" style="{{ m.photoStyle }}">
-          </div>
-          <div>
-            <h3 style="font:600 17px Pretendard,sans-serif;margin:0 0 6px;color:#f2f2f8">{{ m.name }} <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">{{ m.nameKo }}</span></h3>
-            <div style="font:400 13px/1.55 Pretendard,sans-serif;color:#8f95bd;margin-bottom:8px">
-              <sc-for list="{{ m.education }}" as="ed" hint-placeholder-count="2">
-                <div>{{ ed }}</div>
-              </sc-for>
-            </div>
-            <a href="mailto:{{ m.email }}" style="display:block;font:400 13px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:6px">{{ m.email }}</a>
-            <sc-if value="{{ m.linkedin }}">
-              <a href="{{ m.linkedin }}" target="_blank" rel="noopener noreferrer" style="font:400 13px Pretendard,sans-serif;color:#7fa2e8">LinkedIn</a>
-            </sc-if>
-          </div>
-          <div>
-            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Current role</div>
-            <div style="display:flex;flex-direction:column;gap:4px">
-              <sc-for list="{{ m.roles }}" as="r" hint-placeholder-count="2">
-                <div style="font:500 14px/1.45 Pretendard,sans-serif;color:#ff6b6f">{{ r }}</div>
+                <div style="font:500 14px/1.45 Pretendard,sans-serif;color:#f2f2f8">{{ r }}</div>
               </sc-for>
             </div>
           </div>
@@ -239,6 +187,59 @@
   </div>
 
   <div style="padding:32px 56px 64px;max-width:1320px;margin:0 auto">
+    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:20px">M.S.</div>
+    <div style="border-top:1px solid #262c4d">
+      <sc-for list="{{ ms }}" as="m" hint-placeholder-count="5">
+        <div style="display:grid;grid-template-columns:140px 1.15fr 0.85fr 1fr 1.25fr;gap:24px;padding:28px 0;border-bottom:1px solid #262c4d;align-items:start">
+          <div style="width:140px;aspect-ratio:1;background:#1c2142;overflow:hidden;flex:none">
+            <img src="{{ m.photo }}" alt="{{ m.name }}" style="{{ m.photoStyle }}">
+          </div>
+          <div>
+            <h3 style="font:600 17px Pretendard,sans-serif;margin:0 0 6px;color:#f2f2f8">{{ m.name }} <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">{{ m.nameKo }}</span></h3>
+            <div style="font:400 13px/1.55 Pretendard,sans-serif;color:#8f95bd;margin-bottom:8px">
+              <sc-for list="{{ m.education }}" as="ed" hint-placeholder-count="2">
+                <div>{{ ed }}</div>
+              </sc-for>
+            </div>
+            <a href="mailto:{{ m.email }}" style="display:block;font:400 13px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:6px">{{ m.email }}</a>
+            <sc-if value="{{ m.linkedin }}">
+              <a href="{{ m.linkedin }}" target="_blank" rel="noopener noreferrer" style="font:400 13px Pretendard,sans-serif;color:#7fa2e8">LinkedIn</a>
+            </sc-if>
+          </div>
+          <div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Lab Role</div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <sc-for list="{{ m.roles }}" as="r" hint-placeholder-count="2">
+                <div style="font:500 14px/1.45 Pretendard,sans-serif;color:#f2f2f8">{{ r }}</div>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Area of research</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <sc-for list="{{ m.tags }}" as="tag" hint-placeholder-count="2">
+                <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">{{ tag }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+              <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a">Publications</div>
+              <a href="{{ m.pubsHref }}" style="font:600 12px Pretendard,sans-serif;color:#89aef0">View all →</a>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <sc-for list="{{ m.pubs }}" as="pub" hint-placeholder-count="2">
+                <a href="{{ pub.href }}" style="font:400 13.5px/1.5 Pretendard,sans-serif;color:#dfe1ee">{{ pub.title }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <sc-if value="{{ hasUndergrad }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:32px 56px 64px;max-width:1320px;margin:0 auto">
     <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:20px">Undergraduate</div>
     <div style="border-top:1px solid #262c4d">
       <sc-for list="{{ undergrad }}" as="m" hint-placeholder-count="1">
@@ -259,10 +260,10 @@
             </sc-if>
           </div>
           <div>
-            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Current role</div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Lab Role</div>
             <div style="display:flex;flex-direction:column;gap:4px">
               <sc-for list="{{ m.roles }}" as="r" hint-placeholder-count="2">
-                <div style="font:500 14px/1.45 Pretendard,sans-serif;color:#ff6b6f">{{ r }}</div>
+                <div style="font:500 14px/1.45 Pretendard,sans-serif;color:#f2f2f8">{{ r }}</div>
               </sc-for>
             </div>
           </div>
@@ -289,6 +290,7 @@
       </sc-for>
     </div>
   </div>
+  </sc-if>
 
   <!-- ALUMNI -->
   <div id="alumni" style="padding:24px 56px 96px;max-width:1320px;margin:0 auto">
@@ -362,7 +364,6 @@ class Component extends DCLogic {
           ],
           email: 'sumin.cho@kist.re.kr',
           roles: [
-            'Research Trainee',
             'Computing & Server Infrastructure'
           ],
           tags: ['Medical Image Registration'],
@@ -382,7 +383,6 @@ class Component extends DCLogic {
           email: 'serdar.incenkara@kist.re.kr',
           linkedin: 'https://www.linkedin.com/in/serdar-incekara-aa2216143/',
           roles: [
-            'Research Trainee',
             'Robotics Infrastructure'
           ],
           tags: ['Computer Vision'],
@@ -402,7 +402,6 @@ class Component extends DCLogic {
           ],
           email: 'yongjun.kim@kist.re.kr',
           roles: [
-            'Research Trainee',
             'Lab Culture & Community'
           ],
           tags: ['3D-Vision', 'Multi-Modal'],
@@ -421,7 +420,6 @@ class Component extends DCLogic {
           ],
           email: 'seoa.kim@kist.re.kr',
           roles: [
-            'Research Trainee',
             'Lab Culture & Community'
           ],
           tags: ['3D-Vision', 'Medical Image Processing'],
@@ -440,7 +438,6 @@ class Component extends DCLogic {
           ],
           email: 'dongyeop.kang@kist.re.kr',
           roles: [
-            'Research Trainee',
             'Education & Training'
           ],
           tags: ['3D-Vision', 'Pattern Recognition'],
@@ -460,7 +457,6 @@ class Component extends DCLogic {
           email: 'ishitasinghfaujdar@kist.re.kr',
           linkedin: 'https://www.linkedin.com/in/ishitasinghfaujdar/',
           roles: [
-            'Research Trainee',
             'Website & Media',
             'GitHub & Documentation'
           ],
@@ -484,7 +480,6 @@ class Component extends DCLogic {
           ],
           email: 'hyeonjin.goh@kist.re.kr',
           roles: [
-            'Research Trainee',
             'Lab Captain'
           ],
           tags: ['3D-Vision', 'Visual Reasoning'],
@@ -492,17 +487,17 @@ class Component extends DCLogic {
             'Real-Time Detection and Tracking for Agricultural Robotics',
             'Visual Reasoning over Scene Graphs [placeholder]'
           ]
-        })
-      ],
-      undergrad: [
+        }),
         this.member({
           id: 'chanyoung',
           photo: 'assets/members/ChanyongKim.jpg',
           name: 'Chanyoung Kim', nameKo: '김찬영',
-          education: ['B.S., Soongsil University'],
+          education: [
+            'M.S., Korea University',
+            'B.S., Soongsil University'
+          ],
           email: 'chanyoung.kim@kist.re.kr',
           roles: [
-            'Research Trainee',
             'Education & Training'
           ],
           tags: ['Robot-Vision'],
@@ -511,6 +506,8 @@ class Component extends DCLogic {
           ]
         })
       ],
+      undergrad: [],
+      hasUndergrad: false,
       alumni: [
         { name: 'Minsun Yoo', nameKo: '유민선', role: '', now: '' }
       ],
