@@ -28,10 +28,11 @@
       <nav style="display:flex;gap:30px;font:500 13.5px Pretendard,sans-serif">
         <a href="index.html#about" style="color:#dcdee8">About</a>
         <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
-          <a href="Director.dc.html" style="color:#dcdee8">Members</a>
+          <a href="Members.dc.html" style="color:#dcdee8">Members</a>
           <div style="{{ membersMenuStyle }}">
-            <a href="Director.dc.html" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Director</a>
-            <a href="Students.dc.html" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Students</a>
+            <a href="Members.dc.html#director" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Director</a>
+            <a href="Members.dc.html#members" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Members</a>
+            <a href="Members.dc.html#alumni" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Alumni</a>
           </div>
         </div>
         <a href="Publications.dc.html" style="color:#dcdee8">Publications</a>
@@ -145,7 +146,7 @@ class Component extends DCLogic {
     news: [
       { date: '2026.07', kind: 'Announcement', headline: 'Paper accepted — "Robust 3D Human Pose Estimation for Real-World Applications" [placeholder]', href: 'Publications.dc.html' },
       { date: '2025.11', kind: 'News', headline: 'Awarded at the 2025 Korea Science and Technology Festival for the tomato-robot project [placeholder]', href: 'Projects.dc.html' },
-      { date: '2025.09', kind: 'Announcement', headline: 'New students joined Neural Vision Algorithm Lab [placeholder]', href: 'Students.dc.html' }
+      { date: '2025.09', kind: 'Announcement', headline: 'New students joined Neural Vision Algorithm Lab [placeholder]', href: 'Members.dc.html#members' }
     ],
     blogs: [
       { date: '2026.06', author: 'NVA Lab', title: 'Reading notes: vision-language models for medical images', excerpt: 'A short lab note on aligning vision and language for medical image interpretation. Replace this placeholder with a real post.', href: '#' },

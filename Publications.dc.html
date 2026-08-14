@@ -28,10 +28,11 @@
       <nav style="display:flex;gap:30px;font:500 13.5px Pretendard,sans-serif">
         <a href="Home.dc.html#about" style="color:#dcdee8">About</a>
         <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
-          <a href="Director.dc.html" style="color:#dcdee8">Members</a>
+          <a href="Members.dc.html" style="color:#dcdee8">Members</a>
           <div style="{{ membersMenuStyle }}">
-            <a href="Director.dc.html" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Director</a>
-            <a href="Students.dc.html" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Students</a>
+            <a href="Members.dc.html#director" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Director</a>
+            <a href="Members.dc.html#members" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Members</a>
+            <a href="Members.dc.html#alumni" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Alumni</a>
           </div>
         </div>
         <a href="Publications.dc.html" style="color:#fff;font-weight:600">Publications</a>
@@ -55,6 +56,13 @@
   </div>
 
   <div style="padding:96px 56px 120px;max-width:960px;margin:0 auto">
+
+    <sc-if value="{{ hasAuthorFilter }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px">
+        <div style="font:400 13px Pretendard,sans-serif;color:#8f95bd">Filtered by author</div>
+        <div style="{{ authorChipStyle }}" onClick="{{ clearAuthor }}">{{ authorLabel }} ×</div>
+      </div>
+    </sc-if>
 
     <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:52px">
       <sc-for list="{{ filterDefs }}" as="f" hint-placeholder-count="5">
@@ -109,33 +117,154 @@ class Component extends DCLogic {
   state = {
     membersOpen: false,
     boardOpen: false,
+    authorId: null,
     filters: { journal: false, conference: false, patent: false, international: false, domestic: false }
+  };
+
+  authorNames = {
+    ryu: 'Kanghyun Ryu',
+    sumin: 'Sumin Cho',
+    serdar: 'Serdar İncekara',
+    yongjun: 'Yongjun Kim',
+    seoa: 'Seoa Kim',
+    dongyeop: 'Dongyeop Kang',
+    ishita: 'Ishita Singh Faujdar',
+    hyeonjin: 'Hyeonjin Goh',
+    chanyoung: 'Chanyoung Kim'
   };
 
   publications = [
     {
-      year: 2026, tags: ['journal', 'international'],
+      year: 2026, tags: ['journal', 'international'], authorIds: ['yongjun', 'ryu'],
       badgeType: 'Journal', badgeScope: 'International', status: 'Under Review',
       title: 'Robust 3D Human Pose Estimation for Real-World Applications',
-      authors: 'Kim, Y.-J., Ryu, K.-H.', venue: 'IEEE Transactions on Pattern Analysis (submitted)'
+      authors: 'Kim, Y.-J., Ryu, K.', venue: 'IEEE Transactions on Pattern Analysis (submitted)'
     },
     {
-      year: 2025, tags: ['conference', 'domestic'],
+      year: 2026, tags: ['journal', 'international'], authorIds: ['sumin', 'ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: 'Under Review',
+      title: 'Deformable Medical Image Registration with Multi-Scale Attention [placeholder]',
+      authors: 'Cho, S., Ryu, K.', venue: 'Medical Image Analysis (submitted)'
+    },
+    {
+      year: 2025, tags: ['conference', 'domestic'], authorIds: ['seoa', 'ryu'],
       badgeType: 'Conference', badgeScope: 'Domestic', status: null,
       title: 'Vision-Language Alignment for Medical Image Interpretation',
-      authors: 'Jeong, Y.-J., Kim, S.-A., Ryu, K.-H.', venue: 'Korean Society of Medical Imaging, Fall Conference'
+      authors: 'Kim, S.-A., Ryu, K.', venue: 'Korean Society of Medical Imaging, Fall Conference'
     },
     {
-      year: 2025, tags: ['conference', 'domestic'],
+      year: 2025, tags: ['conference', 'domestic'], authorIds: ['dongyeop', 'hyeonjin', 'ryu'],
       badgeType: 'Conference', badgeScope: 'Domestic', status: null,
       title: 'Real-Time Detection and Tracking for Agricultural Robotics',
-      authors: 'Kang, D.-Y., Goh, H.-J., Ryu, K.-H.', venue: '2025 Korea Science and Technology Festival'
+      authors: 'Kang, D.-Y., Goh, H.-J., Ryu, K.', venue: '2025 Korea Science and Technology Festival'
     },
     {
-      year: 2025, tags: ['patent', 'domestic'],
-      badgeType: 'Patent', badgeScope: 'Domestic', status: 'Filed',
-      title: 'Method and System for Real-Time 3D Pose Tracking Using Multi-Modal Sensors',
-      authors: 'Ryu, K.-H.', venue: 'Korean Intellectual Property Office'
+      year: 2025, tags: ['conference', 'international'], authorIds: ['ishita', 'ryu'],
+      badgeType: 'Conference', badgeScope: 'International', status: null,
+      title: 'Robot-Vision Pipelines for Assistive Manipulation [placeholder]',
+      authors: 'Faujdar, I. S., Ryu, K.', venue: 'IEEE/RSJ IROS Workshop (placeholder)'
+    },
+    {
+      year: 2025, tags: ['conference', 'international'], authorIds: ['serdar', 'ryu'],
+      badgeType: 'Conference', badgeScope: 'International', status: null,
+      title: 'Efficient Neural Representations for Visual Recognition [placeholder]',
+      authors: 'İncekara, S., Ryu, K.', venue: 'CVPR Workshop (placeholder)'
+    },
+    {
+      year: 2025, tags: ['journal', 'domestic'], authorIds: ['sumin', 'seoa'],
+      badgeType: 'Journal', badgeScope: 'Domestic', status: null,
+      title: 'Few-Shot Alignment for Cross-Modality MRI [placeholder]',
+      authors: 'Cho, S., Kim, S.-A.', venue: 'Journal of KIISE (placeholder)'
+    },
+    {
+      year: 2025, tags: ['conference', 'domestic'], authorIds: ['yongjun', 'dongyeop'],
+      badgeType: 'Conference', badgeScope: 'Domestic', status: null,
+      title: 'Multi-View Correspondence for Outdoor Robotics [placeholder]',
+      authors: 'Kim, Y.-J., Kang, D.-Y.', venue: 'Korea Computer Vision Society (placeholder)'
+    },
+    {
+      year: 2024, tags: ['journal', 'international'], authorIds: ['ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'Comprehensive Review of Data-Driven Degradation Diagnosis of Lithium-Ion Batteries through Electrochemical and Multi-scale Imaging Analyses',
+      authors: 'Ryu, K. et al.', venue: 'Korean Journal of Chemical Engineering, 2024'
+    },
+    {
+      year: 2024, tags: ['journal', 'international'], authorIds: ['ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'MRI retrospective respiratory gating and cardiac sensing by CW Doppler radar: A feasibility study',
+      authors: 'Ryu, K. et al.', venue: 'IEEE Transactions on Biomedical Engineering, 2024'
+    },
+    {
+      year: 2024, tags: ['journal', 'international'], authorIds: ['ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'FLAIR MRI sequence synthesis using squeeze attention generative model for reliable brain tumor segmentation',
+      authors: 'Ryu, K. et al.', venue: 'Alexandria Engineering Journal, 2024'
+    },
+    {
+      year: 2024, tags: ['journal', 'international'], authorIds: ['ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'JUSTNet: Jointly unrolled cross-domain optimization based spatiotemporal reconstruction network for accelerated 3D myelin water imaging',
+      authors: 'Ryu, K. et al.', venue: 'Magnetic Resonance in Medicine, 2024'
+    },
+    {
+      year: 2024, tags: ['conference', 'international'], authorIds: ['hyeonjin', 'chanyoung'],
+      badgeType: 'Conference', badgeScope: 'International', status: null,
+      title: 'Visual Reasoning over Scene Graphs [placeholder]',
+      authors: 'Goh, H.-J., Kim, C.-Y.', venue: 'ACCV (placeholder)'
+    },
+    {
+      year: 2024, tags: ['journal', 'international'], authorIds: ['ishita', 'seoa'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'Medical Image Processing Benchmarks for Low-Resource Clinics [placeholder]',
+      authors: 'Faujdar, I. S., Kim, S.-A.', venue: 'Computers in Biology and Medicine (placeholder)'
+    },
+    {
+      year: 2024, tags: ['conference', 'domestic'], authorIds: ['chanyoung', 'ryu'],
+      badgeType: 'Conference', badgeScope: 'Domestic', status: null,
+      title: 'Open-Source Toolkit for Robot-Vision Demos [placeholder]',
+      authors: 'Kim, C.-Y., Ryu, K.', venue: 'KCC Demo Track (placeholder)'
+    },
+    {
+      year: 2024, tags: ['conference', 'international'], authorIds: ['seoa'],
+      badgeType: 'Conference', badgeScope: 'International', status: null,
+      title: 'Lightweight Segmentation for Clinical Ultrasound [placeholder]',
+      authors: 'Kim, S.-A.', venue: 'MICCAI Workshop (placeholder)'
+    },
+    {
+      year: 2023, tags: ['journal', 'international'], authorIds: ['ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'Accelerated 3D myelin water imaging using joint spatiotemporal reconstruction',
+      authors: 'Ryu, K. et al.', venue: 'Medical Physics, 2023'
+    },
+    {
+      year: 2023, tags: ['journal', 'international'], authorIds: ['ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'Accelerating High b-Value Diffusion-Weighted MRI Using a Convolutional Recurrent Neural Network (CRNN-DWI)',
+      authors: 'Ryu, K. et al.', venue: 'Bioengineering, 2023'
+    },
+    {
+      year: 2023, tags: ['journal', 'international'], authorIds: ['ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'Multi-planar 2.5 D U-Net for image quality enhancement of dental cone-beam CT',
+      authors: 'Ryu, K. et al.', venue: 'PLOS ONE, 2023'
+    },
+    {
+      year: 2023, tags: ['journal', 'international'], authorIds: ['dongyeop'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'Stereo Depth Refinement under Occlusion [placeholder]',
+      authors: 'Kang, D.-Y.', venue: 'Pattern Recognition Letters (placeholder)'
+    },
+    {
+      year: 2022, tags: ['journal', 'international'], authorIds: ['ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'Reconfigurable heterogeneous integration using stackable chips with embedded artificial intelligence',
+      authors: 'Ryu, K. et al.', venue: 'Nature Electronics, 2022'
+    },
+    {
+      year: 2022, tags: ['journal', 'international'], authorIds: ['ryu'],
+      badgeType: 'Journal', badgeScope: 'International', status: null,
+      title: 'Improving high frequency image features of deep learning reconstructions via kspace refinement with nullspace kernel',
+      authors: 'Ryu, K. et al.', venue: 'Magnetic Resonance in Medicine, 2022'
     }
   ];
 
@@ -147,6 +276,13 @@ class Component extends DCLogic {
     domestic: { bg: 'rgba(179,39,42,.16)', fg: '#ff9a9d' },
     status: { bg: 'rgba(255,255,255,.1)', fg: '#f2f2f8' }
   };
+
+  componentDidMount() {
+    try {
+      const id = new URLSearchParams(window.location.search).get('author');
+      if (id && this.authorNames[id]) this.setState({ authorId: id });
+    } catch (_) {}
+  }
 
   makeBadgeStyle(kind) {
     const c = this.badgeStyles[kind] || this.badgeStyles.status;
@@ -165,7 +301,17 @@ class Component extends DCLogic {
     this.setState((s) => ({ filters: { ...s.filters, [key]: !s.filters[key] } }));
   };
 
+  clearAuthor = () => {
+    this.setState({ authorId: null });
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('author');
+      window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+    } catch (_) {}
+  };
+
   renderVals() {
+    const authorId = this.state.authorId;
     const styledPubs = this.publications.map((p) => ({
       ...p,
       typeBadgeStyle: this.makeBadgeStyle(p.badgeType.toLowerCase()),
@@ -174,16 +320,28 @@ class Component extends DCLogic {
     }));
 
     const active = Object.keys(this.state.filters).filter((k) => this.state.filters[k]);
-    const matches = (pub) => active.length === 0 || pub.tags.some((t) => active.includes(t));
+    const matches = (pub) => {
+      const tagsOk = active.length === 0 || pub.tags.some((t) => active.includes(t));
+      const authorOk = !authorId || (pub.authorIds || []).includes(authorId);
+      return tagsOk && authorOk;
+    };
 
     const years = [...new Set(styledPubs.map((p) => p.year))].sort((a, b) => b - a);
     const groups = years
       .map((year) => ({ year, items: styledPubs.filter((p) => p.year === year && matches(p)) }))
       .filter((g) => g.items.length > 0);
 
-    const allOn = active.length === 0;
+    const tagFiltersOff = active.length === 0;
+    const allOn = tagFiltersOff && !authorId;
     const allFilter = {
-      key: 'all', label: 'All', onToggle: () => this.setState({ filters: { journal: false, conference: false, patent: false, international: false, domestic: false } }),
+      key: 'all',
+      label: 'All',
+      onToggle: () => {
+        this.setState({
+          filters: { journal: false, conference: false, patent: false, international: false, domestic: false }
+        });
+        if (authorId) this.clearAuthor();
+      },
       style: {
         font: '600 12px Pretendard,sans-serif', padding: '9px 18px', borderRadius: 20, cursor: 'pointer',
         border: allOn ? '1px solid #5b7fe0' : '1px solid #262c4d',
@@ -216,6 +374,13 @@ class Component extends DCLogic {
       closeMembers: this.closeMembers,
       openBoard: this.openBoard,
       closeBoard: this.closeBoard,
+      clearAuthor: this.clearAuthor,
+      hasAuthorFilter: !!authorId,
+      authorLabel: authorId ? (this.authorNames[authorId] || authorId) : '',
+      authorChipStyle: {
+        font: '600 12px Pretendard,sans-serif', padding: '8px 14px', borderRadius: 20, cursor: 'pointer',
+        border: '1px solid #5b7fe0', background: 'rgba(91,127,224,.14)', color: '#89aef0', userSelect: 'none'
+      },
       boardMenuStyle: {
         position: 'absolute', top: '100%', left: 0, background: '#171c38',
         border: '1px solid #262c4d', borderRadius: 8, minWidth: 170,

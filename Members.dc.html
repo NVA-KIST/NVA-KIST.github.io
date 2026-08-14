@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#12162a;font-family:'Pretendard',-apple-system,system-ui,sans-serif;color:#e7e8f2}
+  a{color:#7fa2e8;text-decoration:none}
+  a:hover{color:#ff6b6f}
+  html{scroll-behavior:smooth}
+</style>
+</helmet>
+
+<div>
+
+  <div style="background:#12162a;color:#fff">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:76px;max-width:1320px;margin:0 auto">
+      <a href="Home.dc.html" style="display:flex;align-items:center">
+        <img src="assets/logo-dark.webp" alt="NVA Lab" style="height:34px;width:auto;display:block">
+      </a>
+      <nav style="display:flex;gap:30px;font:500 13.5px Pretendard,sans-serif">
+        <a href="Home.dc.html#about" style="color:#dcdee8">About</a>
+        <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
+          <a href="Members.dc.html" style="color:#fff;font-weight:600">Members</a>
+          <div style="{{ membersMenuStyle }}">
+            <a href="Members.dc.html#director" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Director</a>
+            <a href="Members.dc.html#members" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Members</a>
+            <a href="Members.dc.html#alumni" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Alumni</a>
+          </div>
+        </div>
+        <a href="Publications.dc.html" style="color:#dcdee8">Publications</a>
+        <a href="Projects.dc.html" style="color:#dcdee8">Projects</a>
+        <div style="position:relative" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
+          <a href="Board.dc.html" style="color:#dcdee8">Board</a>
+          <div style="{{ boardMenuStyle }}">
+            <a href="Board.dc.html#album" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Album</a>
+            <a href="Board.dc.html#news" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">News</a>
+            <a href="Board.dc.html#blogs" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Research Blogs</a>
+          </div>
+        </div>
+        <a href="Contact.dc.html" style="color:#dcdee8">Contact</a>
+      </nav>
+    </div>
+    <div style="height:2px;background:linear-gradient(90deg,#1f2f6b,#b3272a,#f2a71b)"></div>
+    <div style="padding:64px 56px 56px;text-align:center">
+      <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8f95bd;margin-bottom:14px">NVA Lab</div>
+      <h1 style="font:500 42px Newsreader,serif;margin:0;color:#fff">Members</h1>
+    </div>
+  </div>
+
+  <!-- DIRECTOR -->
+  <div id="director" style="padding:96px 56px 64px;max-width:1120px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:56px">
+    <div>
+      <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:24px">Director</div>
+      <div style="width:100%;aspect-ratio:3/4;background:#1c2142;margin-bottom:24px;overflow:hidden">
+        <img src="assets/members/KanghyunRyu.JPG" alt="Kanghyun Ryu" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+      </div>
+      <h2 style="font:600 24px Pretendard,sans-serif;margin:0 0 4px;color:#f2f2f8">Kanghyun Ryu <span style="font:400 16px Pretendard,sans-serif;color:#8f95bd">류강현</span></h2>
+      <div style="font:500 13.5px Pretendard,sans-serif;color:#ff6b6f;margin-bottom:8px">Assistant Professor · Lab Director</div>
+      <div style="font:400 13px Pretendard,sans-serif;color:#8f95bd;margin-bottom:20px">AI Robotics · KIST School / UST</div>
+      <div style="font:400 13.5px/1.8 Pretendard,sans-serif;color:#a7acc9">
+        <a href="mailto:khryu@kist.re.kr">khryu@kist.re.kr</a><br>
+        <a href="tel:+8229586627">02-958-6627</a><br>
+        <a href="https://www.linkedin.com/in/kanghyun-ryu" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
+        KIST L1 Building<br>
+        Seoul, Republic of Korea
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:20px">
+        <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">AI for Medical Image Analysis</span>
+        <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">AI for Robotic Vision</span>
+        <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Video-based Action Recognition</span>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:48px;padding-top:36px">
+      <div>
+        <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:18px">Education</div>
+        <div style="border-top:1px solid #262c4d;padding-top:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;gap:20px"><div style="font:600 13.5px Pretendard,sans-serif;color:#a7acc9;width:90px;flex:none">2015 – 2020</div><div style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">Ph.D. in Electrical and Electronics Engineering, Yonsei University<br><span style="color:#8f95bd">Data-driven methodologies (numerical methods, deep learning) to improve MR images and signals</span></div></div>
+          <div style="display:flex;gap:20px"><div style="font:600 13.5px Pretendard,sans-serif;color:#a7acc9;width:90px;flex:none">2009 – 2015</div><div style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">B.S. in Electrical and Electronic Engineering, Yonsei University</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:18px">Experience</div>
+        <div style="border-top:1px solid #262c4d;padding-top:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;gap:20px"><div style="font:600 13.5px Pretendard,sans-serif;color:#a7acc9;width:110px;flex:none">2026 – Present</div><div style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">Research Affiliate, Massachusetts Institute of Technology (MIT)<br><span style="color:#8f95bd">Massachusetts, United States · Remote</span></div></div>
+          <div style="display:flex;gap:20px"><div style="font:600 13.5px Pretendard,sans-serif;color:#a7acc9;width:110px;flex:none">2025 – Present</div><div style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">Assistant Professor, AI-Robotics Division, KIST School, University of Science and Technology (UST)</div></div>
+          <div style="display:flex;gap:20px"><div style="font:600 13.5px Pretendard,sans-serif;color:#a7acc9;width:110px;flex:none">2022 – Present</div><div style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">Senior Research Scientist, Korea Institute of Science and Technology (KIST)<br><span style="color:#8f95bd">Principal Investigator, Neural Vision Algorithm Lab · AI for natural images, robotic vision, detection, agriculture</span></div></div>
+          <div style="display:flex;gap:20px"><div style="font:600 13.5px Pretendard,sans-serif;color:#a7acc9;width:110px;flex:none">2020 – 2022</div><div style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">Postdoctoral Researcher, Stanford University<br><span style="color:#8f95bd">AI-based medical image reconstruction to shorten MR scan time · dynamic cardiac cine reconstruction</span></div></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:18px">Research Interests</div>
+        <div style="border-top:1px solid #262c4d;padding-top:18px">
+          <p style="font:400 14.5px/1.85 Pretendard,sans-serif;color:#dfe1ee;margin:0 0 14px">
+            The lab explores the triad of AI, real-world deployment, and impact — combining deep learning,
+            signal processing, diffusion models, foundation models, and agentic AI with full-stack deployment
+            (MQTT, Flask, FastAPI). Flagship applications are in healthcare (MRI/CT/PET), with expanding work
+            in robotic vision and IoT sensor streams.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Medical Image Reconstruction</span>
+            <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Deep Learning</span>
+            <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Robotic Vision</span>
+            <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Foundation Models</span>
+            <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">Agentic AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px">
+          <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd">Selected Publications</div>
+          <a href="Publications.dc.html?author=ryu" style="font:600 13px Pretendard,sans-serif;color:#89aef0">View all →</a>
+        </div>
+        <div style="border-top:1px solid #262c4d;padding-top:18px;display:flex;flex-direction:column;gap:12px">
+          <a href="Publications.dc.html?author=ryu" style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">JUSTNet: Jointly unrolled cross-domain optimization based spatiotemporal reconstruction network for accelerated 3D myelin water imaging — Magnetic Resonance in Medicine, 2024</a>
+          <a href="Publications.dc.html?author=ryu" style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">FLAIR MRI sequence synthesis using squeeze attention generative model for reliable brain tumor segmentation — Alexandria Engineering Journal, 2024</a>
+          <a href="Publications.dc.html?author=ryu" style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">MRI retrospective respiratory gating and cardiac sensing by CW Doppler radar: A feasibility study — IEEE Transactions on Biomedical Engineering, 2024</a>
+          <a href="Publications.dc.html?author=ryu" style="font:400 14.5px/1.7 Pretendard,sans-serif;color:#dfe1ee">Accelerated 3D myelin water imaging using joint spatiotemporal reconstruction — Medical Physics, 2023</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEMBERS (by seniority) — columnar rows -->
+  <div id="members" style="padding:48px 56px 24px;max-width:1320px;margin:0 auto">
+    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:20px">MS-Ph.D. Combined</div>
+    <div style="border-top:1px solid #262c4d">
+      <sc-for list="{{ msphd }}" as="m" hint-placeholder-count="2">
+        <div style="display:grid;grid-template-columns:140px 1.15fr 0.85fr 1fr 1.25fr;gap:24px;padding:28px 0;border-bottom:1px solid #262c4d;align-items:start">
+          <div style="width:140px;aspect-ratio:1;background:#1c2142;overflow:hidden;flex:none">
+            <img src="{{ m.photo }}" alt="{{ m.name }}" style="{{ m.photoStyle }}">
+          </div>
+          <div>
+            <h3 style="font:600 17px Pretendard,sans-serif;margin:0 0 6px;color:#f2f2f8">{{ m.name }} <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">{{ m.nameKo }}</span></h3>
+            <div style="font:400 13px/1.55 Pretendard,sans-serif;color:#8f95bd;margin-bottom:8px">
+              <sc-for list="{{ m.education }}" as="ed" hint-placeholder-count="2">
+                <div>{{ ed }}</div>
+              </sc-for>
+            </div>
+            <a href="mailto:{{ m.email }}" style="display:block;font:400 13px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:6px">{{ m.email }}</a>
+            <sc-if value="{{ m.linkedin }}">
+              <a href="{{ m.linkedin }}" target="_blank" rel="noopener noreferrer" style="font:400 13px Pretendard,sans-serif;color:#7fa2e8">LinkedIn</a>
+            </sc-if>
+          </div>
+          <div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Current role</div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <sc-for list="{{ m.roles }}" as="r" hint-placeholder-count="2">
+                <div style="font:500 14px/1.45 Pretendard,sans-serif;color:#ff6b6f">{{ r }}</div>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Area of research</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <sc-for list="{{ m.tags }}" as="tag" hint-placeholder-count="2">
+                <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">{{ tag }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+              <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a">Publications</div>
+              <a href="{{ m.pubsHref }}" style="font:600 12px Pretendard,sans-serif;color:#89aef0">View all →</a>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <sc-for list="{{ m.pubs }}" as="pub" hint-placeholder-count="2">
+                <a href="{{ pub.href }}" style="font:400 13.5px/1.5 Pretendard,sans-serif;color:#dfe1ee">{{ pub.title }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="padding:32px 56px 24px;max-width:1320px;margin:0 auto">
+    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:20px">M.S.</div>
+    <div style="border-top:1px solid #262c4d">
+      <sc-for list="{{ ms }}" as="m" hint-placeholder-count="5">
+        <div style="display:grid;grid-template-columns:140px 1.15fr 0.85fr 1fr 1.25fr;gap:24px;padding:28px 0;border-bottom:1px solid #262c4d;align-items:start">
+          <div style="width:140px;aspect-ratio:1;background:#1c2142;overflow:hidden;flex:none">
+            <img src="{{ m.photo }}" alt="{{ m.name }}" style="{{ m.photoStyle }}">
+          </div>
+          <div>
+            <h3 style="font:600 17px Pretendard,sans-serif;margin:0 0 6px;color:#f2f2f8">{{ m.name }} <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">{{ m.nameKo }}</span></h3>
+            <div style="font:400 13px/1.55 Pretendard,sans-serif;color:#8f95bd;margin-bottom:8px">
+              <sc-for list="{{ m.education }}" as="ed" hint-placeholder-count="2">
+                <div>{{ ed }}</div>
+              </sc-for>
+            </div>
+            <a href="mailto:{{ m.email }}" style="display:block;font:400 13px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:6px">{{ m.email }}</a>
+            <sc-if value="{{ m.linkedin }}">
+              <a href="{{ m.linkedin }}" target="_blank" rel="noopener noreferrer" style="font:400 13px Pretendard,sans-serif;color:#7fa2e8">LinkedIn</a>
+            </sc-if>
+          </div>
+          <div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Current role</div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <sc-for list="{{ m.roles }}" as="r" hint-placeholder-count="2">
+                <div style="font:500 14px/1.45 Pretendard,sans-serif;color:#ff6b6f">{{ r }}</div>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Area of research</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <sc-for list="{{ m.tags }}" as="tag" hint-placeholder-count="2">
+                <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">{{ tag }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+              <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a">Publications</div>
+              <a href="{{ m.pubsHref }}" style="font:600 12px Pretendard,sans-serif;color:#89aef0">View all →</a>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <sc-for list="{{ m.pubs }}" as="pub" hint-placeholder-count="2">
+                <a href="{{ pub.href }}" style="font:400 13.5px/1.5 Pretendard,sans-serif;color:#dfe1ee">{{ pub.title }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="padding:32px 56px 64px;max-width:1320px;margin:0 auto">
+    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:20px">Undergraduate</div>
+    <div style="border-top:1px solid #262c4d">
+      <sc-for list="{{ undergrad }}" as="m" hint-placeholder-count="1">
+        <div style="display:grid;grid-template-columns:140px 1.15fr 0.85fr 1fr 1.25fr;gap:24px;padding:28px 0;border-bottom:1px solid #262c4d;align-items:start">
+          <div style="width:140px;aspect-ratio:1;background:#1c2142;overflow:hidden;flex:none">
+            <img src="{{ m.photo }}" alt="{{ m.name }}" style="{{ m.photoStyle }}">
+          </div>
+          <div>
+            <h3 style="font:600 17px Pretendard,sans-serif;margin:0 0 6px;color:#f2f2f8">{{ m.name }} <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">{{ m.nameKo }}</span></h3>
+            <div style="font:400 13px/1.55 Pretendard,sans-serif;color:#8f95bd;margin-bottom:8px">
+              <sc-for list="{{ m.education }}" as="ed" hint-placeholder-count="1">
+                <div>{{ ed }}</div>
+              </sc-for>
+            </div>
+            <a href="mailto:{{ m.email }}" style="display:block;font:400 13px Pretendard,sans-serif;color:#7fa2e8;margin-bottom:6px">{{ m.email }}</a>
+            <sc-if value="{{ m.linkedin }}">
+              <a href="{{ m.linkedin }}" target="_blank" rel="noopener noreferrer" style="font:400 13px Pretendard,sans-serif;color:#7fa2e8">LinkedIn</a>
+            </sc-if>
+          </div>
+          <div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Current role</div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <sc-for list="{{ m.roles }}" as="r" hint-placeholder-count="2">
+                <div style="font:500 14px/1.45 Pretendard,sans-serif;color:#ff6b6f">{{ r }}</div>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a;margin-bottom:8px">Area of research</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <sc-for list="{{ m.tags }}" as="tag" hint-placeholder-count="1">
+                <span style="font:600 11px Pretendard,sans-serif;padding:4px 12px;border-radius:999px;border:1px solid #3a4a8f;color:#89aef0">{{ tag }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+              <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a">Publications</div>
+              <a href="{{ m.pubsHref }}" style="font:600 12px Pretendard,sans-serif;color:#89aef0">View all →</a>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <sc-for list="{{ m.pubs }}" as="pub" hint-placeholder-count="1">
+                <a href="{{ pub.href }}" style="font:400 13.5px/1.5 Pretendard,sans-serif;color:#dfe1ee">{{ pub.title }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ALUMNI -->
+  <div id="alumni" style="padding:24px 56px 96px;max-width:1320px;margin:0 auto">
+    <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin-bottom:32px">Alumni</div>
+    <div style="border-top:1px solid #262c4d">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr;padding:14px 4px;font:600 11px Pretendard,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6f759a">
+        <div>Name</div><div>Lab role</div><div>Now at</div>
+      </div>
+      <sc-for list="{{ alumni }}" as="a" hint-placeholder-count="1">
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr;padding:18px 4px;border-top:1px solid #262c4d">
+          <div style="font:600 15px Pretendard,sans-serif;color:#f2f2f8">{{ a.name }} <span style="font:400 13px Pretendard,sans-serif;color:#8f95bd">{{ a.nameKo }}</span></div>
+          <div style="font:400 13.5px Pretendard,sans-serif;color:#8f95bd">{{ a.role }}</div>
+          <div style="font:400 13.5px Pretendard,sans-serif;color:#89aef0">{{ a.now }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="background:#12162a;color:#fff;padding:52px 56px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+      <div>
+        <img src="assets/logo-dark.webp" alt="NVA Lab" style="height:28px;width:auto;display:block;margin-bottom:14px">
+        <div style="font:400 13px Pretendard,sans-serif;color:#9ba0c2">KIST · 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</div>
+      </div>
+      <div style="font:400 12px Pretendard,sans-serif;color:#6f759a">© 2026 Neural Vision Algorithm Lab. All rights reserved.</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { membersOpen: false, boardOpen: false };
+  openMembers = () => this.setState({ membersOpen: true });
+  closeMembers = () => this.setState({ membersOpen: false });
+  openBoard = () => this.setState({ boardOpen: true });
+  closeBoard = () => this.setState({ boardOpen: false });
+
+  member(row) {
+    const href = 'Publications.dc.html?author=' + row.id;
+    const photoStyle = row.photoStyle || {
+      width: '100%', height: '100%', objectFit: 'cover',
+      objectPosition: 'center top', display: 'block'
+    };
+    const roles = row.roles || [row.role].filter(Boolean);
+    return {
+      ...row,
+      nameKo: row.nameKo || '',
+      roles,
+      photoStyle,
+      pubsHref: href,
+      pubs: (row.pubTitles || []).map((title) => ({ title, href }))
+    };
+  }
+
+  renderVals() {
+    return {
+      openMembers: this.openMembers,
+      closeMembers: this.closeMembers,
+      openBoard: this.openBoard,
+      closeBoard: this.closeBoard,
+      msphd: [
+        this.member({
+          id: 'sumin',
+          photo: 'assets/members/sumin-cho.jpg',
+          name: 'Sumin Cho', nameKo: '조수민',
+          education: [
+            'MS-Ph.D., Seoul National University',
+            'B.S., Hanyang University'
+          ],
+          email: 'sumin.cho@kist.re.kr',
+          roles: [
+            'Research Trainee',
+            'Computing & Server Infrastructure'
+          ],
+          tags: ['Medical Image Registration'],
+          pubTitles: [
+            'Deformable Medical Image Registration with Multi-Scale Attention [placeholder]',
+            'Few-Shot Alignment for Cross-Modality MRI [placeholder]'
+          ]
+        }),
+        this.member({
+          id: 'serdar',
+          photo: 'assets/members/SerdarIncenkara.jpg',
+          name: 'Serdar İncekara', nameKo: '',
+          education: [
+            'MS-Ph.D. (AI Robotics), KIST School-UST',
+            'B.S. (Computer Engineering), Gazi University'
+          ],
+          email: 'serdar.incenkara@kist.re.kr',
+          linkedin: 'https://www.linkedin.com/in/serdar-incekara-aa2216143/',
+          roles: [
+            'Research Trainee',
+            'Robotics Infrastructure'
+          ],
+          tags: ['Computer Vision'],
+          pubTitles: [
+            'Efficient Neural Representations for Visual Recognition [placeholder]'
+          ]
+        })
+      ],
+      ms: [
+        this.member({
+          id: 'yongjun',
+          photo: 'assets/members/YongjunKim.jpg',
+          name: 'Yongjun Kim', nameKo: '김용준',
+          education: [
+            'M.S., Korea University',
+            'B.S., Ajou University'
+          ],
+          email: 'yongjun.kim@kist.re.kr',
+          roles: [
+            'Research Trainee',
+            'Lab Culture & Community'
+          ],
+          tags: ['3D-Vision', 'Multi-Modal'],
+          pubTitles: [
+            'Robust 3D Human Pose Estimation for Real-World Applications',
+            'Multi-View Correspondence for Outdoor Robotics [placeholder]'
+          ]
+        }),
+        this.member({
+          id: 'seoa',
+          photo: 'assets/members/SeoaKim.jpg',
+          name: 'Seoa Kim', nameKo: '김서아',
+          education: [
+            'M.S., Seoul National University',
+            'B.S., Sogang University'
+          ],
+          email: 'seoa.kim@kist.re.kr',
+          roles: [
+            'Research Trainee',
+            'Lab Culture & Community'
+          ],
+          tags: ['3D-Vision', 'Medical Image Processing'],
+          pubTitles: [
+            'Vision-Language Alignment for Medical Image Interpretation',
+            'Lightweight Segmentation for Clinical Ultrasound [placeholder]'
+          ]
+        }),
+        this.member({
+          id: 'dongyeop',
+          photo: 'assets/members/DongyubKang.jpg',
+          name: 'Dongyeop Kang', nameKo: '강동엽',
+          education: [
+            'M.S., Korea University',
+            'B.S., SangMyung University'
+          ],
+          email: 'dongyeop.kang@kist.re.kr',
+          roles: [
+            'Research Trainee',
+            'Education & Training'
+          ],
+          tags: ['3D-Vision', 'Pattern Recognition'],
+          pubTitles: [
+            'Real-Time Detection and Tracking for Agricultural Robotics',
+            'Stereo Depth Refinement under Occlusion [placeholder]'
+          ]
+        }),
+        this.member({
+          id: 'ishita',
+          photo: 'assets/members/Ishita.jpg',
+          name: 'Ishita Singh Faujdar', nameKo: '',
+          education: [
+            'M.S., KIST School-UST',
+            'B.Tech, Christ University'
+          ],
+          email: 'ishitasinghfaujdar@kist.re.kr',
+          linkedin: 'https://www.linkedin.com/in/ishitasinghfaujdar/',
+          roles: [
+            'Research Trainee',
+            'Website & Media',
+            'GitHub & Documentation'
+          ],
+          tags: ['Robot-Vision', 'Medical Image Processing'],
+          photoStyle: {
+            width: '100%', height: '100%', objectFit: 'cover',
+            objectPosition: 'center 48%', display: 'block'
+          },
+          pubTitles: [
+            'Robot-Vision Pipelines for Assistive Manipulation [placeholder]',
+            'Medical Image Processing Benchmarks for Low-Resource Clinics [placeholder]'
+          ]
+        }),
+        this.member({
+          id: 'hyeonjin',
+          photo: 'assets/members/hyeonjin-goh.jpg',
+          name: 'Hyeonjin Goh', nameKo: '고현진',
+          education: [
+            'M.S., Seoul National University',
+            'B.S., KyungHee University'
+          ],
+          email: 'hyeonjin.goh@kist.re.kr',
+          roles: [
+            'Research Trainee',
+            'Lab Captain'
+          ],
+          tags: ['3D-Vision', 'Visual Reasoning'],
+          pubTitles: [
+            'Real-Time Detection and Tracking for Agricultural Robotics',
+            'Visual Reasoning over Scene Graphs [placeholder]'
+          ]
+        })
+      ],
+      undergrad: [
+        this.member({
+          id: 'chanyoung',
+          photo: 'assets/members/ChanyongKim.jpg',
+          name: 'Chanyoung Kim', nameKo: '김찬영',
+          education: ['B.S., Soongsil University'],
+          email: 'chanyoung.kim@kist.re.kr',
+          roles: [
+            'Research Trainee',
+            'Education & Training'
+          ],
+          tags: ['Robot-Vision'],
+          pubTitles: [
+            'Open-Source Toolkit for Robot-Vision Demos [placeholder]'
+          ]
+        })
+      ],
+      alumni: [
+        { name: 'Minsun Yoo', nameKo: '유민선', role: '', now: '' }
+      ],
+      boardMenuStyle: {
+        position: 'absolute', top: '100%', left: 0, background: '#171c38',
+        border: '1px solid #262c4d', borderRadius: 8, minWidth: 170,
+        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
+        opacity: this.state.boardOpen ? 1 : 0,
+        visibility: this.state.boardOpen ? 'visible' : 'hidden',
+        transform: this.state.boardOpen ? 'translateY(0)' : 'translateY(-6px)',
+        transition: 'opacity .15s ease, transform .15s ease'
+      },
+      membersMenuStyle: {
+        position: 'absolute', top: '100%', left: 0, background: '#171c38',
+        border: '1px solid #262c4d', borderRadius: 8, minWidth: 150,
+        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
+        opacity: this.state.membersOpen ? 1 : 0,
+        visibility: this.state.membersOpen ? 'visible' : 'hidden',
+        transform: this.state.membersOpen ? 'translateY(0)' : 'translateY(-6px)',
+        transition: 'opacity .15s ease, transform .15s ease'
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
