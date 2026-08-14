@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nva-kist.github.io/sitemap.xml
