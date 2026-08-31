@@ -38,7 +38,7 @@ window.NVA_PUBLICATIONS = [
     year: 2026, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Joint torque estimation from daily living motion for passive sarcopenia monitoring in older adults',
     doi: '10.1186/s12984-026-01962-3',
-    authorList: ['Jaehyun Jo', 'Kyunghyun Kim', 'Minji Kang', 'Kanghyun Ryu', 'Joonho Ha', 'Jaehoon Kang'],
+    authorList: ['Jaebeom Jo', 'Kihyun Kim', 'Min-gu Kang', 'Kanghyun Ryu', 'Junhyoung Ha', 'Jiyeon Kang'],
     venue: 'Journal of NeuroEngineering and Rehabilitation, vol. 23, no. 1, Apr. 2026',
     index: 'JCR Top 2.3%'
   },
@@ -46,7 +46,7 @@ window.NVA_PUBLICATIONS = [
     year: 2026, tags: ['conference', 'publication', 'international'], authorIds: ['seoa', 'ryu'],
     title: 'Context-aware 3D vessel segmentation with anatomical guidance',
     doi: '10.1109/icassp55912.2026.11465038',
-    authorList: ['Seoa Kim', 'Yoseob Han', 'Kanghyun Ryu'],
+    authorList: ['Seo A Kim', 'Yoseob Han', 'Kanghyun Ryu'],
     corresponding: ['Yoseob Han', 'Kanghyun Ryu'],
     venue: 'in Proc. IEEE ICASSP, pp. 6226–6230, 2026',
     index: '정보과학회 A급 학회'
@@ -104,7 +104,7 @@ window.NVA_PUBLICATIONS = [
     year: 2024, tags: ['journal', 'publication', 'domestic'], authorIds: ['ryu'],
     title: 'Comprehensive review of data-driven degradation diagnosis of lithium-ion batteries through electrochemical and multi-scale imaging analyses',
     doi: '10.1007/s11814-024-00277-0',
-    authorList: ['Cheolhwi Park', 'Tae-Hun Kim', 'Yung-Eun Sung', 'Kanghyun Ryu', 'Jungjin Park'],
+    authorList: ['Cheolhwi Park', 'Taehun Kim', 'Yung-Eun Sung', 'Kanghyun Ryu', 'Jungjin Park'],
     corresponding: ['Kanghyun Ryu', 'Jungjin Park'],
     venue: 'Korean Journal of Chemical Engineering, vol. 43, no. 1, pp. 1–18, Jan. 2026'
   },
@@ -134,7 +134,7 @@ window.NVA_PUBLICATIONS = [
     year: 2023, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Accelerating high b-value diffusion-weighted MRI using a convolutional recurrent neural network (CRNN-DWI)',
     doi: '10.3390/bioengineering10070864',
-    authorList: ['Zhenyu Zhong', 'Kanghyun Ryu', 'Jian Mao', 'Kun Sun', 'Guanghao Dan', 'Shreyas Vasanawala', 'Xiaojing Zhou'],
+    authorList: ['Zheng Zhong', 'Kanghyun Ryu', 'Jonathan Mao', 'Kaibao Sun', 'Guangyu Dan', 'Shreyas Vasanawala', 'Xiaohong Zhou'],
     venue: 'Bioengineering, vol. 10, no. 7, pp. 864, Jul. 2023'
   },
   {
@@ -157,14 +157,14 @@ window.NVA_PUBLICATIONS = [
     year: 2022, month: 6, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Accelerated 3D myelin water imaging using joint spatio-temporal reconstruction',
     doi: '10.1002/mp.15788',
-    authorList: ['Jae-Hun Lee', 'Jaeuk Yi', 'Jun-Hyeong Kim', 'Kanghyun Ryu', 'Dongyeob Han', 'Deog Young Kim', 'Dong-Hyun Kim'],
+    authorList: ['Jae-Hun Lee', 'Jaeuk Yi', 'Jun-Hyeong Kim', 'Kanghyun Ryu', 'Dongyeob Han', 'Sewook Kim', 'Seul Lee', 'Deog Young Kim', 'Dong-Hyun Kim'],
     venue: 'Medical Physics, vol. 49, no. 9, pp. 5929–5942, Sep. 2022'
   },
   {
     year: 2022, month: 6, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Reconfigurable heterogeneous integration enabled by stackable chips with embedded artificial intelligence',
     doi: '10.1038/s41928-022-00778-y',
-    authorList: ['Chanyeol Choi', 'Hyunseok Kim', 'Ji-Hoon Kang', 'Hanwool Yeon', 'Celesta S. Chang', 'Jun Min Suh', 'Jiho Shin', 'Yeongin Kim', 'Han Eol Lee', 'Doyoon Lee', 'Min-Kyu Song', 'Jae-Yoon Kim', 'Ikbeom Jang', 'Subeen Pang', 'Kanghyun Ryu', 'Sang-Hoon Bae', 'Yifan Nie', 'Hyun S. Kum', 'Huaqiang Wu', 'Peng Lin', 'Jeehwan Kim'],
+    authorList: ['Chanyeol Choi', 'Hyunseok Kim', 'Ji-Hoon Kang', 'Min-Kyu Song', 'Hanwool Yeon', 'Celesta S. Chang', 'Jun Min Suh', 'Jiho Shin', 'Kuangye Lu', 'Bo-In Park', 'Yeongin Kim', 'Han Eol Lee', 'Doyoon Lee', 'Jaeyong Lee', 'Ikbeom Jang', 'Subeen Pang', 'Kanghyun Ryu', 'Sang-Hoon Bae', 'Yifan Nie', 'Hyun S. Kum', 'Min-Chul Park', 'Suyoun Lee', 'Hyung-Jun Kim', 'Huaqiang Wu', 'Peng Lin', 'Jeehwan Kim'],
     venue: 'Nature Electronics, vol. 5, no. 6, pp. 386–393, Jun. 2022',
     index: 'JCR Top 0.27%'
   },
@@ -172,14 +172,14 @@ window.NVA_PUBLICATIONS = [
     year: 2022, month: 4, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Improving high-frequency image features of deep-learning reconstruction via k-space refinement with a null-space kernel',
     doi: '10.1002/mrm.29261',
-    authorList: ['Kanghyun Ryu', 'Cagan Alkan', 'Shreyas Vasanawala'],
+    authorList: ['Kanghyun Ryu', 'Cagan Alkan', 'Shreyas S. Vasanawala'],
     venue: 'Magnetic Resonance in Medicine, vol. 88, no. 3, pp. 1263–1272, Sep. 2022'
   },
   {
     year: 2022, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Improving phase-based conductivity reconstruction by means of deep-learning-based denoising of phase data for 3T MRI',
     doi: '10.1002/mrm.28826',
-    authorList: ['Kyu-Jin Jung', 'Stefano Mandija', 'Jun-Hyeong Kim', 'Kanghyun Ryu', 'Soozy Jung', 'Chuanjiang Cui', 'Dong-Hyun Kim'],
+    authorList: ['Kyu-Jin Jung', 'Stefano Mandija', 'Jun-Hyeong Kim', 'Kanghyun Ryu', 'Soozy Jung', 'Chuanjiang Cui', 'Soo-Yeon Kim', 'Mina Park', 'Cornelis A. T. van den Berg', 'Dong-Hyun Kim'],
     venue: 'Magnetic Resonance in Medicine, vol. 86, no. 4, pp. 2084–2094, Oct. 2021'
   },
   {
@@ -193,14 +193,14 @@ window.NVA_PUBLICATIONS = [
     year: 2021, month: 10, tags: ['conference', 'publication', 'international'], authorIds: ['ryu'],
     title: 'K-space refinement in deep-learning MR reconstruction via regularizing scan-specific SPIRiT-based self-consistency',
     doi: '10.1109/ICCVW54120.2021.00446',
-    authorList: ['Kanghyun Ryu', 'Cagan Alkan', 'Ikbeom Jang', 'Chanyeol Choi', 'Shreyas Vasanawala'],
+    authorList: ['Kanghyun Ryu', 'Cagan Alkan', 'Chanyeol Choi', 'Ikbeom Jang', 'Shreyas Vasanawala'],
     venue: 'ICCV Workshop on Learning for Computational Imaging, 2021'
   },
   {
     year: 2021, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Accelerated multicontrast reconstruction for synthetic MRI using joint parallel imaging and variable splitting networks',
     doi: '10.1002/mp.14848',
-    authorList: ['Kanghyun Ryu', 'Jae-Hun Lee', 'Yoonho Nam', 'Sung-Min Gho', 'Hosung Kim', 'Dong-Hyun Kim'],
+    authorList: ['Kanghyun Ryu', 'Jae-Hun Lee', 'Yoonho Nam', 'Sung-Min Gho', 'Ho-Sung Kim', 'Dong-Hyun Kim'],
     venue: 'Medical Physics, vol. 48, no. 6, pp. 2939–2950, Jun. 2021'
   },
   {
@@ -214,14 +214,14 @@ window.NVA_PUBLICATIONS = [
     year: 2020, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Stenosis detection from time-of-flight magnetic resonance angiography via deep-learning 3D squeeze-and-excitation residual networks',
     doi: '10.1109/ACCESS.2020.2977669',
-    authorList: ['Hunjin Chung', 'Koung Mi Kang', 'Mohammed A. Al-masni', 'Chul-Ho Sohn', 'Yoonho Nam', 'Kanghyun Ryu', 'Dong-Hyun Kim'],
+    authorList: ['Hunjin Chung', 'Koung Mi Kang', 'Mohammed A. Al-Masni', 'Chul-Ho Sohn', 'Yoonho Nam', 'Kanghyun Ryu', 'Dong-Hyun Kim'],
     venue: 'IEEE Access, vol. 8, pp. 43325–43335, 2020'
   },
   {
     year: 2020, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Estimating age-related changes in in vivo cerebral magnetic resonance angiography using a convolutional neural network',
     doi: '10.1016/j.neurobiolaging.2019.12.008',
-    authorList: ['Yoonho Nam', 'Jinhee Jang', 'Heayon Lee', 'Yangsean Choi', 'Na Young Shin', 'Kanghyun Ryu', 'Dong-Hyun Kim', 'So Lyung Jung', 'Kook Jin Ahn', 'Bum-Soo Kim'],
+    authorList: ['Yoonho Nam', 'Jinhee Jang', 'Hea Yon Lee', 'Yangsean Choi', 'Na Young Shin', 'Kang-Hyun Ryu', 'Dong Hyun Kim', 'So-Lyung Jung', 'Kook-jin Ahn', 'Bum-soo Kim'],
     venue: 'Neurobiology of Aging, vol. 87, pp. 125–131, Mar. 2020'
   },
   {
@@ -256,7 +256,7 @@ window.NVA_PUBLICATIONS = [
     year: 2017, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Regulation of root patterns in mammalian teeth',
     doi: '10.1038/s41598-017-12745-1',
-    authorList: ['Hyeonseok Seo', 'Jihoon Kim', 'Jung-Hoon Hwang', 'Hyun-Gi Jeong', 'Sang-Sun Han', 'Wonkyung Park', 'Kanghyun Ryu', 'Seung-Ho Hong', 'Jung-Eun Kim', 'Eun-Jung Cho', 'Jung-Wook Park', 'Kwang-Hyun Hu', 'Hyung-Jun Kim', 'Dong-Hyun Kim', 'Seung-Woo Cho'],
+    authorList: ['Hyejin Seo', 'Jinsun Kim', 'Jae Joon Hwang', 'Ho-Gul Jeong', 'Sang-Sun Han', 'Wonse Park', 'Kanghyun Ryu', 'Hong Seomun', 'Jae-Young Kim', 'Eui-Sic Cho', 'Joo-Cheol Park', 'Kyung-Seok Hu', 'Hee-Jin Kim', 'Dong-Hyun Kim', 'Sung-Won Cho'],
     venue: 'Scientific Reports, vol. 7, no. 1, Oct. 2017'
   }
 ];
