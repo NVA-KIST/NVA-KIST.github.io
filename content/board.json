@@ -1,24 +1,29 @@
 {
   "album": [
     {
-      "src": "assets/logo-dark.webp",
-      "caption": "NVA Lab mark",
-      "date": "2026.08"
+      "src": "assets/hero-icml.png",
+      "caption": "NVA Lab at ICML",
+      "date": "2025.07"
     },
     {
-      "src": "",
-      "caption": "Lab photo — add a file under assets/album/ and put the path here",
-      "date": "2026.07"
+      "src": "assets/smartfarm.png",
+      "caption": "Smart farm tomato-robot demo — Korea Science and Technology Festival",
+      "date": "2025.04"
     },
     {
-      "src": "",
-      "caption": "Seminar / visit — placeholder",
-      "date": "2026.06"
+      "src": "assets/sportsday.png",
+      "caption": "Lab sports day",
+      "date": "2025.10"
     },
     {
-      "src": "",
-      "caption": "Demo day — placeholder",
-      "date": "2025.11"
+      "src": "assets/sportsday2.png",
+      "caption": "Lab sports day",
+      "date": "2025.10"
+    },
+    {
+      "src": "assets/daejeon_demo1.png",
+      "caption": "Daejeon science festival demo",
+      "date": "2025.04"
     }
   ],
   "news": [

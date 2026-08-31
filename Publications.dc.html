@@ -4,348 +4,158 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Publications | NVA Lab — Neural Vision Algorithm Lab at KIST</title>
-<meta name="description" content="Research papers from NVA Lab (Neural Vision Algorithm Lab, NVA-KIST) at KIST on computer vision, medical imaging, and AI.">
-<meta name="keywords" content="NVA Lab publications, NVA Lab, NVA-KIST, Neural Vision Algorithm Lab, computer vision papers, medical imaging, KIST AI">
-<meta name="author" content="NVA Lab, Korea Institute of Science and Technology (KIST)">
-<meta name="robots" content="index, follow">
+<meta name="description" content="Research papers from NVA Lab on computer vision, medical imaging, and AI.">
 <link rel="canonical" href="https://nva-kist.github.io/Publications.dc.html">
 <link rel="icon" href="https://nva-kist.github.io/assets/nva-logo.png" type="image/png">
-<meta name="theme-color" content="#12162a">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="NVA Lab">
-<meta property="og:locale" content="en_US">
-<meta property="og:title" content="Publications | NVA Lab — Neural Vision Algorithm Lab at KIST">
-<meta property="og:description" content="Papers from NVA Lab (NVA-KIST) at KIST on computer vision, medical imaging, and AI.">
-<meta property="og:url" content="https://nva-kist.github.io/Publications.dc.html">
-<meta property="og:image" content="https://nva-kist.github.io/assets/nva-logo.png">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Publications | NVA Lab — Neural Vision Algorithm Lab at KIST">
-<meta name="twitter:description" content="Research publications from NVA Lab (NVA-KIST) at KIST, Seoul.">
-<meta name="twitter:image" content="https://nva-kist.github.io/assets/nva-logo.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://nva-kist.github.io/Publications.dc.html#webpage",
-  "url": "https://nva-kist.github.io/Publications.dc.html",
-  "name": "Publications | NVA Lab — Neural Vision Algorithm Lab at KIST",
-  "description": "Research papers from NVA Lab (Neural Vision Algorithm Lab, NVA-KIST) at KIST on computer vision, medical imaging, and AI.",
-  "isPartOf": { "@id": "https://nva-kist.github.io/#website" },
-  "about": { "@id": "https://nva-kist.github.io/#lab" }
-}
-</script>
+<meta name="theme-color" content="#83a4d4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/publications-data.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
-<noscript>
-  <main style="font-family:sans-serif;max-width:720px;margin:48px auto;padding:0 24px;line-height:1.6">
-    <h1>Publications | NVA Lab — Neural Vision Algorithm Lab at KIST</h1>
-    <p>NVA Lab (also NVA, NVA LAB, NVA-KIST, Neural Vision Algorithms Lab) is a computer vision and AI research group at the Korea Institute of Science and Technology (KIST) in Seoul.</p>
-    <nav>
-      <a href="index.html">Home</a> ·
-      <a href="Members.dc.html">Members</a> ·
-      <a href="Publications.dc.html">Publications</a> ·
-      <a href="Projects.dc.html">Projects</a> ·
-      <a href="Board.dc.html">Board</a> ·
-      <a href="Contact.dc.html">Contact</a>
-    </nav>
-  </main>
-</noscript>
 <x-dc>
-<helmet data-dc-atomics>
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;background:#12162a;font-family:'Pretendard',-apple-system,system-ui,sans-serif;color:#e7e8f2}
-  a{color:#7fa2e8;text-decoration:none}
-  a:hover{color:#ff6b6f}
-</style>
-</helmet>
-
+<helmet data-dc-atomics></helmet>
 <div>
-
-  <div style="background:#12162a;color:#fff">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:76px;max-width:1320px;margin:0 auto">
+  <div class="site-header">
+    <div class="site-header-bar">
       <a href="Home.dc.html" style="display:flex;align-items:center">
-        <img src="assets/logo-dark.webp" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:34px;width:auto;display:block">
+        <img src="assets/nva-logo.png" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:34px;width:auto;display:block">
       </a>
-      <nav style="display:flex;gap:30px;font:500 13.5px Pretendard,sans-serif">
-        <a href="Home.dc.html#about" style="color:#dcdee8">About</a>
+      <nav class="site-nav">
+        <a href="Home.dc.html#about">About</a>
         <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
-          <a href="Members.dc.html" style="color:#dcdee8">Members</a>
-          <div style="{{ membersMenuStyle }}">
-            <a href="Members.dc.html#director" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Director</a>
-            <a href="Members.dc.html#members" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Members</a>
-            <a href="Members.dc.html#alumni" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Alumni</a>
+          <a href="Members.dc.html">Members</a>
+          <div style="{{ membersMenuStyle }}" class="nav-drop">
+            <a href="Members.dc.html#director">Director</a>
+            <a href="Members.dc.html#members">Members</a>
+            <a href="Members.dc.html#alumni">Alumni</a>
           </div>
         </div>
-        <a href="Publications.dc.html" style="color:#fff;font-weight:600">Publications</a>
-        <a href="Projects.dc.html" style="color:#dcdee8">Projects</a>
+        <a href="Publications.dc.html" class="nav-active">Publications</a>
+        <a href="Projects.dc.html">Projects</a>
         <div style="position:relative" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
-          <a href="Board.dc.html" style="color:#dcdee8">Board</a>
-          <div style="{{ boardMenuStyle }}">
-            <a href="Board.dc.html#album" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Album</a>
-            <a href="Board.dc.html#news" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">News</a>
-            <a href="Board.dc.html#blogs" style="display:block;padding:10px 18px;color:#dfe1ee;font:500 13px Pretendard,sans-serif;white-space:nowrap">Research Blogs</a>
+          <a href="Board.dc.html">Board</a>
+          <div style="{{ boardMenuStyle }}" class="nav-drop">
+            <a href="Board.dc.html#album">Album</a>
+            <a href="Board.dc.html#news">News</a>
+            <a href="Board.dc.html#blogs">Research Blogs</a>
           </div>
         </div>
-        <a href="Contact.dc.html" style="color:#dcdee8">Contact</a>
+        <a href="Contact.dc.html">Contact</a>
       </nav>
     </div>
-    <div style="height:2px;background:linear-gradient(90deg,#1f2f6b,#b3272a,#f2a71b)"></div>
-    <div style="padding:64px 56px 56px;text-align:center">
-      <div style="font:600 11px Pretendard,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8f95bd;margin-bottom:14px">NVA Lab · Neural Vision Algorithm Lab · KIST</div>
-      <h1 style="font:500 42px Newsreader,serif;margin:0;color:#fff">Publications</h1>
+    <div class="site-header-rule">
+      <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,199,222,.85))"></div>
+      <div style="display:flex;gap:5px;flex:none">
+        <div style="width:30px;height:3px;background:#5b7fe0;border-radius:2px"></div>
+        <div style="width:30px;height:3px;background:#b3272a;border-radius:2px"></div>
+        <div style="width:30px;height:3px;background:#f2a71b;border-radius:2px"></div>
+      </div>
+      <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(184,199,222,.85),transparent)"></div>
+    </div>
+    <div class="page-header">
+      <p class="page-eyebrow">NVA Lab. · I2RC, Korea Institute of Science and Technology</p>
+      <h1 class="page-title">Publications</h1>
     </div>
   </div>
 
-  <div style="padding:96px 56px 120px;max-width:960px;margin:0 auto">
-
+  <div class="pub-wrap">
     <sc-if value="{{ hasAuthorFilter }}" hint-placeholder-val="{{ false }}">
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px">
-        <div style="font:400 13px Pretendard,sans-serif;color:#8f95bd">Filtered by author</div>
-        <div style="{{ authorChipStyle }}" onClick="{{ clearAuthor }}">{{ authorLabel }} ×</div>
+        <div class="text-small">Filtered by author</div>
+        <div class="site-chip is-on" onClick="{{ clearAuthor }}">{{ authorLabel }} ×</div>
       </div>
     </sc-if>
-
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:52px">
-      <sc-for list="{{ filterDefs }}" as="f" hint-placeholder-count="5">
-        <div style="{{ f.style }}" onClick="{{ f.onToggle }}">{{ f.label }}</div>
-      </sc-for>
-    </div>
-
     <sc-if value="{{ hasResults }}" hint-placeholder-val="{{ true }}">
+      <div class="pub-count">{{ pubCountLabel }}</div>
       <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
-        <div style="font:600 12px Pretendard,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8f95bd;margin:0 0 24px">{{ g.year }}</div>
-        <div style="border-top:1px solid #262c4d;margin-bottom:44px">
-          <sc-for list="{{ g.items }}" as="pub" hint-placeholder-count="2">
-            <div style="padding:28px 0;border-bottom:1px solid #262c4d;display:flex;gap:24px">
-              <div style="width:96px;height:96px;flex:none;background:repeating-linear-gradient(45deg,#1c2142,#1c2142 8px,#242a4d 8px,#242a4d 16px);display:flex;align-items:center;justify-content:center;font:10px ui-monospace,monospace;color:#6f75a0;text-align:center">figure</div>
-              <div>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px">
-                  <span style="{{ pub.typeBadgeStyle }}">{{ pub.badgeType }}</span>
-                  <span style="{{ pub.scopeBadgeStyle }}">{{ pub.badgeScope }}</span>
-                  <sc-if value="{{ pub.status }}">
-                    <span style="{{ pub.statusBadgeStyle }}">{{ pub.status }}</span>
-                  </sc-if>
-                </div>
-                <h3 style="font:600 17px/1.5 Pretendard,sans-serif;margin:0 0 8px;color:#f2f2f8">{{ pub.title }}</h3>
-                <div style="font:400 13.5px Pretendard,sans-serif;color:#a7acc9">{{ pub.authors }} · {{ pub.venue }}</div>
-              </div>
-            </div>
-          </sc-for>
-        </div>
+        <div class="pub-year">{{ g.label }}</div>
+        <sc-for list="{{ g.items }}" as="pub" hint-placeholder-count="2">
+          <div class="pub-item">
+            <h3 class="pub-title"><span class="pub-num">[{{ pub.num }}]</span>{{ pub.title }}</h3>
+            <div class="pub-authors">{{ pub.authors }}</div>
+            <div class="pub-venue">{{ pub.venue }}</div>
+            <sc-if value="{{ pub.index }}"><div class="pub-meta">{{ pub.index }}</div></sc-if>
+            <sc-if value="{{ pub.status }}"><div class="pub-meta">{{ pub.status }}</div></sc-if>
+            <sc-if value="{{ pub.doiUrl }}"><div style="margin-top:5px"><a class="pub-doi" href="{{ pub.doiUrl }}" target="_blank" rel="noopener noreferrer">doi:{{ pub.doi }}</a></div></sc-if>
+          </div>
+        </sc-for>
       </sc-for>
     </sc-if>
     <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
-      <div style="border-top:1px solid #262c4d;padding:40px 0;font:400 14.5px/1.8 Pretendard,sans-serif;color:#8f95bd;text-align:center">No publications match the selected filters.</div>
+      <div class="pub-empty">No publications match the selected author filter.</div>
     </sc-if>
-
+    <sc-if value="{{ showAuthorNotes }}" hint-placeholder-val="{{ false }}">
+      <div class="pub-notes" style="margin-top:32px;padding-top:20px;border-top:1px solid #b8c7de">
+        <sc-if value="{{ showCoFirstNote }}">* Co-first author</sc-if>
+        <sc-if value="{{ showCorrNote }}"><sc-if value="{{ showCoFirstNote }}"><br></sc-if>+ Corresponding author</sc-if>
+      </div>
+    </sc-if>
   </div>
 
-  <div style="background:#12162a;color:#fff;padding:52px 56px">
-    <div style="max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+  <div class="site-footer">
+    <div class="site-footer-inner">
       <div>
-        <img src="assets/logo-dark.webp" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:28px;width:auto;display:block;margin-bottom:14px">
-        <div style="font:400 13px Pretendard,sans-serif;color:#9ba0c2">KIST · 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</div>
+        <img src="assets/nva-logo.png" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:28px;width:auto;display:block;margin-bottom:14px">
+        <div class="site-footer-addr">KIST · 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</div>
       </div>
-      <div style="font:400 12px Pretendard,sans-serif;color:#6f759a">© 2026 NVA Lab (Neural Vision Algorithm Lab, NVA-KIST). All rights reserved.</div>
+      <div class="site-footer-copy">© 2026 NVA Lab (Neural Vision Algorithm Lab, NVA-KIST). All rights reserved.</div>
     </div>
   </div>
-
 </div>
-
 </x-dc>
+
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = {
-    membersOpen: false,
-    boardOpen: false,
-    authorId: null,
-    filters: { journal: false, conference: false, patent: false, international: false, domestic: false }
-  };
+  state = { membersOpen: false, boardOpen: false, authorId: null };
+  authorNames = { ryu:'Kanghyun Ryu', sumin:'Sumin Cho', serdar:'Serdar İncekara', yongjun:'Yongjun Kim', seoa:'Seoa Kim', dongyeop:'Dongyeop Kang', ishita:'Ishita Singh Faujdar', hyeonjin:'Hyeonjin Goh', chanyoung:'Chanyoung Kim' };
+  publications = (typeof window !== 'undefined' && window.NVA_PUBLICATIONS) ? window.NVA_PUBLICATIONS : [];
+  openMembers = () => this.setState({ membersOpen: true });
+  closeMembers = () => this.setState({ membersOpen: false });
+  openBoard = () => this.setState({ boardOpen: true });
+  closeBoard = () => this.setState({ boardOpen: false });
 
-  authorNames = {
-    ryu: 'Kanghyun Ryu',
-    sumin: 'Sumin Cho',
-    serdar: 'Serdar İncekara',
-    yongjun: 'Yongjun Kim',
-    seoa: 'Seoa Kim',
-    dongyeop: 'Dongyeop Kang',
-    ishita: 'Ishita Singh Faujdar',
-    hyeonjin: 'Hyeonjin Goh',
-    chanyoung: 'Chanyoung Kim'
-  };
-
-  publications = [
-    {
-      year: 2026, tags: ['journal', 'international'], authorIds: ['yongjun', 'ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: 'Under Review',
-      title: 'Robust 3D Human Pose Estimation for Real-World Applications',
-      authors: 'Kim, Y.-J., Ryu, K.', venue: 'IEEE Transactions on Pattern Analysis (submitted)'
-    },
-    {
-      year: 2026, tags: ['journal', 'international'], authorIds: ['sumin', 'ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: 'Under Review',
-      title: 'Deformable Medical Image Registration with Multi-Scale Attention [placeholder]',
-      authors: 'Cho, S., Ryu, K.', venue: 'Medical Image Analysis (submitted)'
-    },
-    {
-      year: 2025, tags: ['conference', 'domestic'], authorIds: ['seoa', 'ryu'],
-      badgeType: 'Conference', badgeScope: 'Domestic', status: null,
-      title: 'Vision-Language Alignment for Medical Image Interpretation',
-      authors: 'Kim, S.-A., Ryu, K.', venue: 'Korean Society of Medical Imaging, Fall Conference'
-    },
-    {
-      year: 2025, tags: ['conference', 'domestic'], authorIds: ['dongyeop', 'hyeonjin', 'ryu'],
-      badgeType: 'Conference', badgeScope: 'Domestic', status: null,
-      title: 'Real-Time Detection and Tracking for Agricultural Robotics',
-      authors: 'Kang, D.-Y., Goh, H.-J., Ryu, K.', venue: '2025 Korea Science and Technology Festival'
-    },
-    {
-      year: 2025, tags: ['conference', 'international'], authorIds: ['ishita', 'ryu'],
-      badgeType: 'Conference', badgeScope: 'International', status: null,
-      title: 'Robot-Vision Pipelines for Assistive Manipulation [placeholder]',
-      authors: 'Faujdar, I. S., Ryu, K.', venue: 'IEEE/RSJ IROS Workshop (placeholder)'
-    },
-    {
-      year: 2025, tags: ['conference', 'international'], authorIds: ['serdar', 'ryu'],
-      badgeType: 'Conference', badgeScope: 'International', status: null,
-      title: 'Efficient Neural Representations for Visual Recognition [placeholder]',
-      authors: 'İncekara, S., Ryu, K.', venue: 'CVPR Workshop (placeholder)'
-    },
-    {
-      year: 2025, tags: ['journal', 'domestic'], authorIds: ['sumin', 'seoa'],
-      badgeType: 'Journal', badgeScope: 'Domestic', status: null,
-      title: 'Few-Shot Alignment for Cross-Modality MRI [placeholder]',
-      authors: 'Cho, S., Kim, S.-A.', venue: 'Journal of KIISE (placeholder)'
-    },
-    {
-      year: 2025, tags: ['conference', 'domestic'], authorIds: ['yongjun', 'dongyeop'],
-      badgeType: 'Conference', badgeScope: 'Domestic', status: null,
-      title: 'Multi-View Correspondence for Outdoor Robotics [placeholder]',
-      authors: 'Kim, Y.-J., Kang, D.-Y.', venue: 'Korea Computer Vision Society (placeholder)'
-    },
-    {
-      year: 2024, tags: ['journal', 'international'], authorIds: ['ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'Comprehensive Review of Data-Driven Degradation Diagnosis of Lithium-Ion Batteries through Electrochemical and Multi-scale Imaging Analyses',
-      authors: 'Ryu, K. et al.', venue: 'Korean Journal of Chemical Engineering, 2024'
-    },
-    {
-      year: 2024, tags: ['journal', 'international'], authorIds: ['ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'MRI retrospective respiratory gating and cardiac sensing by CW Doppler radar: A feasibility study',
-      authors: 'Ryu, K. et al.', venue: 'IEEE Transactions on Biomedical Engineering, 2024'
-    },
-    {
-      year: 2024, tags: ['journal', 'international'], authorIds: ['ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'FLAIR MRI sequence synthesis using squeeze attention generative model for reliable brain tumor segmentation',
-      authors: 'Ryu, K. et al.', venue: 'Alexandria Engineering Journal, 2024'
-    },
-    {
-      year: 2024, tags: ['journal', 'international'], authorIds: ['ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'JUSTNet: Jointly unrolled cross-domain optimization based spatiotemporal reconstruction network for accelerated 3D myelin water imaging',
-      authors: 'Ryu, K. et al.', venue: 'Magnetic Resonance in Medicine, 2024'
-    },
-    {
-      year: 2024, tags: ['conference', 'international'], authorIds: ['hyeonjin', 'chanyoung'],
-      badgeType: 'Conference', badgeScope: 'International', status: null,
-      title: 'Visual Reasoning over Scene Graphs [placeholder]',
-      authors: 'Goh, H.-J., Kim, C.-Y.', venue: 'ACCV (placeholder)'
-    },
-    {
-      year: 2024, tags: ['journal', 'international'], authorIds: ['ishita', 'seoa'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'Medical Image Processing Benchmarks for Low-Resource Clinics [placeholder]',
-      authors: 'Faujdar, I. S., Kim, S.-A.', venue: 'Computers in Biology and Medicine (placeholder)'
-    },
-    {
-      year: 2024, tags: ['conference', 'domestic'], authorIds: ['chanyoung', 'ryu'],
-      badgeType: 'Conference', badgeScope: 'Domestic', status: null,
-      title: 'Open-Source Toolkit for Robot-Vision Demos [placeholder]',
-      authors: 'Kim, C.-Y., Ryu, K.', venue: 'KCC Demo Track (placeholder)'
-    },
-    {
-      year: 2024, tags: ['conference', 'international'], authorIds: ['seoa'],
-      badgeType: 'Conference', badgeScope: 'International', status: null,
-      title: 'Lightweight Segmentation for Clinical Ultrasound [placeholder]',
-      authors: 'Kim, S.-A.', venue: 'MICCAI Workshop (placeholder)'
-    },
-    {
-      year: 2023, tags: ['journal', 'international'], authorIds: ['ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'Accelerated 3D myelin water imaging using joint spatiotemporal reconstruction',
-      authors: 'Ryu, K. et al.', venue: 'Medical Physics, 2023'
-    },
-    {
-      year: 2023, tags: ['journal', 'international'], authorIds: ['ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'Accelerating High b-Value Diffusion-Weighted MRI Using a Convolutional Recurrent Neural Network (CRNN-DWI)',
-      authors: 'Ryu, K. et al.', venue: 'Bioengineering, 2023'
-    },
-    {
-      year: 2023, tags: ['journal', 'international'], authorIds: ['ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'Multi-planar 2.5 D U-Net for image quality enhancement of dental cone-beam CT',
-      authors: 'Ryu, K. et al.', venue: 'PLOS ONE, 2023'
-    },
-    {
-      year: 2023, tags: ['journal', 'international'], authorIds: ['dongyeop'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'Stereo Depth Refinement under Occlusion [placeholder]',
-      authors: 'Kang, D.-Y.', venue: 'Pattern Recognition Letters (placeholder)'
-    },
-    {
-      year: 2022, tags: ['journal', 'international'], authorIds: ['ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'Reconfigurable heterogeneous integration using stackable chips with embedded artificial intelligence',
-      authors: 'Ryu, K. et al.', venue: 'Nature Electronics, 2022'
-    },
-    {
-      year: 2022, tags: ['journal', 'international'], authorIds: ['ryu'],
-      badgeType: 'Journal', badgeScope: 'International', status: null,
-      title: 'Improving high frequency image features of deep learning reconstructions via kspace refinement with nullspace kernel',
-      authors: 'Ryu, K. et al.', venue: 'Magnetic Resonance in Medicine, 2022'
-    }
-  ];
-
-  badgeStyles = {
-    journal: { bg: 'rgba(91,127,224,.16)', fg: '#89aef0' },
-    conference: { bg: 'rgba(91,127,224,.16)', fg: '#89aef0' },
-    patent: { bg: 'rgba(242,167,27,.16)', fg: '#f2c05e' },
-    international: { bg: 'rgba(179,39,42,.16)', fg: '#ff9a9d' },
-    domestic: { bg: 'rgba(179,39,42,.16)', fg: '#ff9a9d' },
-    status: { bg: 'rgba(255,255,255,.1)', fg: '#f2f2f8' }
-  };
-
+  menuStyle(open) {
+    return {
+      position: 'absolute', top: '100%', left: 0, background: '#fff',
+      border: '1px solid #b8c7de', borderRadius: 8, minWidth: 170,
+      boxShadow: '0 8px 24px rgba(28,40,69,.12)', padding: '6px 0', zIndex: 30,
+      opacity: open ? 1 : 0,
+      visibility: open ? 'visible' : 'hidden',
+      transform: open ? 'translateY(0)' : 'translateY(-6px)',
+      transition: 'opacity .15s ease, transform .15s ease'
+    };
+  }
+  formatAuthors(pub) {
+    const norm = n => n.trim().toLowerCase();
+    const cors = new Set((pub.corresponding || []).map(norm));
+    const cof = new Set((pub.coFirst || []).map(norm));
+    const self = norm('Kanghyun Ryu');
+    const parts = [];
+    (pub.authorList || []).forEach((name, i) => {
+      if (i) parts.push(', ');
+      const base = name.trim();
+      const marks = (cof.has(norm(base)) ? '*' : '') + (cors.has(norm(base)) ? '+' : '');
+      if (norm(base) === self) {
+        parts.push(React.createElement(React.Fragment, { key: i },
+          React.createElement('strong', { style: { fontWeight: 600 } }, base), marks));
+      } else parts.push(base + marks);
+    });
+    return parts;
+  }
+  isPrevious(pub) {
+    if (pub.year < 2022) return true;
+    if (pub.year > 2022) return false;
+    return (pub.month || 0) < 8;
+  }
   componentDidMount() {
     try {
       const id = new URLSearchParams(window.location.search).get('author');
       if (id && this.authorNames[id]) this.setState({ authorId: id });
     } catch (_) {}
   }
-
-  makeBadgeStyle(kind) {
-    const c = this.badgeStyles[kind] || this.badgeStyles.status;
-    return {
-      font: '600 11px Pretendard,sans-serif', padding: '3px 10px', borderRadius: 20,
-      background: c.bg, color: c.fg
-    };
-  }
-
-  openMembers = () => this.setState({ membersOpen: true });
-  closeMembers = () => this.setState({ membersOpen: false });
-  openBoard = () => this.setState({ boardOpen: true });
-  closeBoard = () => this.setState({ boardOpen: false });
-
-  toggleFilter = (key) => {
-    this.setState((s) => ({ filters: { ...s.filters, [key]: !s.filters[key] } }));
-  };
-
   clearAuthor = () => {
     this.setState({ authorId: null });
     try {
@@ -354,100 +164,34 @@ class Component extends DCLogic {
       window.history.replaceState({}, '', url.pathname + url.search + url.hash);
     } catch (_) {}
   };
-
   renderVals() {
     const authorId = this.state.authorId;
-    const styledPubs = this.publications.map((p) => ({
-      ...p,
-      typeBadgeStyle: this.makeBadgeStyle(p.badgeType.toLowerCase()),
-      scopeBadgeStyle: this.makeBadgeStyle(p.badgeScope.toLowerCase()),
-      statusBadgeStyle: this.makeBadgeStyle('status')
+    const pubKey = p => p.title + '|' + p.year;
+    const ranked = [...this.publications].sort((a, b) => b.year - a.year || (b.month || 0) - (a.month || 0));
+    const numMap = new Map(ranked.map((p, i) => [pubKey(p), i + 1]));
+    const styled = this.publications.map(p => ({
+      ...p, num: numMap.get(pubKey(p)), authors: this.formatAuthors(p),
+      doiUrl: p.doi ? `https://doi.org/${p.doi}` : null
     }));
-
-    const active = Object.keys(this.state.filters).filter((k) => this.state.filters[k]);
-    const matches = (pub) => {
-      const tagsOk = active.length === 0 || pub.tags.some((t) => active.includes(t));
-      const authorOk = !authorId || (pub.authorIds || []).includes(authorId);
-      return tagsOk && authorOk;
-    };
-
-    const years = [...new Set(styledPubs.map((p) => p.year))].sort((a, b) => b - a);
-    const groups = years
-      .map((year) => ({ year, items: styledPubs.filter((p) => p.year === year && matches(p)) }))
-      .filter((g) => g.items.length > 0);
-
-    const tagFiltersOff = active.length === 0;
-    const allOn = tagFiltersOff && !authorId;
-    const allFilter = {
-      key: 'all',
-      label: 'All',
-      onToggle: () => {
-        this.setState({
-          filters: { journal: false, conference: false, patent: false, international: false, domestic: false }
-        });
-        if (authorId) this.clearAuthor();
-      },
-      style: {
-        font: '600 12px Pretendard,sans-serif', padding: '9px 18px', borderRadius: 20, cursor: 'pointer',
-        border: allOn ? '1px solid #5b7fe0' : '1px solid #262c4d',
-        background: allOn ? 'rgba(91,127,224,.14)' : 'transparent',
-        color: allOn ? '#89aef0' : '#a7acc9', userSelect: 'none'
-      }
-    };
-
-    const filterDefs = [allFilter].concat([
-      { key: 'journal', label: 'Journal' },
-      { key: 'conference', label: 'Conference' },
-      { key: 'patent', label: 'Patent' },
-      { key: 'international', label: 'International' },
-      { key: 'domestic', label: 'Domestic' }
-    ].map((f) => {
-      const on = this.state.filters[f.key];
-      return {
-        key: f.key, label: f.label, onToggle: () => this.toggleFilter(f.key),
-        style: {
-          font: '600 12px Pretendard,sans-serif', padding: '9px 18px', borderRadius: 20, cursor: 'pointer',
-          border: on ? '1px solid #5b7fe0' : '1px solid #262c4d',
-          background: on ? 'rgba(91,127,224,.14)' : 'transparent',
-          color: on ? '#89aef0' : '#a7acc9', userSelect: 'none'
-        }
-      };
-    }));
-
+    const matches = pub => !authorId || (pub.authorIds || []).includes(authorId);
+    const filtered = styled.filter(matches);
+    const mainPubs = filtered.filter(p => !this.isPrevious(p));
+    const prevPubs = filtered.filter(p => this.isPrevious(p)).sort((a, b) => b.year - a.year || (b.month || 0) - (a.month || 0));
+    const years = [...new Set(mainPubs.map(p => p.year))].sort((a, b) => b - a);
+    const groups = years.map(y => ({ label: String(y), items: mainPubs.filter(p => p.year === y).sort((a, b) => (b.month || 0) - (a.month || 0)) })).filter(g => g.items.length);
+    if (prevPubs.length) groups.push({ label: 'Previous', items: prevPubs });
     return {
-      openMembers: this.openMembers,
-      closeMembers: this.closeMembers,
-      openBoard: this.openBoard,
-      closeBoard: this.closeBoard,
-      clearAuthor: this.clearAuthor,
-      hasAuthorFilter: !!authorId,
+      openMembers: this.openMembers, closeMembers: this.closeMembers,
+      openBoard: this.openBoard, closeBoard: this.closeBoard,
+      clearAuthor: this.clearAuthor, hasAuthorFilter: !!authorId,
       authorLabel: authorId ? (this.authorNames[authorId] || authorId) : '',
-      authorChipStyle: {
-        font: '600 12px Pretendard,sans-serif', padding: '8px 14px', borderRadius: 20, cursor: 'pointer',
-        border: '1px solid #5b7fe0', background: 'rgba(91,127,224,.14)', color: '#89aef0', userSelect: 'none'
-      },
-      boardMenuStyle: {
-        position: 'absolute', top: '100%', left: 0, background: '#171c38',
-        border: '1px solid #262c4d', borderRadius: 8, minWidth: 170,
-        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
-        opacity: this.state.boardOpen ? 1 : 0,
-        visibility: this.state.boardOpen ? 'visible' : 'hidden',
-        transform: this.state.boardOpen ? 'translateY(0)' : 'translateY(-6px)',
-        transition: 'opacity .15s ease, transform .15s ease'
-      },
-      membersMenuStyle: {
-        position: 'absolute', top: '100%', left: 0, background: '#171c38',
-        border: '1px solid #262c4d', borderRadius: 8, minWidth: 150,
-        boxShadow: '0 12px 28px rgba(0,0,0,.4)', padding: '6px 0', zIndex: 30,
-        opacity: this.state.membersOpen ? 1 : 0,
-        visibility: this.state.membersOpen ? 'visible' : 'hidden',
-        transform: this.state.membersOpen ? 'translateY(0)' : 'translateY(-6px)',
-        transition: 'opacity .15s ease, transform .15s ease'
-      },
-      filterDefs,
-      groups,
-      hasResults: groups.length > 0,
-      noResults: groups.length === 0
+      membersMenuStyle: this.menuStyle(this.state.membersOpen),
+      boardMenuStyle: this.menuStyle(this.state.boardOpen),
+      groups, pubCountLabel: authorId ? `${filtered.length} of ${this.publications.length} publications` : `${this.publications.length} publications`,
+      hasResults: groups.length > 0, noResults: groups.length === 0,
+      showAuthorNotes: filtered.some(p => (p.corresponding || []).length || (p.coFirst || []).length),
+      showCorrNote: filtered.some(p => (p.corresponding || []).length),
+      showCoFirstNote: filtered.some(p => (p.coFirst || []).length)
     };
   }
 }
