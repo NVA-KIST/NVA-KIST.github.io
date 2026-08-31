@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<script src="assets/board-data.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -72,14 +73,12 @@
     <div class="section-title" style="margin-bottom:28px">About Us</div>
     <div class="about-grid">
       <div>
-        <p class="about-lead"><span class="about-hl"><a href="https://www.kist.re.kr/">KIST</a> <span class="hero-nva"><span style="color:#5b7fe0">N</span>eural <span style="color:#b3272a">V</span>ision <span style="color:#f2a71b">A</span>lgorithm</span> Laboratory (NVA Lab)</span>은</p>
-        <p class="about-body">인공지능(AI), 실제 배포, 사회적 영향의 삼각축을 탐구하는 연구실입니다. 딥러닝, <span class="about-kw">의료 영상(MRI/CT/PET)</span>, 로봇 비전을 결합해 헬스케어와 그 너머의 응용을 연구합니다. 2022년 9월 설립.</p>
-        <p class="about-body">대학원생 및 인턴을 모집합니다. 관심 있으시면 <a href="Contact.dc.html">Contact</a>로 연락해 주세요.</p>
+        <p class="about-body">NVA Lab은 영상과 데이터를 이해하는 <span class="about-kw">AI 알고리즘</span>을 연구합니다. <span class="about-kw">의료영상</span>, <span class="about-kw">비디오</span>, <span class="about-kw">바이오 데이터</span>, <span class="about-kw">로봇 비전</span>처럼 복잡하고 정답이 명확하지 않은 실제 문제를 다루며, 기존 모델을 단순히 적용하기보다 문제의 특성에 맞는 <span class="about-hl">독자적인 방법</span>을 개발하고 학문적으로도 우수 <span class="about-hl">국제 SCIE 저널</span> 또는 <span class="about-hl">국제 인공지능 학술대회</span>에 발표하는 것을 목표로 합니다.</p>
+        <p class="about-body">다양한 <span class="about-kw">정부 연구과제</span>를 수행하며 <span class="about-kw">병원</span>, <span class="about-kw">대학</span>, <span class="about-kw">기업</span>, <span class="about-kw">KIST</span> 내 여러 연구팀과 협력하고 있습니다. 새로운 아이디어를 <span class="about-hl">수학과 알고리즘</span>으로 구체화하고, 직접 코드로 구현해 <span class="about-hl">실제 데이터와 시스템</span>에서 검증하는 전 과정을 함께 연구합니다.</p>
       </div>
       <div>
-        <p class="about-lead"><span class="about-hl"><a href="https://www.kist.re.kr/">KIST</a> <span class="hero-nva"><span style="color:#5b7fe0">N</span>eural <span style="color:#b3272a">V</span>ision <span style="color:#f2a71b">A</span>lgorithm</span> Laboratory (NVA Lab)</span></p>
-        <p class="about-body">We explore the triad of <span class="about-kw">AI</span>, real-world deployment, and impact — combining deep learning, medical imaging (MRI/CT/PET), and robotic vision for healthcare and beyond — established September 2022.</p>
-        <p class="about-body">We welcome graduate students and interns. Please <a href="Contact.dc.html">contact us</a> if you are interested in joining.</p>
+        <p class="about-body">NVA Lab develops <span class="about-kw">AI algorithms</span> for understanding visual information and complex data. We focus on challenging real-world problems where clear-cut answers are often unavailable, including <span class="about-kw">medical imaging</span>, <span class="about-kw">video understanding</span>, <span class="about-kw">biomedical data analysis</span>, and <span class="about-kw">robotic vision</span>. Rather than simply applying existing models, we aim to develop <span class="about-hl">original methods</span> tailored to the unique characteristics of each problem and publish our research in leading <span class="about-hl">international SCIE journals</span> and <span class="about-hl">AI conferences</span>.</p>
+        <p class="about-body">Our lab participates in various <span class="about-kw">government-funded research projects</span> and actively collaborates with <span class="about-kw">hospitals</span>, <span class="about-kw">universities</span>, industry partners, and research teams across <span class="about-kw">KIST</span>. We pursue the entire research process—from formulating new ideas through <span class="about-hl">mathematical and algorithmic principles</span>, to implementing them in code and validating them using <span class="about-hl">real-world data and systems</span>.</p>
       </div>
     </div>
   </div>
@@ -116,18 +115,12 @@
       <a href="Board.dc.html#news" class="news-link">All news →</a>
     </div>
     <div>
-      <a href="Publications.dc.html" class="news-row">
-        <div class="news-date">2026.07</div>
-        <div><div class="news-kind">Announcement</div><div class="news-body">Paper accepted — "Robust 3D Human Pose Estimation for Real-World Applications" [placeholder]</div></div>
-      </a>
-      <a href="Projects.dc.html" class="news-row">
-        <div class="news-date">2025.11</div>
-        <div><div class="news-kind">News</div><div class="news-body">Awarded at the 2025 Korea Science and Technology Festival for the tomato-robot project [placeholder]</div></div>
-      </a>
-      <a href="Members.dc.html#members" class="news-row">
-        <div class="news-date">2025.09</div>
-        <div><div class="news-kind">Announcement</div><div class="news-body">New students joined Neural Vision Algorithm Lab [placeholder]</div></div>
-      </a>
+      <sc-for list="{{ news }}" as="item" hint-placeholder-count="3">
+        <a href="{{ item.href }}" class="news-row">
+          <div class="news-date">{{ item.date }}</div>
+          <div><div class="news-kind">{{ item.kind }}</div><div class="news-body">{{ item.headline }}</div></div>
+        </a>
+      </sc-for>
     </div>
   </div>
 
@@ -145,7 +138,7 @@
 
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { membersOpen: false, boardOpen: false };
+  state = { membersOpen: false, boardOpen: false, news: [] };
   openMembers = () => this.setState({ membersOpen: true });
   closeMembers = () => this.setState({ membersOpen: false });
   openBoard = () => this.setState({ boardOpen: true });
@@ -162,6 +155,9 @@ class Component extends DCLogic {
       transition: 'opacity .15s ease, transform .15s ease'
     };
   }
+  componentDidMount() {
+    if (window.NVA_BOARD && window.NVA_BOARD.news) this.setState({ news: window.NVA_BOARD.news });
+  }
   renderVals() {
     return {
       openMembers: this.openMembers,
@@ -169,7 +165,8 @@ class Component extends DCLogic {
       openBoard: this.openBoard,
       closeBoard: this.closeBoard,
       membersMenuStyle: this.menuStyle(this.state.membersOpen),
-      boardMenuStyle: this.menuStyle(this.state.boardOpen)
+      boardMenuStyle: this.menuStyle(this.state.boardOpen),
+      news: this.state.news
     };
   }
 }

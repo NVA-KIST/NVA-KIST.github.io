@@ -1,4 +1,4 @@
-{
+window.NVA_BOARD = {
   "album": [
     {
       "src": "assets/sportsday.png",
@@ -62,4 +62,4 @@
       "href": "#"
     }
   ]
-}
+};

@@ -61,7 +61,7 @@
     </div>
   </div>
 
-  <div id="director" class="director-profile site-main site-main--narrow" style="padding-top:64px;padding-bottom:48px">
+  <div id="director" class="director-profile site-main" style="padding-top:64px;padding-bottom:48px">
     <div style="display:grid;grid-template-columns:280px 1fr;gap:56px">
       <div>
         <div class="subsection-title">Director</div>
@@ -85,22 +85,21 @@
         </div>
         <div class="subsection-title" style="margin-top:36px">Experience</div>
         <div class="cv-list">
+          <div class="cv-row"><div class="cv-date w-wide">2026 – Present</div><div class="cv-body">AI 분과 겸무위원, <a href="https://iecc.kist.re.kr/home/homeIndex.do">KIST 혁신기업협력센터</a><div class="cv-note">KIST 협력 기업 기술 자문 및 지원</div></div></div>
           <div class="cv-row"><div class="cv-date w-wide">2026 – Present</div><div class="cv-body">Research Affiliate, Massachusetts Institute of Technology (MIT)</div></div>
           <div class="cv-row"><div class="cv-date w-wide">2025 – Present</div><div class="cv-body">Assistant Professor, AI-Robotics Division, KIST School, UST</div></div>
           <div class="cv-row"><div class="cv-date w-wide">2022 – Present</div><div class="cv-body">Senior Research Scientist, KIST<div class="cv-note">Principal Investigator, Neural Vision Algorithm Lab</div></div></div>
           <div class="cv-row"><div class="cv-date w-wide">2020 – 2022</div><div class="cv-body">Postdoctoral Researcher, Stanford University</div></div>
-          <div class="cv-row"><div class="cv-date w-wide">2026 – Present</div><div class="cv-body">AI-Robotics Division 겸무위원, <a href="https://iecc.kist.re.kr/home/homeIndex.do">KIST 혁신기업협력센터</a><div class="cv-note">KIST 협력 기업 기술 자문 및 지원</div></div></div>
         </div>
-        <div class="subsection-title" style="margin-top:36px">Research Collaboration</div>
-        <div class="collab-grid" style="margin-top:8px">
-          <div class="collab-logo"><img src="assets/collaborators/korea.png" alt="Korea University" class="wide"></div>
-          <div class="collab-logo"><img src="assets/collaborators/ssu.png" alt="Soongsil University"></div>
-          <div class="collab-logo"><img src="assets/collaborators/snuh.png" alt="Seoul National University Hospital"></div>
-          <div class="collab-logo"><img src="assets/collaborators/kfupm.svg" alt="KFUPM" class="seal"></div>
-          <div class="collab-logo"><img src="assets/collaborators/mit.png" alt="MIT"></div>
-          <div class="collab-logo"><img src="assets/collaborators/upmc.png" alt="UPMC"></div>
-          <div class="collab-logo"><img src="assets/collaborators/khu.png" alt="Kyung Hee University"></div>
-        </div>
+      </div>
+    </div>
+    <div class="director-about">
+      <div class="subsection-title">About Myself</div>
+      <div class="director-about-body">
+        <p>저는 <strong>전기전자공학부</strong>를 졸업하고 같은 전공으로 대학원에 진학했습니다. 학부 때는 <strong>신호처리와 통신</strong>처럼 <strong>수학과 알고리즘</strong>을 활용하는 과목을 좋아했고, <strong>해석학</strong>과 <strong>선형대수</strong> 같은 수학과 수업도 흥미롭게 들었습니다.</p>
+        <p>아무도 모르는 특이한 분야를 공부해 보고 싶어 <strong>MRI</strong> 연구실에 진학했습니다. 대학원에서는 MRI 장비에서 획득한 raw signal을 영상으로 복원하는 <strong>computational imaging</strong>을 중심으로, <strong>고속 MRI</strong>, <strong>inverse problem</strong>, <strong>parameter estimation</strong> 등을 연구했습니다. 측정된 신호만으로 보이지 않는 영상을 복원하고, 불완전한 데이터에서 필요한 정보를 추정하는 과정에 관심이 많았습니다.</p>
+        <p>이후 <strong>Stanford</strong>의 MRI 연구실에서 박사후연구원으로 근무하며 어린이를 위한 <strong>고속 MRI</strong> 기술을 연구했습니다. 스캔 시간을 줄이면서도 진단에 필요한 영상 품질을 확보하기 위한 <strong>영상 복원</strong> 및 <strong>딥러닝 알고리즘</strong>을 개발했습니다.</p>
+        <p>현재는 <strong>KIST</strong> 선임연구원으로 근무하며 <strong>의료영상</strong>과 <strong>헬스케어 AI</strong>를 비롯해 <strong>컴퓨터 비전</strong>, <strong>바이오 AI</strong>, <strong>로봇 비전</strong> 등으로 연구 영역을 넓혀가고 있습니다. 겉으로는 서로 다른 분야처럼 보이지만, 데이터를 이해하고 문제를 <strong>수학적으로 정의</strong>한 뒤 <strong>알고리즘</strong>으로 해결한다는 점에서는 공통점이 많습니다.</p>
       </div>
     </div>
   </div>
@@ -136,6 +135,19 @@
           </div>
         </div>
       </sc-for>
+    </div>
+  </div>
+
+  <div class="director-collab site-main" style="padding-top:32px">
+    <div class="subsection-title">Research Collaboration</div>
+    <div class="collab-grid" style="margin-top:8px">
+      <div class="collab-logo"><img src="assets/collaborators/korea.png" alt="Korea University" class="wide"></div>
+      <div class="collab-logo"><img src="assets/collaborators/ssu.png" alt="Soongsil University"></div>
+      <div class="collab-logo"><img src="assets/collaborators/snuh.png" alt="Seoul National University Hospital"></div>
+      <div class="collab-logo"><img src="assets/collaborators/kfupm.svg" alt="KFUPM" class="seal"></div>
+      <div class="collab-logo"><img src="assets/collaborators/mit.png" alt="MIT"></div>
+      <div class="collab-logo"><img src="assets/collaborators/upmc.png" alt="UPMC"></div>
+      <div class="collab-logo"><img src="assets/collaborators/khu.png" alt="Kyung Hee University"></div>
     </div>
   </div>
 
@@ -209,8 +221,8 @@ class Component extends DCLogic {
             education:['MS-Ph.D. (AI Robotics), KIST School-UST','B.S. (Computer Engineering), Gazi University'],
             research:'Robotics', email:'serdar.incenkara@kist.re.kr', advisor:'Advisor: Junhyoung Ha (Mechanical Engineering, UNIST)' }),
           this.member({ photo:'assets/members/yeonjae_jeong.jpg', name:'Yeonjae Jung', nameKo:'정연재',
-            education:['MS-Ph.D., Interdisciplinary Program in Bioengineering, Seoul National University'],
-            research:'Robotic VLA', advisor:'Co-Advisor: Jinsoo Kim (SNU)' })
+            education:['MS-Ph.D., Interdisciplinary Program in Bioengineering, Seoul National University','B.S., Soongsil University'],
+            research:'Robotic VLA', advisor:'Co-Advisor: Jinsoo Kim (EE, SNU)' })
         ]},
         { name: 'M.S.', members: [
           this.member({ photo:'assets/members/YongjunKim.jpg', name:'Yongjun Kim', nameKo:'김용준',
@@ -230,7 +242,7 @@ class Component extends DCLogic {
         ]},
         { name: 'Intern', members: [
           this.member({ photo:'assets/members/hyeonjin-goh.jpg', name:'Hyeonjin Goh', nameKo:'고현진', status:'Intern',
-            education:['M.S., Seoul National University','B.S., KyungHee University'],
+            education:['B.S., KyungHee University'],
             research:'Robotics VLA', email:'hyeonjin.goh@kist.re.kr' })
         ]},
         { name: 'Undergraduate Intern', members: [

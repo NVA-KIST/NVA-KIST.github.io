@@ -25,6 +25,13 @@ html{scroll-behavior:smooth}
 .site-main--narrow{max-width:960px}
 .pub-wrap{padding:48px 56px 120px;max-width:960px;margin:0 auto;width:100%;box-sizing:border-box}
 .site-main--contact{max-width:1020px;display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.contact-guide{max-width:960px;padding-top:0}
+.contact-guide-body{display:flex;flex-direction:column;gap:14px}
+.contact-guide-body p{font:400 15px/1.8 'Source Sans 3',sans-serif;color:#1c2845;margin:0;word-break:keep-all}
+.contact-guide-list{margin:0 0 8px;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px}
+.contact-guide-list li{font:400 15px/1.8 'Source Sans 3',sans-serif;color:#1c2845;word-break:keep-all;padding-left:18px;position:relative}
+.contact-guide-list li::before{content:'';position:absolute;left:0;top:.72em;width:6px;height:6px;border-radius:50%;background:#5b7fe0}
+.contact-section{margin-top:40px;padding-top:36px;border-top:1px solid #b8c7de}
 .site-footer{padding:52px 56px;box-sizing:border-box}
 .site-footer-inner{max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
 .site-footer-addr{font:400 13px/1.6 'Source Sans 3',sans-serif;color:#4a5c78}
@@ -40,7 +47,8 @@ html{scroll-behavior:smooth}
 .news-link{font:600 13px 'Source Sans 3',sans-serif;color:#89aef0}
 
 .pub-item{padding:22px 0;border-bottom:1px solid #b8c7de}
-.pub-year{font:600 12px 'Source Sans 3',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#4a5c78;margin:0 0 24px}
+.pub-year{font:600 17px 'Source Sans 3',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#1c2845;margin:36px 0 20px}
+.pub-year:first-of-type{margin-top:0}
 .pub-count{font:400 13px 'Source Sans 3',sans-serif;color:#4a5c78;margin:0 0 36px}
 .pub-title{font:600 15px/1.45 'Source Sans 3',sans-serif;margin:0 0 6px;color:#1c2845}
 .pub-num{font-weight:600;color:#5b7fe0;margin-right:6px}
@@ -55,6 +63,7 @@ html{scroll-behavior:smooth}
 .board-card{border:1px solid #b8c7de;background:rgba(255,255,255,.55);padding:28px 32px;display:block}
 .board-card-title{font:600 18px/1.35 'Source Sans 3',sans-serif;margin:0 0 10px;color:#1c2845}
 .board-card-body{font:400 14px/1.7 'Source Sans 3',sans-serif;color:#4a5c78;margin:0}
+.research-card-img img{width:100%;height:auto;display:block;image-rendering:auto}
 .board-photo-date{font:600 13px 'Source Sans 3',sans-serif;color:#ff6b6f;margin-bottom:6px}
 .board-photo-caption{font:400 14px/1.55 'Source Sans 3',sans-serif;color:#1c2845}
 .board-meta{font:400 13px 'Source Sans 3',sans-serif;color:#4a5c78}
@@ -108,6 +117,11 @@ html{scroll-behavior:smooth}
 .director-cv .cv-body{font:400 15px/1.75 'Source Sans 3',sans-serif;color:#1c2845}
 .director-cv .cv-note{font:400 14px/1.7 'Source Sans 3',sans-serif;color:#4a5c78}
 .director-cv .cv-list{display:flex;flex-direction:column;gap:16px;border-top:1px solid #b8c7de;padding-top:20px}
+.director-about{margin-top:40px;padding-top:36px;border-top:1px solid #b8c7de}
+.director-about-body{display:flex;flex-direction:column;gap:16px;max-width:100%}
+.director-about-body p{font:400 15px/1.8 'Source Sans 3',sans-serif;color:#1c2845;margin:0;word-break:keep-all}
+.director-about-body strong{font-weight:600;color:#132a58}
+.director-collab{margin-top:40px;padding-top:36px;border-top:1px solid #b8c7de}
 
 .member-areas{display:flex;flex-direction:column;gap:32px}
 .members-section-title{margin-bottom:28px;text-align:center}

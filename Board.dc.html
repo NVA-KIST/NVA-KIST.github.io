@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
-
+<script src="assets/board-data.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -67,12 +67,12 @@
       <div class="site-chip {{ newsChipClass }}" onClick="{{ showNews }}">News</div>
       <div class="site-chip {{ blogsChipClass }}" onClick="{{ showBlogs }}">Blogs</div>
     </div>
-    <sc-if true="{{ isAlbum }}">
+    <sc-if value="{{ isAlbum }}">
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
         <sc-for list="{{ album }}" as="photo" hint-placeholder-count="4">
           <div class="board-card">
             <div style="aspect-ratio:4/3;overflow:hidden;margin:-28px -32px 16px;background:#dfe8f5">
-              <sc-if true="{{ photo.hasImage }}"><img src="{{ photo.src }}" alt="{{ photo.caption }}" style="width:100%;height:100%;object-fit:cover;display:block"></sc-if>
+              <sc-if value="{{ photo.hasImage }}"><img src="{{ photo.src }}" alt="{{ photo.caption }}" style="width:100%;height:100%;object-fit:cover;display:block"></sc-if>
             </div>
             <div class="board-photo-date">{{ photo.date }}</div>
             <div class="board-photo-caption">{{ photo.caption }}</div>
@@ -80,7 +80,7 @@
         </sc-for>
       </div>
     </sc-if>
-    <sc-if true="{{ isNews }}">
+    <sc-if value="{{ isNews }}">
       <sc-for list="{{ news }}" as="item" hint-placeholder-count="3">
         <a href="{{ item.href }}" class="news-row">
           <div class="news-date">{{ item.date }}</div>
@@ -88,7 +88,7 @@
         </a>
       </sc-for>
     </sc-if>
-    <sc-if true="{{ isBlogs }}">
+    <sc-if value="{{ isBlogs }}">
       <sc-for list="{{ blogs }}" as="post" hint-placeholder-count="2">
         <a href="{{ post.href }}" class="board-card" style="margin-bottom:20px">
           <div class="board-meta" style="margin-bottom:10px">{{ post.date }} · {{ post.author }}</div>
@@ -137,20 +137,44 @@ class Component extends DCLogic {
     const h = (location.hash || '').replace('#', '').toLowerCase();
     return h === 'album' || h === 'news' || h === 'blogs' ? h : 'news';
   }
+  albumKey(date) {
+    const [y, m] = (date || '0.0').split('.').map(Number);
+    return y * 100 + (m || 0);
+  }
+  sortAlbum(items) {
+    return [...items].sort((a, b) => this.albumKey(b.date) - this.albumKey(a.date));
+  }
+  mapAlbum(items) {
+    return this.sortAlbum(items).map(p => ({ ...p, hasImage: !!(p.src && p.src.trim()) }));
+  }
   applyContent(data) {
     this.setState({
-      album: (data.album || []).map(p => ({ ...p, hasImage: !!(p.src && p.src.trim()) })),
+      album: this.mapAlbum(data.album || []),
       news: data.news || [], blogs: data.blogs || []
     });
   }
+  loadBoard() {
+    if (window.NVA_BOARD) this.applyContent(window.NVA_BOARD);
+  }
   componentDidMount() {
     this.setState({ tab: this.tabFromHash() });
+    this.loadBoard();
     this._onHash = () => this.setState({ tab: this.tabFromHash() });
     window.addEventListener('hashchange', this._onHash);
-    fetch('content/board.json').then(r => r.ok ? r.json() : Promise.reject()).then(d => this.applyContent(d)).catch(() => {});
+    fetch('content/board.json').then(r => {
+      if (!r.ok) throw new Error('board.json ' + r.status);
+      return r.json();
+    }).then(d => this.applyContent(d)).catch(() => {});
   }
   componentWillUnmount() { if (this._onHash) window.removeEventListener('hashchange', this._onHash); }
   chipCls(on) { return on ? 'is-on' : ''; }
+  boardItems(key) {
+    const fromState = this.state[key];
+    if (fromState && fromState.length) return fromState;
+    const d = window.NVA_BOARD || {};
+    if (key === 'album') return this.mapAlbum(d.album || []);
+    return d[key] || [];
+  }
   renderVals() {
     const tab = this.state.tab;
     return {
@@ -162,7 +186,7 @@ class Component extends DCLogic {
       albumChipClass: this.chipCls(tab === 'album'), newsChipClass: this.chipCls(tab === 'news'),
       blogsChipClass: this.chipCls(tab === 'blogs'),
       isAlbum: tab === 'album', isNews: tab === 'news', isBlogs: tab === 'blogs',
-      album: this.state.album, news: this.state.news, blogs: this.state.blogs
+      album: this.boardItems('album'), news: this.boardItems('news'), blogs: this.boardItems('blogs')
     };
   }
 }
