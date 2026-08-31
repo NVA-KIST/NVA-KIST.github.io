@@ -107,34 +107,122 @@
   <div id="members" class="site-main" style="padding-top:32px">
     <div class="subsection-title members-section-title">Members</div>
     <div class="member-groups">
-      <sc-for list="{{ groups }}" as="group" hint-placeholder-count="2">
-        <div class="member-group">
-          <div class="member-group-title">{{ group.name }}</div>
-          <div class="member-grid">
-            <sc-for list="{{ group.members }}" as="m" hint-placeholder-count="3">
-              <div class="{{ m.cardClass }}">
-                <div class="member-photo">
-                  <sc-if value="{{ m.hasPhoto }}"><img src="{{ m.photo }}" alt="{{ m.name }}" style="{{ m.photoStyle }}"></sc-if>
-                </div>
-                <div class="member-info">
-                  <div class="member-name">{{ m.name }} <span class="member-name-ko">{{ m.nameKo }}</span></div>
-                  <sc-if value="{{ m.status }}"><span class="member-status">{{ m.status }}</span></sc-if>
-                  <sc-if value="{{ m.hasEducation }}">
-                    <div class="member-edu-list">
-                      <sc-for list="{{ m.education }}" as="ed" hint-placeholder-count="2"><div class="member-edu">{{ ed }}</div></sc-for>
-                    </div>
-                  </sc-if>
-                  <sc-if value="{{ m.research }}"><span class="member-area-tag">{{ m.research }}</span></sc-if>
-                  <sc-if value="{{ m.hasAdvisorFmt }}">
-                    <div class="member-advisor"><span class="member-advisor-label">{{ m.advisorRole }}:</span><span class="member-advisor-name">{{ m.advisorName }}</span> <span class="member-advisor-aff">({{ m.advisorAff }})</span></div>
-                  </sc-if>
-                  <sc-if value="{{ m.email }}"><a class="member-email" href="mailto:{{ m.email }}">{{ m.email }}</a></sc-if>
-                </div>
-              </div>
-            </sc-for>
+      <div class="member-group">
+        <div class="member-group-title">MS-Ph.D.</div>
+        <div class="member-grid">
+          <div class="member-card">
+            <div class="member-photo"><img src="assets/members/SuminCho.jpg" alt="Sumin Cho"></div>
+            <div class="member-info">
+              <div class="member-name">Sumin Cho <span class="member-name-ko">조수민</span></div>
+              <div class="member-edu-list"><div class="member-edu">MS-Ph.D., Interdisciplinary Program in Bioengineering, Seoul National University</div><div class="member-edu">B.S., Hanyang University</div></div>
+              <span class="member-area-tag">Medical &amp; Bio AI</span>
+              <div class="member-advisor"><span class="member-advisor-label">Co-Advisor:</span><span class="member-advisor-name">Dongheon Lee</span> <span class="member-advisor-aff">(Bioengineering, SNU)</span></div>
+              <a class="member-email" href="mailto:sumin.cho@kist.re.kr">sumin.cho@kist.re.kr</a>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo"><img src="assets/members/SerdarIncenkara.jpg" alt="Serdar İncekara"></div>
+            <div class="member-info">
+              <div class="member-name">Serdar İncekara</div>
+              <div class="member-edu-list"><div class="member-edu">MS-Ph.D. (AI Robotics), KIST School-UST</div><div class="member-edu">B.S. (Computer Engineering), Gazi University</div></div>
+              <span class="member-area-tag">Robotics</span>
+              <div class="member-advisor"><span class="member-advisor-label">Advisor:</span><span class="member-advisor-name">Junhyoung Ha</span> <span class="member-advisor-aff">(Mechanical Engineering, UNIST)</span></div>
+              <a class="member-email" href="mailto:serdar.incenkara@kist.re.kr">serdar.incenkara@kist.re.kr</a>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo"><img src="assets/members/yeonjae_jeong.jpg" alt="Yeonjae Jung"></div>
+            <div class="member-info">
+              <div class="member-name">Yeonjae Jung <span class="member-name-ko">정연재</span></div>
+              <div class="member-edu-list"><div class="member-edu">MS-Ph.D., Interdisciplinary Program in Bioengineering, Seoul National University</div><div class="member-edu">B.S., Soongsil University</div></div>
+              <span class="member-area-tag">Robotic VLA</span>
+              <div class="member-advisor"><span class="member-advisor-label">Co-Advisor:</span><span class="member-advisor-name">Jinsoo Kim</span> <span class="member-advisor-aff">(EE, SNU)</span></div>
+            </div>
           </div>
         </div>
-      </sc-for>
+      </div>
+      <div class="member-group">
+        <div class="member-group-title">M.S.</div>
+        <div class="member-grid">
+          <div class="member-card">
+            <div class="member-photo"><img src="assets/members/YongjunKim.jpg" alt="Yongjun Kim"></div>
+            <div class="member-info">
+              <div class="member-name">Yongjun Kim <span class="member-name-ko">김용준</span></div>
+              <div class="member-edu-list"><div class="member-edu">M.S., Department of Electrical Engineering, Korea University</div><div class="member-edu">B.S., Ajou University</div></div>
+              <span class="member-area-tag">Medical &amp; Bio AI</span>
+              <div class="member-advisor"><span class="member-advisor-label">Co-Advisor:</span><span class="member-advisor-name">Kyong Hwan Jin</span> <span class="member-advisor-aff">(Electrical Engineering, Korea Univ.)</span></div>
+              <a class="member-email" href="mailto:yongjun.kim@kist.re.kr">yongjun.kim@kist.re.kr</a>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo"><img src="assets/members/SeoaKim.jpg" alt="Seoa Kim"></div>
+            <div class="member-info">
+              <div class="member-name">Seoa Kim <span class="member-name-ko">김서아</span></div>
+              <div class="member-edu-list"><div class="member-edu">M.S., Interdisciplinary Program in Bioengineering, Seoul National University</div><div class="member-edu">B.S., Sogang University</div></div>
+              <span class="member-area-tag">Medical Image Processing</span>
+              <div class="member-advisor"><span class="member-advisor-label">Co-Advisor:</span><span class="member-advisor-name">Dongheon Lee</span> <span class="member-advisor-aff">(Bioengineering, SNU)</span></div>
+              <a class="member-email" href="mailto:seoa.kim@kist.re.kr">seoa.kim@kist.re.kr</a>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo"><img src="assets/members/DongyubKang.jpg" alt="Dongyeop Kang"></div>
+            <div class="member-info">
+              <div class="member-name">Dongyeop Kang <span class="member-name-ko">강동엽</span></div>
+              <div class="member-edu-list"><div class="member-edu">M.S., Department of Electrical Engineering, Korea University</div><div class="member-edu">B.S., SangMyung University</div></div>
+              <span class="member-area-tag">Robotic Vision</span>
+              <div class="member-advisor"><span class="member-advisor-label">Co-Advisor:</span><span class="member-advisor-name">Kyong Hwan Jin</span> <span class="member-advisor-aff">(Electrical Engineering, Korea Univ.)</span></div>
+              <a class="member-email" href="mailto:dongyeop.kang@kist.re.kr">dongyeop.kang@kist.re.kr</a>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo member-photo--ishita"><img src="assets/members/Ishita.jpg" alt="Ishita Singh Faujdar"></div>
+            <div class="member-info">
+              <div class="member-name">Ishita Singh Faujdar</div>
+              <div class="member-edu-list"><div class="member-edu">M.S., KIST School-UST (AI-Robotics Division)</div><div class="member-edu">B.Tech, Christ University</div></div>
+              <span class="member-area-tag">Robotic VLA</span>
+              <a class="member-email" href="mailto:ishitasinghfaujdar@kist.re.kr">ishitasinghfaujdar@kist.re.kr</a>
+            </div>
+          </div>
+          <div class="member-card placeholder">
+            <div class="member-photo empty"></div>
+            <div class="member-info">
+              <div class="member-name">Eashaan</div>
+              <div class="member-edu-list"><div class="member-edu">M.S., KIST School-UST (AI-Robotics Division)</div></div>
+              <span class="member-area-tag">Robotic VLA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="member-group">
+        <div class="member-group-title">Intern</div>
+        <div class="member-grid">
+          <div class="member-card">
+            <div class="member-photo"><img src="assets/members/hyeonjin-goh.jpg" alt="Hyeonjin Goh"></div>
+            <div class="member-info">
+              <div class="member-name">Hyeonjin Goh <span class="member-name-ko">고현진</span></div>
+              <span class="member-status">Intern</span>
+              <div class="member-edu-list"><div class="member-edu">B.S., KyungHee University</div></div>
+              <span class="member-area-tag">Robotics VLA</span>
+              <a class="member-email" href="mailto:hyeonjin.goh@kist.re.kr">hyeonjin.goh@kist.re.kr</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="member-group">
+        <div class="member-group-title">Undergraduate Intern</div>
+        <div class="member-grid">
+          <div class="member-card">
+            <div class="member-photo"><img src="assets/members/ChanyongKim.jpg" alt="Chanyoung Kim"></div>
+            <div class="member-info">
+              <div class="member-name">Chanyoung Kim <span class="member-name-ko">김찬영</span></div>
+              <span class="member-status">Undergraduate Intern</span>
+              <div class="member-edu-list"><div class="member-edu">B.S., Soongsil University</div></div>
+              <span class="member-area-tag">Robotics Vision</span>
+              <a class="member-email" href="mailto:chanyoung.kim@kist.re.kr">chanyoung.kim@kist.re.kr</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -154,13 +242,11 @@
   <div id="alumni" class="site-main" style="padding-top:32px;padding-bottom:96px">
     <div class="subsection-title">Alumni</div>
     <div style="border-top:1px solid #b8c7de;margin-top:18px">
-      <sc-for list="{{ alumni }}" as="a" hint-placeholder-count="1">
-        <div style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr;padding:18px 4px;border-bottom:1px solid #b8c7de">
-          <div class="member-name">{{ a.name }} <span class="member-name-ko">{{ a.nameKo }}</span></div>
-          <div class="text-small">{{ a.role }}</div>
-          <div class="text-small">{{ a.now }}</div>
-        </div>
-      </sc-for>
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr;padding:18px 4px;border-bottom:1px solid #b8c7de">
+        <div class="member-name">Minsun Yoo <span class="member-name-ko">유민선</span></div>
+        <div class="text-small"></div>
+        <div class="text-small"></div>
+      </div>
     </div>
   </div>
 
@@ -195,62 +281,12 @@ class Component extends DCLogic {
       transition: 'opacity .15s ease, transform .15s ease'
     };
   }
-  member(row) {
-    const photoStyle = row.photoStyle || { width:'100%', height:'100%', objectFit:'cover', objectPosition:'center top', display:'block' };
-    const adv = row.advisor?.match(/^(Co-Advisor|Advisor):\s*(.+?)\s*\((.+)\)$/);
-    return {
-      ...row, nameKo: row.nameKo || '', education: row.education || [],
-      hasEducation: (row.education || []).length > 0, photoStyle,
-      hasPhoto: !!row.photo, cardClass: row.placeholder ? 'member-card placeholder' : 'member-card',
-      hasAdvisorFmt: !!adv, advisorRole: adv?.[1] || '', advisorName: adv?.[2] || '', advisorAff: adv?.[3] || '',
-      status: row.status || ''
-    };
-  }
   renderVals() {
     return {
       openMembers: this.openMembers, closeMembers: this.closeMembers,
       openBoard: this.openBoard, closeBoard: this.closeBoard,
       membersMenuStyle: this.menuStyle(this.state.membersOpen),
-      boardMenuStyle: this.menuStyle(this.state.boardOpen),
-      groups: [
-        { name: 'MS-Ph.D.', members: [
-          this.member({ photo:'assets/members/SuminCho.jpg', name:'Sumin Cho', nameKo:'조수민',
-            education:['MS-Ph.D., Interdisciplinary Program in Bioengineering, Seoul National University','B.S., Hanyang University'],
-            research:'Medical & Bio AI', email:'sumin.cho@kist.re.kr', advisor:'Co-Advisor: Dongheon Lee (Bioengineering, SNU)' }),
-          this.member({ photo:'assets/members/SerdarIncenkara.jpg', name:'Serdar İncekara', nameKo:'',
-            education:['MS-Ph.D. (AI Robotics), KIST School-UST','B.S. (Computer Engineering), Gazi University'],
-            research:'Robotics', email:'serdar.incenkara@kist.re.kr', advisor:'Advisor: Junhyoung Ha (Mechanical Engineering, UNIST)' }),
-          this.member({ photo:'assets/members/yeonjae_jeong.jpg', name:'Yeonjae Jung', nameKo:'정연재',
-            education:['MS-Ph.D., Interdisciplinary Program in Bioengineering, Seoul National University','B.S., Soongsil University'],
-            research:'Robotic VLA', advisor:'Co-Advisor: Jinsoo Kim (EE, SNU)' })
-        ]},
-        { name: 'M.S.', members: [
-          this.member({ photo:'assets/members/YongjunKim.jpg', name:'Yongjun Kim', nameKo:'김용준',
-            education:['M.S., Department of Electrical Engineering, Korea University','B.S., Ajou University'],
-            research:'Medical & Bio AI', email:'yongjun.kim@kist.re.kr', advisor:'Co-Advisor: Kyong Hwan Jin (Electrical Engineering, Korea Univ.)' }),
-          this.member({ photo:'assets/members/SeoaKim.jpg', name:'Seoa Kim', nameKo:'김서아',
-            education:['M.S., Interdisciplinary Program in Bioengineering, Seoul National University','B.S., Sogang University'],
-            research:'Medical Image Processing', email:'seoa.kim@kist.re.kr', advisor:'Co-Advisor: Dongheon Lee (Bioengineering, SNU)' }),
-          this.member({ photo:'assets/members/DongyubKang.jpg', name:'Dongyeop Kang', nameKo:'강동엽',
-            education:['M.S., Department of Electrical Engineering, Korea University','B.S., SangMyung University'],
-            research:'Robotic Vision', email:'dongyeop.kang@kist.re.kr', advisor:'Co-Advisor: Kyong Hwan Jin (Electrical Engineering, Korea Univ.)' }),
-          this.member({ photo:'assets/members/Ishita.jpg', name:'Ishita Singh Faujdar', nameKo:'',
-            education:['M.S., KIST School-UST (AI-Robotics Division)','B.Tech, Christ University'], research:'Robotic VLA',
-            email:'ishitasinghfaujdar@kist.re.kr', photoStyle:{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center 48%', display:'block' } }),
-          this.member({ placeholder:true, name:'Eashaan', nameKo:'',
-            education:['M.S., KIST School-UST (AI-Robotics Division)'], research:'Robotic VLA' })
-        ]},
-        { name: 'Intern', members: [
-          this.member({ photo:'assets/members/hyeonjin-goh.jpg', name:'Hyeonjin Goh', nameKo:'고현진', status:'Intern',
-            education:['B.S., KyungHee University'],
-            research:'Robotics VLA', email:'hyeonjin.goh@kist.re.kr' })
-        ]},
-        { name: 'Undergraduate Intern', members: [
-          this.member({ photo:'assets/members/ChanyongKim.jpg', name:'Chanyoung Kim', nameKo:'김찬영', status:'Undergraduate Intern',
-            education:['B.S., Soongsil University'], research:'Robotics Vision', email:'chanyoung.kim@kist.re.kr' })
-        ]}
-      ],
-      alumni: [{ name:'Minsun Yoo', nameKo:'유민선', role:'', now:'' }]
+      boardMenuStyle: this.menuStyle(this.state.boardOpen)
     };
   }
 }
