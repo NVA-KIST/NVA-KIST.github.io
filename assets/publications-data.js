@@ -2,7 +2,7 @@ window.NVA_PUBLICATIONS = [
   {
     year: 2026, month: 9, tags: ['conference', 'publication', 'international'], authorIds: ['yongjun', 'ryu'],
     title: 'Improved vascular segmentation via binary flow matching with straight-path regularization',
-    authorList: ['Yongjun Kim', 'Kang-Hyun Jin', 'Yoseob Han', 'Kanghyun Ryu'],
+    authorList: ['Yongjun Kim', 'Kyong Hwan Jin', 'Yoseob Han', 'Kanghyun Ryu'],
     venue: 'in Proc. MICCAI, Sep. 2026 (Accepted)',
     index: '정보과학회 S급 학회',
     status: 'Accepted'
@@ -10,7 +10,7 @@ window.NVA_PUBLICATIONS = [
   {
     year: 2026, month: 9, tags: ['conference', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Coarse-to-fine meta-reweighting with dynamic retrieval for adult-to-pediatric domain adaptation in tumor segmentation',
-    authorList: ['Abdulkhalek Al-Fakih', 'Kanghyun Choi', 'Dong-Hyun Kim', 'Kanghyun Ryu', 'Mohammed A. Al-masni'],
+    authorList: ['Abdulkhalek Al-Fakih', 'Kyusung Choi', 'Dong-Hyun Kim', 'Kanghyun Ryu', 'Mohammed A. Al-masni'],
     corresponding: ['Kanghyun Ryu', 'Mohammed A. Al-masni'],
     venue: 'in Proc. MICCAI, Sep. 2026 (Accepted)',
     index: '정보과학회 S급 학회',
@@ -221,7 +221,7 @@ window.NVA_PUBLICATIONS = [
     year: 2020, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Estimating age-related changes in in vivo cerebral magnetic resonance angiography using a convolutional neural network',
     doi: '10.1016/j.neurobiolaging.2019.12.008',
-    authorList: ['Yoonho Nam', 'Jinhee Jang', 'Hea Yon Lee', 'Yangsean Choi', 'Na Young Shin', 'Kang-Hyun Ryu', 'Dong Hyun Kim', 'So-Lyung Jung', 'Kook-jin Ahn', 'Bum-soo Kim'],
+    authorList: ['Yoonho Nam', 'Jinhee Jang', 'Hea Yon Lee', 'Yangsean Choi', 'Na Young Shin', 'Kanghyun Ryu', 'Dong Hyun Kim', 'So-Lyung Jung', 'Kook-jin Ahn', 'Bum-soo Kim'],
     venue: 'Neurobiology of Aging, vol. 87, pp. 125–131, Mar. 2020'
   },
   {
