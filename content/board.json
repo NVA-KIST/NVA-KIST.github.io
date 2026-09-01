@@ -1,27 +1,27 @@
 {
   "album": [
     {
-      "src": "assets/sportsday.png",
+      "src": "assets/sportsday.webp",
       "caption": "Lab sports day",
       "date": "2025.10"
     },
     {
-      "src": "assets/sportsday2.png",
+      "src": "assets/sportsday2.webp",
       "caption": "Lab sports day",
       "date": "2025.10"
     },
     {
-      "src": "assets/hero-icml.png",
+      "src": "assets/hero-icml.webp",
       "caption": "NVA Lab at ICML",
       "date": "2025.07"
     },
     {
-      "src": "assets/smartfarm.png",
+      "src": "assets/smartfarm.webp",
       "caption": "Smart farm tomato-robot demo — Korea Science and Technology Festival",
       "date": "2025.04"
     },
     {
-      "src": "assets/daejeon_demo1.png",
+      "src": "assets/daejeon_demo1.webp",
       "caption": "Daejeon science festival demo",
       "date": "2025.04"
     }

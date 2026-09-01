@@ -16,19 +16,22 @@
 <link rel="stylesheet" href="assets/site.css">
 
 <script src="./support.js"></script>
+<script src="assets/site-chrome.js" defer></script>
 </head>
 <body>
 <x-dc>
 <helmet data-dc-atomics></helmet>
 <div>
   <div class="site-header">
+    <!-- @chrome:header -->
     <div class="site-header-bar">
-      <a href="Home.dc.html" style="display:flex;align-items:center">
-        <img src="assets/nva-logo.png" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:34px;width:auto;display:block">
+      <a href="Home.dc.html" class="site-brand">
+        <img src="assets/nva-logo.webp" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:34px;width:auto;display:block">
       </a>
-      <nav class="site-nav">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav">
         <a href="Home.dc.html#about">About</a>
-        <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
+        <div class="nav-group" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
           <a href="Members.dc.html">Members</a>
           <div style="{{ membersMenuStyle }}" class="nav-drop">
             <a href="Members.dc.html#director">Director</a>
@@ -38,7 +41,7 @@
         </div>
         <a href="Publications.dc.html">Publications</a>
         <a href="Research.dc.html">Research</a>
-        <div style="position:relative" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
+        <div class="nav-group" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
           <a href="Board.dc.html">Board</a>
           <div style="{{ boardMenuStyle }}" class="nav-drop">
             <a href="Board.dc.html#album">Album</a>
@@ -46,25 +49,24 @@
             <a href="Board.dc.html#blogs">Research Blogs</a>
           </div>
         </div>
-        <a href="Contact.dc.html" class="nav-active">FAQ &amp; Contact</a>
+        <a href="Contact.dc.html" class="nav-active" aria-current="page">FAQ &amp; Contact</a>
       </nav>
     </div>
     <div class="site-header-rule">
-      <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,199,222,.85))"></div>
-      <div style="display:flex;gap:5px;flex:none">
-        <div style="width:30px;height:3px;background:#5b7fe0;border-radius:2px"></div>
-        <div style="width:30px;height:3px;background:#b3272a;border-radius:2px"></div>
-        <div style="width:30px;height:3px;background:#f2a71b;border-radius:2px"></div>
+      <div class="site-header-rule-line"></div>
+      <div class="site-header-rule-marks">
+        <span></span><span></span><span></span>
       </div>
-      <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(184,199,222,.85),transparent)"></div>
+      <div class="site-header-rule-line"></div>
     </div>
+    <!-- /@chrome:header -->
     <div class="page-header">
       <h1 class="page-title">FAQ &amp; Contact</h1>
     </div>
   </div>
 
-  <div class="site-main contact-guide" style="padding-bottom:48px">
-    <div class="subsection-title">진학 안내</div>
+  <div class="site-main contact-guide site-main--flush-bottom">
+    <h2 class="subsection-title">진학 안내</h2>
     <ul class="contact-guide-list">
       <li>KIST에서는 진행 중인 연구과제에서 필요한 분야와 인원에 따라 학생 연구원(대학원생)을 모집합니다. 일반적인 경로는 과제의 인력 수요 발생 → 학부 인턴 채용 → 실제 연구 참여 → 대학원 진학 논의 순서입니다.</li>
       <li>학부 인턴은 주로 학점인정형(유급 학부 인턴) 또는 인턴(학부 졸업 후)으로 모집하며, 여러 학교에서 모집하므로 경쟁률이 높은 편입니다. 개발 경험, 연구에 대한 관심, 성실함, 가장 중요한 연구실 구성원들과의 적합성을 꼼꼼하게 확인합니다.</li>
@@ -73,7 +75,7 @@
     </ul>
 
     <div class="contact-section">
-      <div class="subsection-title">석사 과정 vs 석·박사 통합과정</div>
+      <h2 class="subsection-title">석사 과정 vs 석·박사 통합과정</h2>
       <div class="contact-guide-body">
         <p>개인적으로는 아직 확신이 없다면 석사과정부터 시작하는 것을 추천합니다. 박사과정은 노력만으로 버티는 과정이라기보다, 연구를 좋아하는 성향과 생활 방식이 잘 맞아야 합니다. 오랜 기간 한 문제를 붙잡고 실패를 반복해야 하므로, 이를 평생의 업으로 삼을 수 있을지 신중하게 생각할 필요가 있습니다.</p>
         <p>반대로 공부와 연구 자체를 좋아하고, 앞으로도 이 일을 계속하고 싶다는 생각이 비교적 확실하다면 석·박사 통합과정이 좋은 선택입니다. 석사 후 다시 박사과정에 지원하는 시간을 줄일 수 있고, 단기 성과에 쫓기지 않고 조금 더 긴 호흡으로 연구할 수 있습니다.</p>
@@ -82,7 +84,7 @@
     </div>
 
     <div class="contact-section">
-      <div class="subsection-title">연구실 생활</div>
+      <h2 class="subsection-title">연구실 생활</h2>
       <div class="contact-guide-body">
         <p>저희 연구실은 서로의 연구를 도와주고, 어려운 일이 생기면 함께 해결하는 분위기를 중요하게 생각합니다. 연구원들끼리 비교적 화목하게 지내며, 학회 출장이나 워크숍, MT에도 함께 참여하고 평소에도 연구와 진로에 관한 이야기를 자주 나누려고 합니다.</p>
         <p>각자의 시간과 성향은 존중하지만, 모든 일을 완전히 혼자 처리하기보다는 동료들과 자연스럽게 소통하고 도움을 주고받는 분이 연구실에 더 잘 맞을 것 같습니다. 함께한 시간도 좋은 기억으로 남는 연구실 생활을 지향합니다.</p>
@@ -90,13 +92,13 @@
     </div>
 
     <figure class="contact-photo">
-      <img src="assets/i2rc-naver-visit.jpg" alt="I2RC student researchers group photo at Naver Labs">
+      <img src="assets/i2rc-naver-visit.webp" alt="I2RC student researchers group photo at Naver Labs" loading="lazy" decoding="async">
       <figcaption>I2RC 연구센터 학생연구원 전체 사진 — 네이버 견학 중</figcaption>
     </figure>
 
     <div class="site-main--contact contact-info" style="padding:0;margin:0;max-width:none">
       <div>
-        <div class="subsection-title">Address</div>
+        <h2 class="subsection-title">Address</h2>
         <p class="text-body" style="margin:0 0 32px">
           Korea Institute of Science and Technology (KIST)<br>
           5, Hwarang-ro 14-gil, Seongbuk-gu<br>
@@ -105,27 +107,29 @@
         </p>
       </div>
       <div>
-        <div class="subsection-title">Lab Director</div>
+        <h2 class="subsection-title">Lab Director</h2>
         <h3 class="text-body" style="font-weight:600;margin:0 0 6px">Kanghyun Ryu</h3>
         <div class="text-small" style="margin-bottom:20px">Assistant Professor · Lab Director · AI Robotics</div>
         <a href="mailto:khryu@kist.re.kr" class="text-body" style="display:block;margin-bottom:10px">khryu@kist.re.kr</a>
         <a href="tel:+8229586627" class="text-body" style="display:block;margin-bottom:10px">02-958-6627</a>
         <a href="https://www.linkedin.com/in/kanghyun-ryu" target="_blank" rel="noopener noreferrer" class="text-body" style="display:block;margin-bottom:32px">LinkedIn</a>
-        <div class="subsection-title">General Inquiries</div>
+        <h2 class="subsection-title">General Inquiries</h2>
         <a href="mailto:nvakist@gmail.com" class="text-body">nvakist@gmail.com</a>
       </div>
     </div>
   </div>
 
-  <div class="site-footer">
+  <!-- @chrome:footer -->
+    <div class="site-footer">
     <div class="site-footer-inner">
       <div>
-        <img src="assets/nva-logo.png" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:28px;width:auto;display:block;margin-bottom:14px">
+        <img src="assets/nva-logo.webp" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:28px;width:auto;display:block;margin-bottom:14px" loading="lazy" decoding="async">
         <div class="site-footer-addr">KIST · 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</div>
       </div>
       <div class="site-footer-copy">© 2026 NVA Lab (Neural Vision Algorithm Lab, NVA-KIST). All rights reserved.</div>
     </div>
   </div>
+    <!-- /@chrome:footer -->
 </div>
 </x-dc>
 

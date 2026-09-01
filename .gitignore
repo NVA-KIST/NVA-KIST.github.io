@@ -1,10 +1,12 @@
-﻿# Not part of the GitHub Pages site
+# Not part of the GitHub Pages site
 original-design/
 source/
 README-site.md
 
 # Local working / temp files
 _*
+# ...except the shared header/footer source used by sync-chrome.py
+!_chrome/
 crossref_dois.txt
 CV_*.pdf
 /AI-biomarker.png

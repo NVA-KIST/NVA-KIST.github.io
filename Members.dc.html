@@ -16,20 +16,23 @@
 <link rel="stylesheet" href="assets/site.css">
 
 <script src="./support.js"></script>
+<script src="assets/site-chrome.js" defer></script>
 </head>
 <body>
 <x-dc>
 <helmet data-dc-atomics></helmet>
 <div>
   <div class="site-header">
+    <!-- @chrome:header -->
     <div class="site-header-bar">
-      <a href="Home.dc.html" style="display:flex;align-items:center">
-        <img src="assets/nva-logo.png" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:34px;width:auto;display:block">
+      <a href="Home.dc.html" class="site-brand">
+        <img src="assets/nva-logo.webp" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:34px;width:auto;display:block">
       </a>
-      <nav class="site-nav">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav">
         <a href="Home.dc.html#about">About</a>
-        <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
-          <a href="Members.dc.html" class="nav-active">Members</a>
+        <div class="nav-group" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
+          <a href="Members.dc.html" class="nav-active" aria-current="page">Members</a>
           <div style="{{ membersMenuStyle }}" class="nav-drop">
             <a href="Members.dc.html#director">Director</a>
             <a href="Members.dc.html#members">Members</a>
@@ -38,7 +41,7 @@
         </div>
         <a href="Publications.dc.html">Publications</a>
         <a href="Research.dc.html">Research</a>
-        <div style="position:relative" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
+        <div class="nav-group" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
           <a href="Board.dc.html">Board</a>
           <div style="{{ boardMenuStyle }}" class="nav-drop">
             <a href="Board.dc.html#album">Album</a>
@@ -50,27 +53,26 @@
       </nav>
     </div>
     <div class="site-header-rule">
-      <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,199,222,.85))"></div>
-      <div style="display:flex;gap:5px;flex:none">
-        <div style="width:30px;height:3px;background:#5b7fe0;border-radius:2px"></div>
-        <div style="width:30px;height:3px;background:#b3272a;border-radius:2px"></div>
-        <div style="width:30px;height:3px;background:#f2a71b;border-radius:2px"></div>
+      <div class="site-header-rule-line"></div>
+      <div class="site-header-rule-marks">
+        <span></span><span></span><span></span>
       </div>
-      <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(184,199,222,.85),transparent)"></div>
+      <div class="site-header-rule-line"></div>
     </div>
+    <!-- /@chrome:header -->
     <div class="page-header">
       <h1 class="page-title">Members</h1>
     </div>
   </div>
 
-  <div id="director" class="director-profile site-main" style="padding-top:64px;padding-bottom:48px">
-    <div style="display:grid;grid-template-columns:280px 1fr;gap:56px">
+  <div id="director" class="director-profile site-main site-main--flush-bottom">
+    <div class="director-grid">
       <div>
-        <div class="subsection-title">Director</div>
-        <div style="width:100%;aspect-ratio:3/4;background:#1c2142;margin-bottom:24px;overflow:hidden;border-radius:8px">
-          <img src="assets/members/KanghyunRyu.JPG" alt="Kanghyun Ryu" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+        <h2 class="subsection-title">Director</h2>
+        <div class="director-photo">
+          <img src="assets/members/KanghyunRyu.webp" alt="Kanghyun Ryu" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" loading="lazy" decoding="async">
         </div>
-        <h2 class="director-name">Kanghyun Ryu <span class="member-name-ko">류강현</span></h2>
+        <h3 class="director-name">Kanghyun Ryu <span class="member-name-ko">류강현</span></h3>
         <div class="text-accent" style="margin-bottom:8px">Assistant Professor · Lab Director</div>
         <div class="text-small" style="margin-bottom:20px">AI Robotics · KIST School / UST</div>
         <div class="text-small">
@@ -80,12 +82,12 @@
         </div>
       </div>
       <div class="director-cv">
-        <div class="subsection-title">Education</div>
+        <h3 class="subsection-title">Education</h3>
         <div class="cv-list">
           <div class="cv-row"><div class="cv-date w-narrow">2015 – 2020</div><div class="cv-body">Ph.D. in Electrical and Electronics Engineering, Yonsei University<div class="cv-note">Data-driven methodologies for MR images and signals</div></div></div>
           <div class="cv-row"><div class="cv-date w-narrow">2009 – 2015</div><div class="cv-body">B.S. in Electrical and Electronic Engineering, Yonsei University</div></div>
         </div>
-        <div class="subsection-title" style="margin-top:36px">Experience</div>
+        <h3 class="subsection-title" style="margin-top:36px">Experience</h3>
         <div class="cv-list">
           <div class="cv-row"><div class="cv-date w-wide">2026 – Present</div><div class="cv-body">AI 분과 겸무위원, <a href="https://iecc.kist.re.kr/home/homeIndex.do">KIST 혁신기업협력센터</a><div class="cv-note">KIST 협력 기업 기술 자문 및 지원</div></div></div>
           <div class="cv-row"><div class="cv-date w-wide">2026 – Present</div><div class="cv-body">Research Affiliate, Massachusetts Institute of Technology (MIT)</div></div>
@@ -96,7 +98,7 @@
       </div>
     </div>
     <div class="director-about">
-      <div class="subsection-title">About Myself</div>
+      <h3 class="subsection-title">About Myself</h3>
       <div class="director-about-body">
         <p>저는 <strong>전기전자공학부</strong>를 졸업하고 같은 전공으로 대학원에 진학했습니다. 학부 때는 <strong>신호처리와 통신</strong>처럼 <strong>수학과 알고리즘</strong>을 활용하는 과목을 좋아했고, <strong>해석학</strong>과 <strong>선형대수</strong> 같은 수학과 수업도 흥미롭게 들었습니다.</p>
         <p>아무도 모르는 특이한 분야를 공부해 보고 싶어 <strong>MRI</strong> 연구실에 진학했습니다. 대학원에서는 MRI 장비에서 획득한 raw signal을 영상으로 복원하는 <strong>computational imaging</strong>을 중심으로, <strong>고속 MRI</strong>, <strong>inverse problem</strong>, <strong>parameter estimation</strong> 등을 연구했습니다. 측정된 신호만으로 보이지 않는 영상을 복원하고, 불완전한 데이터에서 필요한 정보를 추정하는 과정에 관심이 많았습니다.</p>
@@ -106,14 +108,14 @@
     </div>
   </div>
 
-  <div id="members" class="site-main" style="padding-top:32px">
-    <div class="subsection-title members-section-title">Members</div>
+  <div id="members" class="site-main site-main--flush-top site-main--flush-bottom">
+    <h2 class="subsection-title members-section-title">Members</h2>
     <div class="member-groups">
       <div class="member-group">
-        <div class="member-group-title">MS-Ph.D.</div>
+        <h3 class="member-group-title">MS-Ph.D.</h3>
         <div class="member-grid">
           <div class="member-card">
-            <div class="member-photo"><img src="assets/members/SuminCho.jpg" alt="Sumin Cho"></div>
+            <div class="member-photo"><img src="assets/members/SuminCho.webp" alt="Sumin Cho" loading="lazy" decoding="async"></div>
             <div class="member-info">
               <div class="member-name">Sumin Cho <span class="member-name-ko">조수민</span></div>
               <div class="member-edu-list"><div class="member-edu">MS-Ph.D., Interdisciplinary Program in Bioengineering, Seoul National University</div><div class="member-edu">B.S., Hanyang University</div></div>
@@ -123,7 +125,7 @@
             </div>
           </div>
           <div class="member-card">
-            <div class="member-photo"><img src="assets/members/SerdarIncenkara.jpg" alt="Serdar İncekara"></div>
+            <div class="member-photo"><img src="assets/members/SerdarIncenkara.webp" alt="Serdar İncekara" loading="lazy" decoding="async"></div>
             <div class="member-info">
               <div class="member-name">Serdar İncekara</div>
               <div class="member-edu-list"><div class="member-edu">MS-Ph.D. (AI Robotics), KIST School-UST</div><div class="member-edu">B.S. (Computer Engineering), Gazi University</div></div>
@@ -133,7 +135,7 @@
             </div>
           </div>
           <div class="member-card">
-            <div class="member-photo"><img src="assets/members/yeonjae_jeong.jpg" alt="Yeonjae Jung"></div>
+            <div class="member-photo"><img src="assets/members/yeonjae_jeong.webp" alt="Yeonjae Jung" loading="lazy" decoding="async"></div>
             <div class="member-info">
               <div class="member-name">Yeonjae Jung <span class="member-name-ko">정연재</span></div>
               <div class="member-edu-list"><div class="member-edu">MS-Ph.D., Interdisciplinary Program in Bioengineering, Seoul National University</div><div class="member-edu">B.S., Soongsil University</div></div>
@@ -144,10 +146,10 @@
         </div>
       </div>
       <div class="member-group">
-        <div class="member-group-title">M.S.</div>
+        <h3 class="member-group-title">M.S.</h3>
         <div class="member-grid">
           <div class="member-card">
-            <div class="member-photo"><img src="assets/members/YongjunKim.jpg" alt="Yongjun Kim"></div>
+            <div class="member-photo"><img src="assets/members/YongjunKim.webp" alt="Yongjun Kim" loading="lazy" decoding="async"></div>
             <div class="member-info">
               <div class="member-name">Yongjun Kim <span class="member-name-ko">김용준</span></div>
               <div class="member-edu-list"><div class="member-edu">M.S., Department of Electrical Engineering, Korea University</div><div class="member-edu">B.S., Ajou University</div></div>
@@ -157,7 +159,7 @@
             </div>
           </div>
           <div class="member-card">
-            <div class="member-photo"><img src="assets/members/SeoaKim.jpg" alt="Seoa Kim"></div>
+            <div class="member-photo"><img src="assets/members/SeoaKim.webp" alt="Seoa Kim" loading="lazy" decoding="async"></div>
             <div class="member-info">
               <div class="member-name">Seoa Kim <span class="member-name-ko">김서아</span></div>
               <div class="member-edu-list"><div class="member-edu">M.S., Interdisciplinary Program in Bioengineering, Seoul National University</div><div class="member-edu">B.S., Sogang University</div></div>
@@ -167,7 +169,7 @@
             </div>
           </div>
           <div class="member-card">
-            <div class="member-photo"><img src="assets/members/DongyubKang.jpg" alt="Dongyeop Kang"></div>
+            <div class="member-photo"><img src="assets/members/DongyubKang.webp" alt="Dongyeop Kang" loading="lazy" decoding="async"></div>
             <div class="member-info">
               <div class="member-name">Dongyeop Kang <span class="member-name-ko">강동엽</span></div>
               <div class="member-edu-list"><div class="member-edu">M.S., Department of Electrical Engineering, Korea University</div><div class="member-edu">B.S., SangMyung University</div></div>
@@ -177,7 +179,7 @@
             </div>
           </div>
           <div class="member-card">
-            <div class="member-photo member-photo--ishita"><img src="assets/members/Ishita.jpg" alt="Ishita Singh Faujdar"></div>
+            <div class="member-photo member-photo--ishita"><img src="assets/members/Ishita.webp" alt="Ishita Singh Faujdar" loading="lazy" decoding="async"></div>
             <div class="member-info">
               <div class="member-name">Ishita Singh Faujdar</div>
               <div class="member-edu-list"><div class="member-edu">M.S., KIST School-UST (AI-Robotics Division)</div><div class="member-edu">B.Tech, Christ University</div></div>
@@ -196,10 +198,10 @@
         </div>
       </div>
       <div class="member-group">
-        <div class="member-group-title">Intern</div>
+        <h3 class="member-group-title">Intern</h3>
         <div class="member-grid">
           <div class="member-card">
-            <div class="member-photo"><img src="assets/members/hyeonjin-goh.jpg" alt="Hyeonjin Goh"></div>
+            <div class="member-photo"><img src="assets/members/hyeonjin-goh.webp" alt="Hyeonjin Goh" loading="lazy" decoding="async"></div>
             <div class="member-info">
               <div class="member-name">Hyeonjin Goh <span class="member-name-ko">고현진</span></div>
               <span class="member-status">Intern</span>
@@ -211,10 +213,10 @@
         </div>
       </div>
       <div class="member-group">
-        <div class="member-group-title">Undergraduate Intern</div>
+        <h3 class="member-group-title">Undergraduate Intern</h3>
         <div class="member-grid">
           <div class="member-card">
-            <div class="member-photo"><img src="assets/members/ChanyongKim.jpg" alt="Chanyoung Kim"></div>
+            <div class="member-photo"><img src="assets/members/ChanyongKim.webp" alt="Chanyoung Kim" loading="lazy" decoding="async"></div>
             <div class="member-info">
               <div class="member-name">Chanyoung Kim <span class="member-name-ko">김찬영</span></div>
               <span class="member-status">Undergraduate Intern</span>
@@ -228,23 +230,23 @@
     </div>
   </div>
 
-  <div class="director-collab site-main" style="padding-top:32px">
-    <div class="subsection-title">Research Collaboration</div>
+  <div class="director-collab site-main site-main--flush-top site-main--flush-bottom">
+    <h2 class="subsection-title">Research Collaboration</h2>
     <div class="collab-grid" style="margin-top:8px">
-      <div class="collab-logo"><img src="assets/collaborators/korea.png" alt="Korea University" class="wide"></div>
-      <div class="collab-logo"><img src="assets/collaborators/ssu.png" alt="Soongsil University"></div>
-      <div class="collab-logo"><img src="assets/collaborators/snuh.png" alt="Seoul National University Hospital"></div>
-      <div class="collab-logo"><img src="assets/collaborators/kfupm.svg" alt="KFUPM" class="seal"></div>
-      <div class="collab-logo"><img src="assets/collaborators/mit.png" alt="MIT"></div>
-      <div class="collab-logo"><img src="assets/collaborators/upmc.png" alt="UPMC"></div>
-      <div class="collab-logo"><img src="assets/collaborators/khu.png" alt="Kyung Hee University"></div>
+      <div class="collab-logo"><img src="assets/collaborators/korea.webp" alt="Korea University" class="wide" loading="lazy" decoding="async"></div>
+      <div class="collab-logo"><img src="assets/collaborators/ssu.webp" alt="Soongsil University" loading="lazy" decoding="async"></div>
+      <div class="collab-logo"><img src="assets/collaborators/snuh.webp" alt="Seoul National University Hospital" loading="lazy" decoding="async"></div>
+      <div class="collab-logo"><img src="assets/collaborators/kfupm.svg" alt="KFUPM" class="seal" loading="lazy" decoding="async"></div>
+      <div class="collab-logo"><img src="assets/collaborators/mit.webp" alt="MIT" loading="lazy" decoding="async"></div>
+      <div class="collab-logo"><img src="assets/collaborators/upmc.webp" alt="UPMC" loading="lazy" decoding="async"></div>
+      <div class="collab-logo"><img src="assets/collaborators/khu.webp" alt="Kyung Hee University" loading="lazy" decoding="async"></div>
     </div>
   </div>
 
-  <div id="alumni" class="site-main" style="padding-top:32px;padding-bottom:96px">
-    <div class="subsection-title">Alumni</div>
-    <div style="border-top:1px solid #b8c7de;margin-top:18px">
-      <div style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr;padding:18px 4px;border-bottom:1px solid #b8c7de">
+  <div id="alumni" class="site-main site-main--flush-top">
+    <h2 class="subsection-title">Alumni</h2>
+    <div class="alumni-table">
+      <div class="alumni-row">
         <div class="member-name">Minsun Yoo <span class="member-name-ko">유민선</span></div>
         <div class="text-small"></div>
         <div class="text-small"></div>
@@ -252,15 +254,17 @@
     </div>
   </div>
 
-  <div class="site-footer">
+  <!-- @chrome:footer -->
+    <div class="site-footer">
     <div class="site-footer-inner">
       <div>
-        <img src="assets/nva-logo.png" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:28px;width:auto;display:block;margin-bottom:14px">
+        <img src="assets/nva-logo.webp" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:28px;width:auto;display:block;margin-bottom:14px" loading="lazy" decoding="async">
         <div class="site-footer-addr">KIST · 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</div>
       </div>
       <div class="site-footer-copy">© 2026 NVA Lab (Neural Vision Algorithm Lab, NVA-KIST). All rights reserved.</div>
     </div>
   </div>
+    <!-- /@chrome:footer -->
 </div>
 </x-dc>
 

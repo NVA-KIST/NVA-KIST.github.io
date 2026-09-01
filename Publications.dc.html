@@ -16,19 +16,22 @@
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/publications-data.js"></script>
 <script src="./support.js"></script>
+<script src="assets/site-chrome.js" defer></script>
 </head>
 <body>
 <x-dc>
 <helmet data-dc-atomics></helmet>
 <div>
   <div class="site-header">
+    <!-- @chrome:header -->
     <div class="site-header-bar">
-      <a href="Home.dc.html" style="display:flex;align-items:center">
-        <img src="assets/nva-logo.png" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:34px;width:auto;display:block">
+      <a href="Home.dc.html" class="site-brand">
+        <img src="assets/nva-logo.webp" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:34px;width:auto;display:block">
       </a>
-      <nav class="site-nav">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav">
         <a href="Home.dc.html#about">About</a>
-        <div style="position:relative" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
+        <div class="nav-group" onMouseEnter="{{ openMembers }}" onMouseLeave="{{ closeMembers }}">
           <a href="Members.dc.html">Members</a>
           <div style="{{ membersMenuStyle }}" class="nav-drop">
             <a href="Members.dc.html#director">Director</a>
@@ -36,9 +39,9 @@
             <a href="Members.dc.html#alumni">Alumni</a>
           </div>
         </div>
-        <a href="Publications.dc.html" class="nav-active">Publications</a>
+        <a href="Publications.dc.html" class="nav-active" aria-current="page">Publications</a>
         <a href="Research.dc.html">Research</a>
-        <div style="position:relative" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
+        <div class="nav-group" onMouseEnter="{{ openBoard }}" onMouseLeave="{{ closeBoard }}">
           <a href="Board.dc.html">Board</a>
           <div style="{{ boardMenuStyle }}" class="nav-drop">
             <a href="Board.dc.html#album">Album</a>
@@ -50,22 +53,21 @@
       </nav>
     </div>
     <div class="site-header-rule">
-      <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,199,222,.85))"></div>
-      <div style="display:flex;gap:5px;flex:none">
-        <div style="width:30px;height:3px;background:#5b7fe0;border-radius:2px"></div>
-        <div style="width:30px;height:3px;background:#b3272a;border-radius:2px"></div>
-        <div style="width:30px;height:3px;background:#f2a71b;border-radius:2px"></div>
+      <div class="site-header-rule-line"></div>
+      <div class="site-header-rule-marks">
+        <span></span><span></span><span></span>
       </div>
-      <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(184,199,222,.85),transparent)"></div>
+      <div class="site-header-rule-line"></div>
     </div>
+    <!-- /@chrome:header -->
     <div class="page-header">
       <h1 class="page-title">Publications</h1>
     </div>
   </div>
 
-  <div class="pub-wrap">
+  <div class="site-main">
     <div class="pub-count">34 publications</div>
-    <div class="pub-year">2026</div>
+    <h2 class="pub-year">2026</h2>
     <div class="pub-item">
       <h3 class="pub-title"><span class="pub-num">[1]</span>Improved vascular segmentation via binary flow matching with straight-path regularization</h3>
       <div class="pub-authors">Yongjun Kim, Kyong Hwan Jin, Yoseob Han, <strong style="font-weight:600">Kanghyun Ryu</strong></div>
@@ -121,7 +123,7 @@
       <div class="pub-meta">정보과학회 A급 학회</div>
       <div style="margin-top:5px"><a class="pub-doi" href="https://doi.org/10.1109/icassp55912.2026.11465038" target="_blank" rel="noopener noreferrer">doi:10.1109/icassp55912.2026.11465038</a></div>
     </div>
-    <div class="pub-year">2025</div>
+    <h2 class="pub-year">2025</h2>
     <div class="pub-item">
       <h3 class="pub-title"><span class="pub-num">[9]</span>Improving pelvic MR–CT image alignment with self-supervised reference-augmented pseudo-CT generation framework</h3>
       <div class="pub-authors">Daniel Kim, Mohammed A. Al-masni, Jaehun Lee, Dong-Hyun Kim+, <strong style="font-weight:600">Kanghyun Ryu</strong>+</div>
@@ -149,7 +151,7 @@
       <div class="pub-meta">JCR Top 8.6%</div>
       <div style="margin-top:5px"><a class="pub-doi" href="https://doi.org/10.1016/j.compmedimag.2025.102506" target="_blank" rel="noopener noreferrer">doi:10.1016/j.compmedimag.2025.102506</a></div>
     </div>
-    <div class="pub-year">2024</div>
+    <h2 class="pub-year">2024</h2>
     <div class="pub-item">
       <h3 class="pub-title"><span class="pub-num">[13]</span>Comprehensive review of data-driven degradation diagnosis of lithium-ion batteries through electrochemical and multi-scale imaging analyses</h3>
       <div class="pub-authors">Cheolhwi Park, Taehun Kim, Yung-Eun Sung, <strong style="font-weight:600">Kanghyun Ryu</strong>+, Jungjin Park+</div>
@@ -175,7 +177,7 @@
       <div class="pub-venue">Magnetic Resonance in Medicine, vol. 91, no. 6, pp. 2483–2497, Jun. 2024</div>
       <div style="margin-top:5px"><a class="pub-doi" href="https://doi.org/10.1002/mrm.30021" target="_blank" rel="noopener noreferrer">doi:10.1002/mrm.30021</a></div>
     </div>
-    <div class="pub-year">2023</div>
+    <h2 class="pub-year">2023</h2>
     <div class="pub-item">
       <h3 class="pub-title"><span class="pub-num">[17]</span>Accelerating high b-value diffusion-weighted MRI using a convolutional recurrent neural network (CRNN-DWI)</h3>
       <div class="pub-authors">Zheng Zhong, <strong style="font-weight:600">Kanghyun Ryu</strong>, Jonathan Mao, Kaibao Sun, Guangyu Dan, Shreyas Vasanawala, Xiaohong Zhou</div>
@@ -195,7 +197,7 @@
       <div class="pub-meta">정보과학회 S급 학회</div>
       <div style="margin-top:5px"><a class="pub-doi" href="https://doi.org/10.1109/cvpr52729.2023.01911" target="_blank" rel="noopener noreferrer">doi:10.1109/cvpr52729.2023.01911</a></div>
     </div>
-    <div class="pub-year">Previous</div>
+    <h2 class="pub-year">Previous</h2>
     <div class="pub-item">
       <h3 class="pub-title"><span class="pub-num">[20]</span>Accelerated 3D myelin water imaging using joint spatio-temporal reconstruction</h3>
       <div class="pub-authors">Jae-Hun Lee, Jaeuk Yi, Jun-Hyeong Kim, <strong style="font-weight:600">Kanghyun Ryu</strong>, Dongyeob Han, Sewook Kim, Seul Lee, Deog Young Kim, Dong-Hyun Kim</div>
@@ -290,15 +292,17 @@
     <div class="pub-notes" style="margin-top:32px;padding-top:20px;border-top:1px solid #b8c7de">+ Corresponding author</div>
   </div>
 
-  <div class="site-footer">
+  <!-- @chrome:footer -->
+    <div class="site-footer">
     <div class="site-footer-inner">
       <div>
-        <img src="assets/nva-logo.png" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:28px;width:auto;display:block;margin-bottom:14px">
+        <img src="assets/nva-logo.webp" alt="NVA Lab — Neural Vision Algorithm Lab at KIST" style="height:28px;width:auto;display:block;margin-bottom:14px" loading="lazy" decoding="async">
         <div class="site-footer-addr">KIST · 5, Hwarang-ro 14-gil, Seongbuk-gu, Seoul, Republic of Korea</div>
       </div>
       <div class="site-footer-copy">© 2026 NVA Lab (Neural Vision Algorithm Lab, NVA-KIST). All rights reserved.</div>
     </div>
   </div>
+    <!-- /@chrome:footer -->
 </div>
 </x-dc>
 
