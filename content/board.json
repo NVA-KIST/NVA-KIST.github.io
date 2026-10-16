@@ -39,6 +39,12 @@
   ],
   "news": [
     {
+      "date": "2026.10",
+      "kind": "Announcement",
+      "headline": "Our group is joining CloSer, a Horizon Europe project coordinated by Tampere University (participant)",
+      "href": "https://cordis.europa.eu/project/id/101297189"
+    },
+    {
       "date": "2026.09",
       "kind": "Announcement",
       "headline": "Paper accepted — \"Improved vascular segmentation via binary flow matching with straight-path regularization\" (MICCAI 2026)",
