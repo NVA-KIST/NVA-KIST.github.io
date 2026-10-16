@@ -318,6 +318,8 @@ a:hover{color:var(--link-hover)}
 .collab-logo img.seal{max-height:58px}
 .collab-logo span{font-size:var(--fs-xs);font-weight:var(--fw-bold);line-height:var(--lh-tight);color:var(--ink);text-align:center;word-break:keep-all}
 .album-photo{aspect-ratio:4/3;overflow:hidden;margin:-28px -32px var(--sp-4);background:var(--surface-soft)}
+/* A card holding two photos splits the frame between them. */
+.album-photo:has(img + img){display:grid;grid-template-columns:1fr 1fr;gap:2px}
 
 /* ==========================================================================
    Layout blocks lifted out of inline styles
