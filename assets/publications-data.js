@@ -2,19 +2,19 @@ window.NVA_PUBLICATIONS = [
   {
     year: 2026, month: 9, tags: ['conference', 'publication', 'international'], authorIds: ['yongjun', 'ryu'],
     title: 'Improved vascular segmentation via binary flow matching with straight-path regularization',
+    doi: '10.1007/978-3-032-38082-1_22',
     authorList: ['Yongjun Kim', 'Kyong Hwan Jin', 'Yoseob Han', 'Kanghyun Ryu'],
-    venue: 'in Proc. MICCAI, Sep. 2026 (Accepted)',
-    index: '정보과학회 S급 학회',
-    status: 'Accepted'
+    venue: 'in Proc. MICCAI, Lecture Notes in Computer Science, pp. 232–242, Sep. 2026',
+    index: '정보과학회 S급 학회'
   },
   {
     year: 2026, month: 9, tags: ['conference', 'publication', 'international'], authorIds: ['ryu'],
     title: 'Coarse-to-fine meta-reweighting with dynamic retrieval for adult-to-pediatric domain adaptation in tumor segmentation',
+    doi: '10.1007/978-3-032-38072-2_10',
     authorList: ['Abdulkhalek Al-Fakih', 'Kyusung Choi', 'Dong-Hyun Kim', 'Kanghyun Ryu', 'Mohammed A. Al-masni'],
     corresponding: ['Kanghyun Ryu', 'Mohammed A. Al-masni'],
-    venue: 'in Proc. MICCAI, Sep. 2026 (Accepted)',
-    index: '정보과학회 S급 학회',
-    status: 'Accepted'
+    venue: 'in Proc. MICCAI, Lecture Notes in Computer Science, pp. 100–109, Sep. 2026',
+    index: '정보과학회 S급 학회'
   },
   {
     year: 2026, tags: ['journal', 'publication', 'international'], authorIds: ['ryu'],
