@@ -1,6 +1,25 @@
 window.NVA_BOARD = {
   "album": [
     {
+      "src": "assets/album/kist-autumn-festival-2026.webp",
+      "caption": "NVA Lab at the 2026 KIST Autumn Festival — 추계체육대회",
+      "date": "2026.10"
+    },
+    {
+      "src": "assets/album/zeroone-demoday-2026-group.webp",
+      "caption": "ZER01NE Demo Day 2026 (Hyundai Motor Group) — the lab visited at Yeonjae Jung's invitation",
+      "date": "2026.10",
+      "href": "https://www.hyundaimotorgroup.com/ko/news/hyundai-motor-group-zero-one-2026-demo-day",
+      "linkLabel": "About the event"
+    },
+    {
+      "src": "assets/album/zeroone-demoday-2026-board.webp",
+      "caption": "ZER01NE Demo Day 2026 — Yeonjae Jung at the 《Physical AI Companion: The Traveling Soul》 exhibit she worked on",
+      "date": "2026.10",
+      "href": "https://www.hyundaimotorgroup.com/ko/news/hyundai-motor-group-zero-one-2026-demo-day",
+      "linkLabel": "About the event"
+    },
+    {
       "src": "assets/sportsday.webp",
       "caption": "Lab sports day",
       "date": "2025.10"

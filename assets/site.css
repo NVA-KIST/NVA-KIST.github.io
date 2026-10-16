@@ -212,6 +212,8 @@ a:hover{color:var(--link-hover)}
 .board-photo-date{font-size:var(--fs-sm);font-weight:var(--fw-bold);color:var(--brand-red);margin-bottom:var(--sp-1)}
 .board-photo-caption{font-size:var(--fs-sm);line-height:var(--lh-snug);color:var(--ink)}
 .board-meta{font-size:var(--fs-sm);color:var(--ink-muted)}
+.board-photo-link{display:inline-block;margin-top:var(--sp-2);font-size:var(--fs-sm);font-weight:var(--fw-bold);color:var(--link)}
+.board-photo-link:hover{color:var(--link-hover)}
 
 /* ==========================================================================
    Home — hero & sections

@@ -80,6 +80,7 @@
             </div>
             <div class="board-photo-date">{{ photo.date }}</div>
             <div class="board-photo-caption">{{ photo.caption }}</div>
+            <sc-if value="{{ photo.hasLink }}"><a href="{{ photo.href }}" class="board-photo-link" target="_blank" rel="noopener noreferrer">{{ photo.linkLabel }} →</a></sc-if>
           </div>
         </sc-for>
       </div>
@@ -151,7 +152,12 @@ class Component extends DCLogic {
     return [...items].sort((a, b) => this.albumKey(b.date) - this.albumKey(a.date));
   }
   mapAlbum(items) {
-    return this.sortAlbum(items).map(p => ({ ...p, hasImage: !!(p.src && p.src.trim()) }));
+    return this.sortAlbum(items).map(p => ({
+      ...p,
+      hasImage: !!(p.src && p.src.trim()),
+      hasLink: !!(p.href && p.href.trim()),
+      linkLabel: p.linkLabel || 'Read more'
+    }));
   }
   applyContent(data) {
     this.setState({
